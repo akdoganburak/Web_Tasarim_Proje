@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cyber Channel</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0;">
+
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- cards gallery -->   
+        <link rel="stylesheet" href="cards-gallery.css">   
+
+        <!--card animation-->    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+
+        <!--Google icon-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <!-- social icons -->
+        <!--Font Awesome 5 icon-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    </head>
+
+    <body style="background-color: black">
+        <div class="jumbotron text-center "style="background-color:black">
+            <h1><b>CYBER CHANNEL</b></h1>  
+            <script>
+
+                var mydate=new Date()
+                var year=mydate.getYear()
+                if (year < 1000)
+                    year+=1900
+                var day=mydate.getDay()
+                var month=mydate.getMonth()
+                var daym=mydate.getDate()
+                if (daym<10)
+                    daym="0"+daym
+                var dayarray=new Array("Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi")
+                var montharray=new Array("Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık")
+
+                myhours = mydate.getHours();
+                if (myhours >= 12) {
+                    myhours = (myhours == 12) ? 12 : myhours - 12; mm = " Akşam";
+                }
+                else {
+                    myhours = (myhours == 0) ? 12 : myhours; mm = " Sabah";
+                }
+
+                myminutes = mydate.getMinutes();
+                if (myminutes < 10){
+                    mytime = ":0" + myminutes;
+                }
+                else {
+                    mytime = ":" + myminutes;
+                };
+
+                document.write("<font color='white' face='Arial' size=2><b>" + myhours + mytime + mm + ", " + dayarray[day]+", "+montharray[month]+" "+daym+", "+year+"</b></font>")
+
+            </script>
+            <div class="container">
+
+            </div>  <!--containerın -->  
+        </div><!--jmbotron -->
+
+
+
+        <div class="sticky-top"; >
+            <nav class=" navbar-expand-md navbar bg-dark navbar-fixed-top navbar-dark" >
+                <div class="container">
+                    <button class="navbar-toggler"data-toggle="collapse" data-target="#Link1"><span class="navbar-toggler-icon"></span></button>  
+                    <div class="collapse navbar-collapse" id="Link1">
+                        <ul  class="navbar-nav">
+                            <a class="navbar-brand" href="#">Ana Sayfa</a>
+
+
+                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Siber Saldırılar</a>
+                                <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                                    <a  class ="dropdown-item " href="verisizintilari.html">Veri Sızıntıları</a>
+                                    <a class="dropdown-item " href="dossald%C4%B1r%C4%B1lar%C4%B1.html">DOS/DDOS Saldırıları</a>
+
+                                </div>                   
+                            </li>  
+                            <li class="nav-item"><a class="nav-link" href="arastirma.html">Araştırma</a></li>
+
+
+                            <li class="nav-item"><a class="nav-link" href="guvenliaciklari.html">Güvenlik Açıkları</a></li>
+                            <li class="nav-item"><a class="nav-link" href="hakk%C4%B1m%C4%B1zda.html">Hakkımızda</a></li>
+                        </ul>
+                    </div>
+                    <div class="row"> 
+                        <div class="col-md-12">
+                            <ul class="navbar-nav mx-auto  ">
+                                <form action="" style="position: relative; left: -30px; top:25px; transform:  translate(30px,-50%)">
+                                    <input type="search">
+                                    <i id="fa" class="fa fa-search"></i>
+                                </form>
+                            </ul>
+                        </div>
+                    </div> 
+                </div>
+            </nav>
+
+        </div>
+        <br>
+        <br>
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-9" style="text-align: center">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="image/apple.jpg"   style="width:100%" style="height: :100%" alt="First slide" data-toggle="modal" data-target="#de-modal1">
+
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>19 Nisan 2019</p>
+                                    <h5>Apple’a 1 milyon dolarlık dava açıldı</h5>
+                                </div>
+
+                            </div>
+                            <div class="carousel-item" >
+                                <img class="d-block w-100" src="image/instagram-sifre.jpeg"   style="width:100%" alt="Second slide" data-toggle="modal" data-target="#de-modal2">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>19 Nisan 2019</p>
+                                    <h5>Facebook, Milyonlarca Instagram Kullanıcısının Parolasını Düz Metin Olarak Saklamış</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="image/facebook-%C5%9Fifre.jpg" style="width:100%" alt="Third slide" data-toggle="modal" data-target="#de-modal3">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>3 Nisan 2019</p>
+                                    <h5>Facebook, Doğrulama Yaparken E-Posta Hesabının Şifresini İstiyor</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="image/jeff.png"    style="width:100% " alt="Third slide"  data-toggle="modal" data-target="#de-modal4">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>2 Nisan 2019</p>
+                                    <h5>Amazon CEO’su Jeff Bezos’un Telefonu Hack’lendi!</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="image/google1.jpg" style="width:100%"  alt="Third slide"  data-toggle="modal" data-target="#de-modal5">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>1 Nisan 2019</p>
+                                    <h5>Google’ın Kullanıcılarına Yapmış Olduğu 1 Nisan Şakaları</h5>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <br>
+
+                </div>
+
+                <div class="col-md-3" style="text-align:center;">
+
+                    <button type="button" class="btn btn-outline-primary btn-block"><a id="i1" class="fab fa-facebook-f" href="https://www.facebook.com"></a></button>
+                    <button type="button" class="btn btn-outline-danger btn-block"><a id="i4" class="fab fa-youtube" href="https://www.youtube.com"></a></button>
+                    <button type="button" class="btn btn-outline-warning btn-block"> <a id="i2" class="fab fa-instagram" href="https://www.instagram.com"></a></button>
+                    <button type="button" class="btn btn-outline-info btn-block"> <a id="i3" class="fab fa-twitter" href="https://www.twitter.com"></a></button>
+                    <br>
+                    <!-- weather widget start --><div id="m-booked-bl-simple-835"> <div class="booked-wzs-160-110 weather-customize" style="background-color:#050505;width:220px;" id="width3"> <div class="booked-wzs-160-110_in"> <a target="_blank" class="booked-wzs-top-160-110" href="https://www.booked.net/"><img src="//s.bookcdn.com/images/letter/s5.gif" alt="booked.net" /></a> <div class="booked-wzs-160-data"> <div class="booked-wzs-160-left-img wrz-18"></div> <div class="booked-wzs-160-right"> <div class="booked-wzs-day-deck"> <div class="booked-wzs-day-val"> <div class="booked-wzs-day-number"><span class="plus">+</span>14</div> <div class="booked-wzs-day-dergee"> <div class="booked-wzs-day-dergee-val">&deg;</div> <div class="booked-wzs-day-dergee-name">C</div> </div> </div> <div class="booked-wzs-day"> <div class="booked-wzs-day-d"><span class="plus">+</span>21&deg;</div> <div class="booked-wzs-day-n"><span class="plus">+</span>15&deg;</div> </div> </div> <div class="booked-wzs-160-info"> <div class="booked-wzs-160-city">İstanbul</div> <div class="booked-wzs-160-date">Salı, 14</div> </div> </div> </div> <a target="_blank" href="https://bookeder.com/weather/istanbul-18319" class="booked-wzs-bottom-160-110"> <div class="booked-wzs-center"><span class="booked-wzs-bottom-l"> 7 Günlük Hava Tahmini</span></div> </a> </div> </div> </div><script type="text/javascript"> var css_file=document.createElement("link"); css_file.setAttribute("rel","stylesheet"); css_file.setAttribute("type","text/css"); css_file.setAttribute("href",'https://s.bookcdn.com/css/w/booked-wzs-widget-160.css?v=0.0.1'); document.getElementsByTagName("head")[0].appendChild(css_file); function setWidgetData(data) { if(typeof(data) != 'undefined' && data.results.length > 0) { for(var i = 0; i < data.results.length; ++i) { var objMainBlock = document.getElementById('m-booked-bl-simple-835'); if(objMainBlock !== null) { var copyBlock = document.getElementById('m-bookew-weather-copy-'+data.results[i].widget_type); objMainBlock.innerHTML = data.results[i].html_code; if(copyBlock !== null) objMainBlock.appendChild(copyBlock); } } } else { alert('data=undefined||data.results is empty'); } } </script> <script type="text/javascript" charset="UTF-8" src="https://widgets.booked.net/weather/info?action=get_weather_info&ver=6&cityID=18319&type=1&scode=124&ltid=3458&domid=765&anc_id=61385&cmetric=1&wlangID=21&color=050505&wwidth=220&header_color=ffffff&text_color=333333&link_color=08488D&border_form=1&footer_color=ffffff&footer_text_color=333333&transparent=0"></script><!-- weather widget end -->
+                </div>
+            </div>
+
+            <section class="gallery-block cards-gallery ">
+                <div class="baslik"> 
+                    <h2 style="color: blue">Haberler</h2>  
+                </div>  
+                <div class="row " style="margin-top: 17px;">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal6">
+                            <a class="lightbox">
+                                <img src="image/pentagonn.jpg"  style="width: 100%"   alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">Pentagon, çalışanlarının kişisel bilgilerinin sızdırıldığını açıkladı</a></h6>
+                                <p class="text-muted card-text"> " ABD Savunma Bakanlığı temsilcisi Yarbay Joseph Buccino, RIA Novosti'ye verdiği demeçte, Pentagon'un, çalışanlarının kişisel verilerinin bilgisayar korsanlarının eline geçmesinin neden olduğu koşulları ve zararlarını araştırdığını söyledi. Buccino, Savunma Bakanlığı'nın 4 Ekim'de çalışanlarının kişisel verilerinin...</p>
+                            </div>
+                        </div>
+
+                    </div><!pentagon!>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal7">
+                            <a class="lightbox">
+                                <img src="image/yapay-yasam.jpeg" style="width: 100%" alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">Yaşıyor! Bilim adamları bir kuantum bilgisayarda 'Yapay Yaşam' oluşturdular.</a></h6>
+                                <p class="text-muted card-text"> " Bilim kurgu hikayelerindeki simülasyon teorilerinin mihenk taşı olan yapay yaşam kavramı, ilk defa gerçek oldu. Bilim insanları, bir kuantum bilgisayar kullanarak tarihin ilk “yapay yaşamını” meydana getirdiler. Aklınızı allak bullak edecek, ....</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal8">
+                            <a class="lightbox">
+                                <img src="image/android.malware-610x423.jpeg" style="width: 100%"  alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">Android Cihazlara Sızarak Veri Çalan Yeni Bir Casus Yazılım Tespit Edildi</a></h6>
+                                <p class="text-muted card-text"> " Bitdefender Antivirüs’ün güvenlik araştırmacılarının keşfettiği yeni bir casus yazılım, uygulamalar aracılığıyla Android cihazlara sızarak telefondaki pek çok veriyi sızdırıyor. Casus yazılımlar, telefon...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal9">
+                            <a class="lightbox">
+                                <img src="image/android-logo-796x398.jpg" style="width: 100%"    alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">ZooPark ! Android’in Yeni Kabusu</a></h6>
+                                <p class="text-muted card-text"> ZooPark Android'li telefonların neredeyse tamamını dinleyip parolaları, fotoğrafları çalabilen, fotoğraf ve video çekebilen, Telegram, WhatsApp ve diğerlerinden veri sızdırabiliyor. Yeni keşfedilen bu zararlının, telefonunuzda yapamadığı bir şey, neredeyse yok! Üstelik bunlara WhatsApp ve Telegram'dan bilgi çalmak bile dahil... ZooPark'ın... </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal10">
+                            <a class="lightbox">
+                                <img src="image/botnet.png" style="width: 100%"    alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">Büyüyen Tehlike GPON Router'lar BOTNET Saldırıları İçin Kullanılıyor!</a></h6>
+                                <p class="text-muted card-text"> GPON routuerlardaki açıklanan iki kritik güvenlik açığı ile BOTNET sahipleri kendilerini bu zafiyeti kullanarak sayılarını arttırmaya çalışıyor. GPON Router da yayınlanan kritik güvenlik açıklarından birincisi kimlik doğrulamayı atlatmak için kullanılabilirken (CVE-2018-10561), ikinci zafiyet ... </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal11">
+                            <a class="lightbox">
+                                <img src="image/is-your-vpn-leaking.jpg" style="width: 100%"   alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">Popüler 3 VPN Hizmeti IP Adresinizi Sızdırıyor</a></h6>
+                                <p class="text-muted card-text"> VPN (Virtual private network = Sanal Ağ )nedir ? VPN uzaktan erişim yoluyla farklı ağlara bağlanmayı sağlayan internet teknolojisidir. VPN sanal bir ağ uzantısı oluşturduğu için, VPN kullanarak ağa bağlanan bir cihaz, fiziksel olarak bağlıymış gibi o ağ üzerinden veri alışverişinde...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <ul class="pagination" style="justify-content: center;">
+                <li class="page-item disabled"><a class="page-link bg-dark deactive" href="#" style="color:orange; font-size: 20px;">Previous</a></li>
+                <li class="page-item "><a class="page-link bg-light" href="#" style="color:black; font-size: 20px;">1</a></li>
+                <li class="page-item"><a class="page-link bg-dark" href="2.sayfa.html" style="color:white; font-size: 20px;">2</a></li>
+                <li class="page-item"><a class="page-link bg-dark" href="3.sayfa.html" style="color:white; font-size: 20px;">3</a></li>
+                <li class="page-item"><a class="page-link bg-dark" href="2.sayfa.html" style="color:blue; font-size: 20px;">Next</a></li>
+            </ul>
+        </div>
+
+
+
+        <div class="jumbotron text-center mb-0 mt-4 bg-dark">
+            <div class="container">
+                <a id="i1" class="fab fa-facebook-f" href="https://www.facebook.com"></a>
+                <a id="i2" class="fab fa-instagram" href="https://www.instagram.com"></a>
+                <a id="i3" class="fab fa-twitter" href="https://www.twitter.com"></a>
+                <a id="i4" class="fab fa-youtube" href="https://www.youtube.com"></a>
+                <br><br><br>
+                <p>@Copyright 2019</p>
+            </div>  
+        </div>
+
+        <div class="modal fade" id="de-modal1">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Apple’a 1 milyon dolarlık dava açıldı</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+
+                    <div class="modal-body" style="background: black">
+
+                        <img src="image/apple1.JPG"  
+                             style="width:100%">
+
+                        <p style="color: white">
+                            ABD’de 18 yaşındaki bir genç, yüz tanıma sisteminin yanlışlıkla tutuklanmasına sebebiyet verdiği gerekçesiyle Apple’a dava açtı. Dava dosyasında, Apple’ın sistemi müşterilerinden gizli kullandığı da belirtildi.</p>
+                        <p style="color: white">
+                            New York’ta yaşayan Ousmane Bah isimli genç, geçen yıl Kasım ayında evine gelen polisler tarafından hırsızlık suçlamasıyla tutuklandı.</p>
+                        <p style="color: white">
+
+                            Bah, polisin kendisini Boston, New Jersey ve New York’taki AppStore’lardan eşya çalmakla suçlandığını ve mağazalardaki kameraların incelenmesi sonucu kendisinin fotoğrafına ulaştıklarını söylediğini belirtti. Ancak genç adam, söz konusu hırsızlığın gerçekleştiği gün bahsedilen eyaletlerde bile olmadığını, lise mezuniyet törenine katılmak üzere Manhattan’da olduğunu söyledi.</p>
+                        <p style="color: white">
+                            Bunun üzerine, New York Şehri Polis Teşkilatı’ndan bir dedektif, olayı detaylıca araştırdıktan sonra görüntülerdeki kişinin Bah ile bir alakası olmadığını ortaya çıkardı ve böylece genç adam üzerine atılan suçlardan kurtuldu.</p>
+                        <p style="color: white">
+                            ‘Yanlışlıkla’ evi polisler tarafından basılarak gözaltına alınan ve tutuklanan Bah ise ABD’li teknoloji devine 1 milyon dolarlık dava açtı.
+                        </p>
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+
+
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal2">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Facebook, Milyonlarca Instagram Kullanıcısının Parolasını Düz Metin Olarak Saklamış</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/hack-facebook-password.jpg" style="width:100%" >
+                        <p style="color: white">
+                            Facebook, yalnızca on binlerce Instagram parolasını düz metin olarak saklandığı makalesini güncelledi ve sorunun milyonlarca Instagram kullanıcısını etkilediğini belirtti.</p>
+                        <p style="color: white">
+                            Facebook, Mart ayında gerçekleştirdiği açıklamada milyonlarca Facebook kullanıcısının parolasını düz metin olarak saklandığını itiraf etmişti. Bununla birlikte Facebok, konuyla ilgili olarak yayınladığı bildiride bu durumdan yüz milyonlarca Facebook Lite kullanıcısının ve yalnızca on binlerce Instagram kullanıcısının etkilendiğini belirtmişti.</p>
+                        <p style="color: white">
+
+                            Kullanıcıların e-posta adreslerini ve parolalarını düz metin olarak saklanması demek, Facebook sunucularına erişimi olan herhangi bir Facebook çalışanının herhangi bir kullanıcının Facebook parolasını kolaylıkla görüntüleyebilmesi anlamına geliyor. Bu nedenle Facebook çalışanları ile aranızı iyi tutsanız iyi olur.</p>
+                        <p style="color: white">
+                            Facebook, konuyla ilgili bilgilendirme gerçekleştirdiği metinde dün akşam itibarıyla bir güncelleme gerçekleştirdi. Makaleye yapılan güncellemede Instagram kullanıcılarının parolalarını düz metin olarak saklandığı yeni günlükler keşfedildiği ve söz konusu şifre skandalından milyonlarca Instagram kullanıcısının etkilendiği belirtildi.</p>
+                        <p style="color: white">
+                            Facebook’un neden yeni bir gönderi oluşturmak yerine eski gönderiyi güncellemeyi tercih ettiği bilinmiyor ancak söz konusu bilgilerin daha az kişiye ulaşmasını umduğu düşünülüyor. Facebook’un unuttuğu şey, şirketin son birkaç yıldır karıştığı skandallar nedeniyle sürekli olarak dikkatle takip edildiği.
+                        </p>
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal3">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Facebook, Doğrulama Yaparken E-Posta Hesabının Şifresini İstiyor</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+
+                    <div class="modal-body" style="background: black">
+
+                        <img src="image/facebook-dogrulama.png" style="width:100%">
+                        <p style="color: white">
+                            Facebook, kullanıcılarının güvenliğini tehlikeye atabilecek, şimdiye kadarki en kötü kullanıcı doğrulama mekanizmasını uygularken yakalandı.
+                            Facebook yeni kullanıcılardan hesap kaydı için sağladıkları e-posta adresine gönderilen gizli bir kodu veya bir URL’i onaylamalarını ister.</p>
+                        <p style="color: white">
+                            Bu şekilde Facebook bazı yeni kayıtlı kullanıcılardan e-posta hesaplarının şifrelerini girmeleri istenildiğini belirtti; bu, güvenlik uzmanlarına göre kullanıcılarının gizliliğini ve güvenliğini tehdit edebilecek korkunç bir olay.</p>
+                        <p style="color: white">
+                            Facebook, kullanıcıların kaydını doğrulamak için e-posta ve şifrelerini istiyor, Facebook böylece e-posta adreslerini “otomatik olarak” doğrulayabiliyor.</p>
+                        <p style="color: white">
+                            Twitter kullanıcısı E-Sushi bu durumu şöyle ifade etti.
+                        </p>
+                        <p style="color: white" >
+                            “3 farklı IP ve 2 farklı tarayıcı kullanarak 3 farklı e-posta ile 3 kez kayıt yaptırmayı kendim test ettim. 3 kayıtın 2’sinde ön sayfadaki kayıt formunu tıkladıktan hemen sonra bu e-posta ve şifre doğrulama işlemiyle 
+                        </p>
+                        karşılaştım.”
+                        <p style="color: white" >
+                            Bu haberin Facebook’un çalışanlarının erişimine açık olan şirket kayıtlarında senelerce düz metin olarak güvensiz şekilde ” yüz milyonlarca kullanıcının şifrelerini” sakladığını kabul etmesinden sadece iki hafta sonra ortaya çıkması ironik.
+                        </p>
+                        <p style="color: white" >
+                            Sağlanan açıklamada Daily Beast , Facebook böyle “şüpheli” doğrulama işleminin varlığını doğruladığını ama aynı zamanda sunucudaki kullanıcı tarafından sağlanan e-posta şifrelerini saklamadıklarını iddia etti.
+                        </p>
+                        <p style="color: white" >
+                            Facebook ayrıca, tamamen e-posta şifresi sorma uygulamasının sona ereceğini söyledi.
+                        </p>
+
+                        <p style="color: white" >
+                            Facebook, “Şifre doğrulama seçeneğinin bu konuda en iyi yol olmadığını anlıyoruz, bu yüzden bunu sunmayı bırakacağız” dedi.
+                        </p>
+                        <p style="color: white" >
+                            Facebook ayrıca, kullanıcıların hesaplarını doğrulamak için e-posta şifrelerini istediklerini belirterek, telefon numaralarına gönderilen bir şifre veya “Yardıma mı ihtiyacınız var” ı tıklayarak e-posta adreslerine bir bağlantı gibi diğer doğrulama yöntemlerini seçebileceklerini belirtti.
+                        </p>
+                    </div><!-- model-body -->
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal4">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Amazon CEO’su Jeff Bezos’un Telefonu Hack’lendi!</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/jeff.png" style="width:100%">
+                        <p style="color: white">
+                            Amazon patronu Jeff Bezos’un telefonu Suudiler tarafından hack’lenmiş!
+
+                        </p>
+                        <p style="color: white">
+                            Siber saldırılara ilişkin sizlerle çok sayıda haber paylaşıyor ve dijital dünyada korunmanın ne kadar önemli olduğunu yoğunlukla vurguluyoruz. Görünüşe göre Jeff Bezos’un da bu konuda bilgilenmesi gerekiyor. Zira gelen son haberlere göre Amazon ve Washington Post’un patronu Jeff Bezos’un telefonu Suudi Arabistan tarafından hack’lenmiş!</p>
+                        <iframe width="560" height="315" style="width:100%" src="https://www.youtube.com/embed/BBXyoo6Jpao" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        <p style="color: white">
+
+                            The Daily Beast gazetesinde yer alan habere göre, Jeff Bezos, şu sıralar Suudi Arabistan tarafından mercek altında. Daha önce adı American Media Inc ile ilgili şantaj haberleriyle geçen Bezos, bu defa ise Suudiler tarafından hack’lenmiş. Bunu ortaya çıkartan kişi ise, Jeff Bezos’un tuttuğu Gavin de Becker. Dünyanın en etkili insanlarını korumakla ünlü Gavin de Becker tarafından yapılan açıklamaya göre, Suudiler, Bezos’un telefonuna erişerek bazı özel bilgileri edinmişler. Suudiler’in Bezos’un telefonuna sızmak için ise en önemli neden ise Cemal Kaşıkçı suikasti</p>
+                        <p style="color: white">
+                            Bilindiği gibi Jeff Bezos, yalnızca Amazon’un sahibi değil; aynı zamanda ilk sayısını 1877 yılında çıkartmış köklü gazete Washington Post’un da sahibi. Suudilerin, Bezos’un telefonunu hack’lemekteki sebebinin, Washington Post‘ta Cemal Kaşıkçı suikasti ile ilgili yayınlanan haberlerle ilişkili olabileceği söyleniyor. Ancak bu konu henüz netlik kazanmış değil, araştırmalar sürüyor.</p>
+
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal5">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Google’ın Kullanıcılarına Yapmış Olduğu 1 Nisan Şakaları</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/google1.jpg" style="width: 100%"style="width:100%">
+                        <p style="color: white">
+                            Her sene olduğu gibi bu sene de 1 Nisan şakaları geleneğini devam ettiren Google, geçtiğimiz yıllarda Mavi Gmail, Google Hazine haritaları, YouTube kapanıyor ve “Pokemon Challenge” oyunu gibi şakalarla dikkat çekmişti. Özellikle geçen sene Google Cloud Humus API ve Google Maps’te “Waldo Nerede?” gibi şakalarıyla ses getiren şirket, bu yıl da şakalarıyla dikkat çekiyor. İşte merak edenler için şirketin bu yıl yaptığı tüm şakaların listesi.
+                        </p>
+                        <h4><a href="https://www.blog.google/products/maps/sssnakes-map/"> Google Maps’te Snake</a></h4>
+                        <img src="image/snake_GIF.gif"  style="width:100%" >
+                        <p style="color: white">
+                            Geçtiğimiz yıl Google Maps’te Waldo’ya yer veren şirket, bu yıl bu geleceği bozmadan efsanevi Snake oyununu Google Maps’e taşıdı. Bu sayede Kahire, Londra, San Francisco, Sao Paulo, Sidney ve Tokyo haritaları üzerinde yılan oynayabiliyorsunuz. Oyunu, Google Maps’in Android ve iOS uygulamalarında Menüde yer alan “Snake Oyna” seçeneğine bastıktan sonra oynayabildiğinizi de belirtelim. Snake oyunundaki yılanı bir tren olarak kurgulayan Google, oyunu başlatacağınız şehri seçtikten sonra mümkün olduğunca fazla insanı trene almanız gerektiğini belirtiyor. Bu şakanın uygulamada 1 haftadan fazla bir süre aktif olacağını da ekleyelim.  Snake hayranları oyunu uygulama yerine masaüstünde oynamayı tercih ederse, bunun için özel olarak hazırlanmış siteyi de ziyaret edebilir.</p>
+                        <h4><a href="https://landing.google.co.jp/---o/"> Gboard Spoon Bending Version </a></h4>
+
+                        <iframe width="560" height="315" style="width:100%" src="https://www.youtube.com/embed/DeJY5d14qKs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        <p style="color: white">
+
+                            Geçtiğimiz yıl da Gboard özelinde şakalar hazırlayan Google, bu yıl GBoard tarafında Japonya ekibinin mizah anlayışıyla hareket etti.  Ekibin çektiği videoda tanıtılan yeni bir teknoloji, GBoard’da harfler ve kelimeler girerek kaşık bükmenizi sağlıyor. Esnekliğe odaklanan bu yeni teknolojiden faydalanmak isteyenler ise  kaşığa bir aparat yerleştirerek, kaşığı bilgisayara ve mobil telefonlara bağlayabiliyor. Çekilen bu mizahi videoya göre Gboard ilerleyen dönemlerde bu esnekliği farklı fiziksel bir araçlara da getirecek. Videoda bahsedildiği üzere şimdilik bu kaşıkların bebekler tarafından rağbet göreceği düşünülüyor.</p>
+                        <h4><a href="https://www.youtube.com/watch?v=nsPQvZm_rgM"> Google Tulip </a></h4>
+
+                        <iframe width="560" height="315" style="width:100%"src="https://www.youtube.com/embed/nsPQvZm_rgM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                        <p style="color: white">
+                            Google Hollanda ekibi çektiği bu videoda artık Google Home üzerinden Laleler ile konuşabildiğinizi duyurdu. “Hey Google, lalem ile konuş” komutuyla başlatacağınız bu konuşmanın yapay zekadan güç aldığını da belirtelim. İnsanlara ait birçok dil ile Lale dili arasında çeviri yapan Google Home, Lalelerin ihtiyaçlarını dile getirmesinde büyük rol oynuyor. Yılda 12. 5 milyar lale üreten Hollanda, bu teknolojiyi dünyaca ünlü çiçek bahçesi Keukenhof’te test etti. Google’ın bu yeni çeviri teknolojisi için Wageningen University  Research ile işbirliği yaptığını da belirtelim.</p>
+                        <h4><a href="https://assistant.google.com/intl/tr_tr/platforms/phones/"> Google Assistan </a></h4>
+                        <img src="image/Google-Asistan.png" style="width:100%"   >
+                        <p style="color: white">
+                            Google Asistan’a “April Fools” komutunu verdiğinizde, Asistan size tarihe geçen efsanevi 1 Nisan şakalarını aktarıyor. Eğer Google Asistan’a Türkçe olarak 1 Nisan demeyi tercih ederseniz, sizi başınıza gelebilecek şakalara dair uyarmayı ihmal etmiyor.
+                        </p>
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal6">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Pentagon, çalışanlarının kişisel bilgilerinin sızdırıldığını açıkladı</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/pentagonn.jpg" style="width:100%">
+                        <p style="color: white">
+                            ABD Savunma Bakanlığı temsilcisi Yarbay Joseph Buccino, RIA Novosti’ye verdiği demeçte, Pentagon’un, çalışanlarının kişisel verilerinin bilgisayar korsanlarının eline geçmesinin neden olduğu koşulları ve zararlarını araştırdığını söyledi.
+                        </p>
+
+                        <p style="color: white">
+                            Buccino, Savunma Bakanlığı’nın 4 Ekim’de çalışanlarının kişisel verilerinin sızdırıldığını belirlediğini ve konuyla ilgili Kongre’yi bilgilendirdiğini 
+
+                        <p style="color: white">
+
+                            Buccino, sözkonusu bilgilerin Pentagon personeline seyahat hizmeti veren bir taşeron şirketi aracılığıyla gerçekleştiğini ve Savunma Bakanlığı’nın konuyla ilgili soruşturma başlattığını da belirtti.</p>
+
+                        <p style="color: white">
+                            Buccino, açıklamasında şu sözlerinede yer verdi: “Bu siber saldırının yalnızca Savunma Departmanı personelinin küçük bir bölümüne hizmet sağlayan tek bir ticari satıcıya yönelik gerçekleştirildiğini anlamak önem arz ediyor.” Siber saldırıya uğrayan bu satıcının kim olduğu hakkında herhangi bir açıklama yapılmazken, saldırı hakkındaki ekstra detaylar da şimdilik gizli tutulmakta.</p>
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal7">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Yaşıyor! Bilim adamları bir kuantum bilgisayarda 'Yapay Yaşam' oluşturdular.</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/yapay-yasam.jpeg"  style="width:100%">
+                        <p style="color: white">
+                            Bilim kurgu hikayelerindeki simülasyon teorilerinin mihenk taşı olan yapay yaşam kavramı, ilk defa gerçek oldu. Bilim insanları, bir kuantum bilgisayar kullanarak tarihin ilk “yapay yaşamını” meydana getirdiler. Aklınızı allak bullak edecek, hayatınızda duyacağınız en tuhaf haberlerden birisiyle karşınızdayız.
+                        </p>
+
+                        <p style="color: white">
+                            İspanya’daki Bask Üniversitesi araştırmacıları, IBM tarafından üretilen gelişmiş kuantum bilgisayar QX4’ü kullanarak üreyebilen, mutasyon geçiren, evrimleşen ve ölen bir yapay yaşam formu ürettiler. Gerçek yaşam formlarında görülen bu davranışlar, kuantum bilgisayarların çok yönlü işlem yapabilme becerisi sayesinde simüle edilebildi.  </p>
+
+
+
+
+                        <p style="color: white">
+
+                            Araştırmacıların amacı, yaşamın kökenine kuantum mekaniği ile açıklama getirip getiremeyeceklerini anlamak. Bunun için de doğal yaşam formları gibi davranabilen, baştan sona yapay olan bir simülasyon gerekiyordu. Ekibin üyelerinden Lucas Lamata, “Araştırmamız, daha önce birbirleriyle bağlantısı olmayan yapay yaşam kavramı ve kuantum hesaplama tekniklerini, ilk kez bir araya getirdi.” dedi. Yapay ortamda biyolojik sistemleri yeniden üretebilmenin amaçlandığı çalışmaların daha farklı amaçları da var. Bilim insanları, söz konusu çalışmaların modern insanın iletişim anlayışını, bilime yaklaşımını derinden sarsabilir.</p>
+                        <img src="image/yapay-zeka.jpeg" style="width:100%">
+
+                        <p style="color: white">
+                            Bir başka deyişle; kuantum bilgisayarlarla, yaşayan canlılar kadar “hayatta olan” yapay bedenler üretebilir miyiz? Bu, cevabına göre dünyanın dengesini değiştirebilecek bir sorudur. Zira insanın açık bir tabirle yeni bir yapay yaşam formu oluşturması söz konusuysa, günümüzdeki çoğu inanç ve anlayışa karşı, toplumlar bile cephe alabilir.</p>
+
+                        <img src="image/ibm.jpg" style="width:100%"  >
+                        <p style="color: white">
+                            Bir DNA molekülündeki değişimlerin, kuantum fiziğine dayalı bilgisayar ortamlarında gerçekleşme durumunu merak eden araştırmacılar, iki kuantum bitini (kübit) temsili olarak çalışmaların merkezine konumlandırdılar. Kübitler, sıradan bilgisayarlardaki 0 ve 1 seçeneklerine ek olarak, süperizasyon adı verilen bilgi formlarına sahiplerdir. Yani evet ve hayır seçeneklerinin yanında, kuantum bilgisayarlarda “belki” seçeneği de devreye girer.
+                        </p>
+                        <img src="image/dna-768x492.jpeg" style="width:100%"   >
+                        <p style="color: white">
+                            Bir diğer araştırmacı Enrique Solano, “Ekonomi, tasarım, aerodinamik ve karmaşık biyolojik sistemlerdeki uygulamalar için ortak nokta kuantum olabilir. Bu araştırmanın sonuçları, yapay zekâ yöntemleriyle doğal bir şekilde birleştirilebilir. Gelecekteki potansiyel çalışmaların seyrini değiştirecek bakış açıları ortaya çıkartabiliriz.” açıklamasında bulundu. 
+
+                            İnsan ürünü olan bir ortamda, insan ürünü olan bir yapay yaşam… Bakalım bu araştırmanın ışığında, gelecek yıllarda neler göreceğiz. 
+                        </p>
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal8">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Android Cihazlara Sızarak Veri Çalan Yeni Bir Casus Yazılım Tespit Edildi</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/android.malware-610x423.jpeg"  style="width:100%">
+                        <p style="color: white">
+                            Bitdefender Antivirüs’ün güvenlik araştırmacılarının keşfettiği yeni bir casus yazılım, uygulamalar aracılığıyla Android cihazlara sızarak telefondaki pek çok veriyi sızdırıyor.
+
+
+
+                        <p style="color: white">
+                            Casus yazılımlar, telefonlarımızda erişebildikleri bilgilerin sınırsızlığı sebebiyle oldukça tehlikeli ve bu konuda kullanıcı olarak kesinlikle bilinçli olunması gerekiyor. Aksi takdirde bu yazılımlar ruhumuz bile duymadan telefonumuza sızarak fotoğraflarımızı, SMS’lerimizi, konumumuzu ve telefon görüşmelerimizi dahi kayıt altına alıyor.
+
+                        </p>
+                        <img src="image/android_malware.png" style="width:100%"   >
+
+
+
+                        <p style="color: white">
+
+                            Son dönemde özellikle İsrail ve Rusya’dan gelen veriler sonucu keşfedilen Triout isimli casus yazılım da bunun en net örneklerinden biri. Bitdefender Antivirüs’ün güvenlik yetkilileri tarafından keşfedilen bu casus yazılım; Android cihazlara sızarak kullanıcıların telefon görüşmelerini, mesajlarını, fotoğraflarını, videolarını ve lokasyonlarını yetkisiz bir şekilde kaydediyor.
+
+                        </p>
+
+                        <p style="color: white">
+                            Pek çok farklı uygulama aracılığıyla telefonlara sızdığı belirlenen Triout, oldukça gelişmiş bir yazılım ve ne yazık ki kullanıcıların durumu fark etmesi pek mümkün değil. Elde ettiği bilgileri siber saldırganların sunucularına aktardığı belirtilen Triout’un Rusya’da ortaya çıktığı ancak yoğun olarak İsrail’de gözlemlendiği açıklandı.
+
+                        </p>
+
+
+
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal9">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">ZooPark ! Android’in Yeni Kabusu</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/android-logo-796x398.jpg"  style="width:100%">
+                        <p style="color: white">
+                            ZooPark Android’li telefonların neredeyse tamamını dinleyip parolaları, fotoğrafları çalabilen, fotoğraf ve video çekebilen, Telegram, WhatsApp ve diğerlerinden veri sızdırabiliyor.
+
+
+
+                        <p style="color: white">
+                            Yeni keşfedilen bu zararlının, telefonunuzda yapamadığı bir şey, neredeyse yok! Üstelik bunlara WhatsApp ve Telegram’dan bilgi çalmak bile dahil…
+
+                        </p>
+
+                        <p style="color: white">
+
+                            ZooPark’ın dört nesillik bir geçmişi bulunuyor. İlk başta “sadece” hesap bilgilerini ve kişi listesini çalabilen zararlı, son nesil itibariyle tuş basışlarını, pano verilerini, arama geçmişini ve tarayıcı geçmişini, bellek kartındaki fotoğraf ve videoları, çağrı kayıtlarını ve sesini, Telegram gibi güvenli uygulamalardaki verileri çalabiliyor. Zararlı canı istediğinde fotoğraf, video, ses ve ekran görüntüsü kaydedebiliyor ve bundan kullanıcının haberi olmuyor. Zararlı, çuvalına doldurduğu verileri kaçırabilmek için sessizce çağrılar yapabiliyor, mesajlar gönderebiliyor ve shell komutları çalıştırabiliyor.
+
+                        </p>
+                        <img src="image/androidde-yeni-kabus-iste-zoopark-600x338.jpg" style="width:100%"  >
+                        <p style="color: white">
+                            Kaspersky, zararlıya maruz kalan 100’den az kullanıcıya rastladığını söylüyor. Firmaya göre bu durum ve bazı ipuçları, “zararlının hedeflerinin özellikle seçildiğini” gösteriyor. Kaspersky, zararlının bizzat onu kullanan devlet tarafından geliştirilmemiş olabileceğini, “en son sürümünün izleme araçları satanlardan alınmış olabileceğini” belirtiyor. Firma bunun sürpriz olmayacağını düşünüyor çünkü casusluk araçları, devletler arasında giderek daha popüler bir hale geliyor. Bu araçların birçoğunun ABD’den çıktığı biliniyor. Shadow Brokers’ın NSA’den çaldığı güvenlik açıkları, bunun bir örneği. Bir başka deyişle bir hacker grubu, dünyanın en güvenli ajanslarından biri kabul edilen bir yerden zararlı çalmayı başarmıştı.
+
+                        </p>
+
+
+                        <p style="color: white">
+                            Kasperksy, virüsün hangi ülke tarafından kullanıldığını açıklamazken, ülkenin virüsü kendisinin geliştirmemiş, bunun yerine gözetleme araçları satan üçüncü taraf bir şirketten satın alınmış olabileceğini açıkladı. Firsh, son dönemde Orta Doğulu devletlerin giderek daha yoğun şekilde bu araçlara yöneldiğini belirtti.
+
+
+                        </p>
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal10">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Büyüyen Tehlike GPON Router’lar BOTNET Saldırıları İçin Kullanılıyor!
+                        </h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/botnet.png"  style="width:100%">
+                        <p style="color: white">
+                            GPON routuerlardaki açıklanan iki kritik güvenlik açığı ile BOTNET sahipleri kendilerini bu zafiyeti kullanarak sayılarını arttırmaya çalışıyor. GPON Router da yayınlanan kritik güvenlik açıklarından birincisi kimlik doğrulamayı atlatmak için kullanılabilirken (CVE-2018-10561), ikinci zafiyet ile uzaktan root olarak kod çalıştırmaya izin vermektedir.(CVE-2018-10562)  BOTNET sahipleri zafiyetleri sömürerek kalıcı olarak bağlantıyı sürdürmek için kendilerine bir arka kapı oluşturuyorlar.
+                        </p>
+
+
+                        <p style="color: white">
+                            Zafiyet içeren 240.000 cihaz olduğu tahmin edilmektedir. 360 Netlab araştırmacıları, tehdit oluşturan cihazların, güvenlik açığı bulunan yönlendiricilerin botnet kötü amaçlı yazılım ağlarına dahil etmek için her iki kusurdan da yararlanmaları konusunda uyardı.
+
+                        </p>
+
+                        <p style="color: white">
+
+                            Şimdi, araştırmacılar, bu sorunları aktif olarak kullanan 5 farklı alt başlıklı botnet ağını detaylandıran yeni bir rapor yayınladılar:
+
+                        </p> 
+                        <p style="color: white">
+                            Mettle Botnet – Komuta kontrol paneli ve bu botnet tarayıcısı, Vietnam’daki bir sunucuda barındırılıyor. Saldırganlar, savunmasız yönlendiricilere kötü amaçlı yazılım uygulamak için açık kaynaklı bir Mettle saldırı modülünü kullanıyorlar.
+
+                        </p>
+                        <p style="color: white">
+                            GMuhstik Botnet – Bu botnet, aslında geçen hafta kritik bir Drupal kusurunu aktif olarak kullanmasıyla ortaya çıktı ve Müjav’un en son sürümü, JBOSS ve DD-WRT ürün yazılımlarındaki kusurların yanı sıra GPON açıklarını da kullanmaya başladı.
+
+
+                        </p>
+                        <p style="color: white">
+                            Mirai Botnet – GPON exploit ayrıca birkaç yeni türeve entegre edildi (farklı bilgisayar grupları tarafından çalıştırıldı) rekor kıran DDoS saldırılarını başlatmak için kullanıldı. Daha sonra Mirai IoT botnet 2016 yılında ilk ortaya çıkan ve açık kaynak kodlu botnet oldu.
+
+
+
+
+                        </p>
+                        <p style="color: white">
+                            Hajime Botnet – Başka bir ünlü IoT botnet, Hajime, aynı zamanda yüz binlerce ev yönlendiricisini hedef alan koduna GPON zafiyetini de ekledi.
+
+
+
+
+
+                        </p>
+                        <p style="color: white">
+                            Hajime Botnet – Başka bir ünlü IoT botnet, Hajime, aynı zamanda yüz binlerce ev yönlendiricisini hedef alan koduna GPON zafiyetini de ekledi.
+
+
+
+
+
+                        </p>
+                        <p style="color: white">
+
+                            Satori Botnet – Geçen yıl sadece 12 saat içinde 260.000 cihazı enjekte eden kötü amaçlı botnet olan Satori’nin (Okiru olarak da bilinir) en son versiyonunda GPON zafiyetini de içerdiği gözlemlendi.
+                            Yapılan PoC çalışmasına <a href="https://github.com/f3d0x0/GPON">buradan</a> ulaşabilirsiniz.
+                        </p>
+                        <iframe width="560" height="315" style="width:100%" src="https://www.youtube.com/embed/2tgRJa58jY0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal11">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Popüler 3 VPN Hizmeti IP Adresinizi Sızdırıyor
+                        </h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/is-your-vpn-leaking.jpg"  style="width:100%">
+                        <h5 style="color: red">
+                            VPN (Virtual private network = Sanal Ağ )nedir ?
+                        </h5>
+                        <img src="image/avira-vpn-what-is-a-vpn.gif"  style="width:100%" >
+                        <p style="color: white">
+                            VPN uzaktan erişim yoluyla farklı ağlara bağlanmayı sağlayan internet teknolojisidir. VPN sanal bir ağ uzantısı oluşturduğu için, VPN kullanarak ağa bağlanan bir cihaz, fiziksel olarak bağlıymış gibi o ağ üzerinden veri alışverişinde bulunabilir. Kısacası Virtual Private Network (VPN), İnternet ya da başka bir açık ağ üzerinden özel bir ağa bağlanmayı sağlayan bir bağlantı çeşididir VPN bağlantısı sırasında verilerinizi şifreleyerek güvenliğinizi artırmanın yanı sıra gerçek IP adresinizi gizleyerek güvenliğinizi sağlamanın harika bir yoludur.
+                        </p>
+
+
+                        <p style="color: white">
+
+                            Ancak araştırmacılar popüler olan üç VPN hizmetinde (HotSpot Shield, PureVPN ve Zenmate) yapılan bir dizi gizlilik testleri sonucunda dünya çapında milyonlarca kullanıcının gizliliğini tehlikeye atabilecek zafiyetler buldular. Bu zafiyetler sayesinde VPN kullanıcılarının gerçek ip adresleri tespit edilebileceğini gösterdiler.
+
+                        </p>
+
+                        <p style="color: white">
+                            ZenMate ve PureVPN’deki sorunlar henüz yamalanmadıkları için tam olarak açıklanmadı ancak ZenMate VPN’inde bulunan sızıntının HotSpot Shield ve PureVPN’ine göre daha az olduğunu açıkladılar. Araştırmacılar HotSpot Shield hızlı dönüşünün övgüye değer olduğunu belirterek HotSpot Shield ekibiyle ciddi bir şekilde çalıştıklarını ve açıkları kapattıklarını bunun HotSpot Shield  ekibinin kullanıcılarına verdiği önemi hissettiklerini belirttiler.
+
+                        </p>
+                        <h5 style="color: red">Hotspot Shield’da Bulunan Güvenlik Açıkları
+
+                        </h5>
+
+                        <p style="color: white">
+                            Araştırmacılar Hotspot Shield’ da bulunan zafiyetler sadece Chrome eklentisinde olup mobil ve masaüstü uygulamaları bu güvenlik açıklarından etkilenmediğini açıkladılar.
+                        </p>
+                        <h5 style="color: red">CVE-2018-7879 Tüm Trafiği Ele Geçirme:
+                        </h5>
+                        <p style="color: white">
+                            CVE-2018-7879 olarak bulunan güvenlik açığı, kurbanın Hotspot Shield kullanarak kötü amaçlı bir siteyi ziyaret ettiğinde tüm trafiğinin saldırganın proxy sunucusuna yönlendirir.
+
+
+                        </p>    
+                        <p style="color: white">
+                            Araştırmacılar bu yönlendirme işleminin Hotspot Shield Chome uygulamasında kullanılan aşağıdaki PAC (proxy auto config) script yüzünden olduğunu açıkladırlar.
+
+
+                        </p>   
+                        <p style="color: white">
+                            function FindProxyForURL(url, host) {<br>
+                            if(url.indexOf(‘act=afProxyServerPing’) != -1) {<br>
+                            let parsed = url.match(/act=afProxyServerPing&server=([^&]+)/);<br>
+                            if(parsed && parsed[1]) return ‘https ‘+parsed[1]+’:443; DIRECT;’;<br>
+                            }
+
+                        </p>   
+                        <p style="color: white">
+                            Bu script geçerli URL’de act = afProxyServerPing sorgu parametresi olup olmadığını algılar ve varsa, tüm trafiği sunucu parametresi tarafından sağlanan Proxy e yönlendirir. Kurban böyle bir URL ziyaret ettiğinde tüm trafiği saldırganın proxy sunucusuna gidebilir.
+
+
+                        </p>   
+                        <h5 style="color: red">CVE-2018-7878 DNS Sızıntısı
+                        </h5>
+
+                        <h5 style="color: red">CVE-2018-7880 IP Sızıntısı
+
+                        </h5>
+                        <p style="color: white">
+                            Hotspot Shield Chome uygulamasında tespit edilen bu zafiyet aşağıdaki koddan kaynaklanmaktadır.
+
+
+
+                        </p>   
+                        <p style="color: white">
+                            let whiteList = /localhost|accounts\.google|google\-analytics\.com|chrome\-signin|freegeoip\.net|event\.shelljacket|chrome\.google|box\.anchorfree|googleapis|127\.0\.0\.1|hsselite<br>|firebaseio|amazonaws\.com|shelljacket\.us|coloredsand\.us|ratehike\.us|pixel\.quantserve\.com<br>|googleusercontent\.com|easylist\-downloads\.adblockplus\.org|hotspotshield<br>|get\.betternet\.co|betternet\.co|support\.hotspotshield\.com|geo\.mydati\.com|control\.kochava\.com/;<br>if(isPlainHostName(host) || shExpMatch(host, ‘*.local’) || isInNet(ip, ‘10.0.0.0’, ‘255.0.0.0’) || isInNet(ip, ‘172.16.0.0’, ‘255.240.0.0’) || isInNet(ip, ‘192.168.0.0’, ‘255.255.0.0’) || isInNet(ip, ‘173.37.0.0’, ‘255.255.0.0’) || isInNet(ip, ‘127.0.0.0’, ‘255.255.255.0’) || !url.match(/^https?/) || whiteList.test(host) || url.indexOf(‘type=a1fproxyspeedtest’) != -1) return
+                        </p>   
+                        <img src="image/VPN-hotspot-shield-ip_leak-1024x612.png"  style="width:100%" >
+                        <h5 style="color: red">Bu kod bloğunda :
+                        </h5>
+
+                        <ul type="square" style="color: white">
+                            <li>Localhost içeren herhangi bir alan, proxy’yi bypass edecektir. Örneğin localhost.foo.bar.com
+                            <li>type = a1fproxyspeedtest parametresi olan bir urli ziyaret ettiği zaman tüm trafiği sunucu parametresi tarafından sağlanan proxy yönlendirdiği anlamına gelir. Bu nedenle HSS’yi (Host Security Service) kullanan birini https://example.com/?act=afProxyServerPing&server=mywebsite.com adresine yönlendirirse, söz konusu web sitesi kullanıcının gerçek IP adresinden bir istek alır. Bu sayede kurbanın gerçek ip adresi açığa çıkmış olur.
+                        </ul>
+
+
+
+
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+
+    </body>
+
+
+</html>
