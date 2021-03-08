@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cyber Channel</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0;">
+
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- cards gallery -->   
+        <link rel="stylesheet" href="cards-gallery.css">   
+
+        <!--card animation-->    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+
+        <!--Google icon-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <!-- social icons -->
+        <!--Font Awesome 5 icon-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    </head>
+
+    <body style="background-color: black">
+        <div class="jumbotron text-center "style="background-color:black">
+            <h1><b>CYBER CHANNEL</b></h1>  
+            <script>
+
+                var mydate=new Date()
+                var year=mydate.getYear()
+                if (year < 1000)
+                    year+=1900
+                var day=mydate.getDay()
+                var month=mydate.getMonth()
+                var daym=mydate.getDate()
+                if (daym<10)
+                    daym="0"+daym
+                var dayarray=new Array("Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi")
+                var montharray=new Array("Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık")
+
+                myhours = mydate.getHours();
+                if (myhours >= 12) {
+                    myhours = (myhours == 12) ? 12 : myhours - 12; mm = " Akşam";
+                }
+                else {
+                    myhours = (myhours == 0) ? 12 : myhours; mm = " Sabah";
+                }
+
+                myminutes = mydate.getMinutes();
+                if (myminutes < 10){
+                    mytime = ":0" + myminutes;
+                }
+                else {
+                    mytime = ":" + myminutes;
+                };
+
+                document.write("<font color='white' face='Arial' size=2><b>" + myhours + mytime + mm + ", " + dayarray[day]+", "+montharray[month]+" "+daym+", "+year+"</b></font>")
+
+            </script>
+            <div class="container">
+
+            </div>  <!--containerın -->  
+        </div><!--jmbotron -->
+
+
+
+        <div class="sticky-top"; >
+            <nav class=" navbar-expand-md navbar bg-dark navbar-fixed-top navbar-dark" >
+                <div class="container">
+                    <button class="navbar-toggler"data-toggle="collapse" data-target="#Link1"><span class="navbar-toggler-icon"></span></button>  
+                    <div class="collapse navbar-collapse" id="Link1">
+                        <ul  class="navbar-nav">
+                            <a class="navbar-brand" href="index.html">Ana Sayfa</a>
+
+
+                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Siber Saldırılar</a>
+                                <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                                    <a  class ="dropdown-item " href="verisizintilari.html">Veri Sızıntıları</a>
+                                    <a class="dropdown-item " href="dossald%C4%B1r%C4%B1lar%C4%B1.html">DOS/DDOS Saldırıları</a>
+
+                                </div>                   
+                            </li>  
+                            <li class="nav-item"><a class="nav-link" href="arastirma.html">Araştırma</a></li>
+
+
+                            <li class="nav-item"><a class="nav-link" href="#">Güvenlik Açıkları</a></li>
+                            <li class="nav-item"><a class="nav-link" href="hakk%C4%B1m%C4%B1zda.html">Hakkımızda</a></li>
+                        </ul>
+                    </div>
+                    <div class="row"> 
+                        <div class="col-md-12">
+                            <ul class="navbar-nav mx-auto  ">
+                                <form action="" style="position: relative; left: -30px; top:25px; transform:  translate(30px,-50%)">
+                                    <input type="search">
+                                    <i id="fa" class="fa fa-search"></i>
+                                </form>
+                            </ul>
+                        </div>
+                    </div> 
+                </div>
+            </nav>
+
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <div class="baslik"> 
+                <h2 style="color: blue">Güvenlik Açıkları </h2>  
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-9" style="text-align: center">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+
+
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="image/asus-360x206.png"   style="width:100%" alt="First slide" data-toggle="modal" data-target="#de-modal1">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>30 Mart 2019</p>
+                                    <h5 style="color: white">ASUS saldırısından etkilenen MAC adreslerinin listesi yayınlandı</h5>
+                                </div>
+
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="image/apple-feature-360x206.jpg"   style="width:100%" alt="Second slide" data-toggle="modal" data-target="#de-modal2">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>28 Mart 2019</p>
+                                    <h5>Apple çok sayıda kritik zafiyet için yama yayınladı</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="image/wp-easy-smtp-vulnerability-360x206.png"  style="width:100%" alt="Third slide" data-toggle="modal" data-target="#de-modal3">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>26 Mart 2019</p>
+                                    <h5>Hacker’lar WordPress’in Easy WP SMTP eklentisini hedef alıyor</h5>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <br>
+
+                </div>
+
+                <div class="col-md-3" style="text-align:center;">
+                    
+
+                    <button type="button" class="btn btn-outline-primary btn-block"><a id="i1" class="fab fa-facebook-f" href="https://www.facebook.com"></a></button>
+                    <button type="button" class="btn btn-outline-danger btn-block"><a id="i4" class="fab fa-youtube" href="https://www.youtube.com"></a></button>
+                    <button type="button" class="btn btn-outline-warning btn-block"> <a id="i2" class="fab fa-instagram" href="https://www.instagram.com"></a></button>
+                    <button type="button" class="btn btn-outline-info btn-block"> <a id="i3" class="fab fa-twitter" href="https://www.twitter.com"></a></button> <br>
+                    <!-- weather widget start --><div id="m-booked-bl-simple-835"> <div class="booked-wzs-160-110 weather-customize" style="background-color:#050505;width:220px;" id="width3"> <div class="booked-wzs-160-110_in"> <a target="_blank" class="booked-wzs-top-160-110" href="https://www.booked.net/"><img src="//s.bookcdn.com/images/letter/s5.gif" alt="booked.net" /></a> <div class="booked-wzs-160-data"> <div class="booked-wzs-160-left-img wrz-18"></div> <div class="booked-wzs-160-right"> <div class="booked-wzs-day-deck"> <div class="booked-wzs-day-val"> <div class="booked-wzs-day-number"><span class="plus">+</span>14</div> <div class="booked-wzs-day-dergee"> <div class="booked-wzs-day-dergee-val">&deg;</div> <div class="booked-wzs-day-dergee-name">C</div> </div> </div> <div class="booked-wzs-day"> <div class="booked-wzs-day-d"><span class="plus">+</span>21&deg;</div> <div class="booked-wzs-day-n"><span class="plus">+</span>15&deg;</div> </div> </div> <div class="booked-wzs-160-info"> <div class="booked-wzs-160-city">İstanbul</div> <div class="booked-wzs-160-date">Salı, 14</div> </div> </div> </div> <a target="_blank" href="https://bookeder.com/weather/istanbul-18319" class="booked-wzs-bottom-160-110"> <div class="booked-wzs-center"><span class="booked-wzs-bottom-l"> 7 Günlük Hava Tahmini</span></div> </a> </div> </div> </div><script type="text/javascript"> var css_file=document.createElement("link"); css_file.setAttribute("rel","stylesheet"); css_file.setAttribute("type","text/css"); css_file.setAttribute("href",'https://s.bookcdn.com/css/w/booked-wzs-widget-160.css?v=0.0.1'); document.getElementsByTagName("head")[0].appendChild(css_file); function setWidgetData(data) { if(typeof(data) != 'undefined' && data.results.length > 0) { for(var i = 0; i < data.results.length; ++i) { var objMainBlock = document.getElementById('m-booked-bl-simple-835'); if(objMainBlock !== null) { var copyBlock = document.getElementById('m-bookew-weather-copy-'+data.results[i].widget_type); objMainBlock.innerHTML = data.results[i].html_code; if(copyBlock !== null) objMainBlock.appendChild(copyBlock); } } } else { alert('data=undefined||data.results is empty'); } } </script> <script type="text/javascript" charset="UTF-8" src="https://widgets.booked.net/weather/info?action=get_weather_info&ver=6&cityID=18319&type=1&scode=124&ltid=3458&domid=765&anc_id=61385&cmetric=1&wlangID=21&color=050505&wwidth=220&header_color=ffffff&text_color=333333&link_color=08488D&border_form=1&footer_color=ffffff&footer_text_color=333333&transparent=0"></script><!-- weather widget end -->
+                </div>
+            </div>
+
+            <section class="gallery-block cards-gallery ">
+                <div class="baslik"> 
+                    <h2 style="color: blue">Haberler</h2>  
+                </div>  
+                <div class="row " style="margin-top: 17px;">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal6">
+                            <a class="lightbox">
+                                <img src="image/drupal-1.jpg"    alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">Drupal’de kritik zafiyet tespit edildi</a></h6>
+                                <p class="text-muted card-text">Milyonlarca web sitesine hayat veren Drupal’de kritik bir zafiyet tespit edildi. Drupal güvenlik takımı konu üzerinde çalışarak, zafiyetin kapatılması için yeni bir güncelleme yayınlayacağını …<br></p>
+                            </div>
+                        </div>
+
+                    </div><!sigintos!>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal7">
+                            <a class="lightbox">
+                                <img src="image/wordpress-5-image-rce.png"      alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">WordPress’te 6 yıldır kapatılmayan kritik güvenlik açığı</a></h6>
+                                <p class="text-muted card-text">Eğer web sitenizi WordPress‘in 5.0.3 sürümüne güncellemediyseniz, şimdi yükseltmek mükemmel bir fikir olacaktır… RIPS Technologies GmbH‘te çalışan siber güvenlik…<br><br></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal8">
+                            <a class="lightbox">
+                                <img src="image/android-phone-hacking-png-rce.jpg"    alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">Android telefonunuz sadece görüntülediğiniz bir resim dosyasından hacklenebilir</a></h6>
+                                <p class="text-muted card-text">YAndroid telefon kullanıcısı mısınız? Eğer öyleyse internetten indirdiğiniz, mesaj yoluyla gelen ya da e-posta ile elinize ulaşan görselleri açarken dikkatli olun! Evet, Android cihazınız …<br><br></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal9">
+                            <a class="lightbox">
+                                <img src="image/5g-protocol-vulnerability.png"    alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">4G, 3G ve özellikle 5G protokolünü etkileyen yeni zafiyet</a></h6>
+                                <p class="text-muted card-text">Yaklaşan 5G hücresel iletişim protokolünde yeni bir zafiyet keşfedildi. Araştırmacılar, ortaya çıkan yeni hatayı daha önce 3G ve 4G protokolleri için tespit edilmiş zafiyetlere …<br><br></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal10">
+                            <a class="lightbox">
+                                <img src="image/Apple-iCloud-hack-melih-sevim.png"   alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">Apple’ın kullanıcılarından sakladığı bir gizlilik ihlali</a></h6>
+                                <p class="text-muted card-text"> YGeçtiğimiz yılın sonlarında Facebook, anonim bir hacker grubu tarafından ele geçirilen milyonlarca Facebook hesaplarının kullanıcılarını bilgilendirmişti. Benzer …</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal11">
+                            <a class="lightbox">
+                                <img src="image/facetime.png"    alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">Facetime’daki bu zafiyet, arayanların siz açmadan sizi duymasını ve görmesini sağlıyor</a></h6>
+                                <p class="text-muted card-text">Bir Apple cihazınız varsa, Facetime uygulamasını birkaç gün boyunca kapalı konuma getirmenizi öneriyoru…</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+
+        <div class="jumbotron text-center mb-0 mt-4 bg-dark">
+            <div class="container">
+                <a id="i1" class="fab fa-facebook-f" href="https://www.facebook.com"></a>
+                <a id="i2" class="fab fa-instagram" href="https://www.instagram.com"></a>
+                <a id="i3" class="fab fa-twitter" href="https://www.twitter.com"></a>
+                <a id="i4" class="fab fa-youtube" href="https://www.youtube.com"></a>
+                <br><br><br>
+                <p>@Copyright 2019</p>
+            </div>  
+        </div>
+
+        <div class="modal fade" id="de-modal1">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">ASUS saldırısından etkilenen MAC adreslerinin listesi yayınlandı</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+
+                    <div class="modal-body" style="background: black">
+
+                        <img src="image/asus-360x206.png" 
+                             style="width:100%">
+
+                        <p style="color: white">
+                            Geçtiğimiz günlerde siber saldırganlar ASUS Live Update hizmetine saldırmış ve ASUS dizüstü kullanıcılarını hedef almıştı. Kaspersky Lab tarafından yapılan açıklamaya göre, 57.000’den fazla Kaspersky kullanıcısı bu saldırıdan etkilenirken, toplamda 1 milyonun üzerindeki ASUS kullanıcısının arka kapı bulunan ASUS Live Update uygulamasını indirdiği ortaya çıktı.
+
+                        </p>
+                        <p style="color: white">
+                            Güvenlik uzmanları ayrıca, enfekte edilmiş ASUS Live Update uygulamasının farklı versiyonlarının bulunduğunu, dolayısıyla da ayıklama sürecinin uzun olabileceğini ifade ediyor. Saldırganlar, kullanıcıları MAC adresleri üzerinden hedefleri haline getirmişler. Listede yer alan MAC adresi tespit edildiğinde zararlı kod devreye girerek, sisteme sızma işlemini tamamlıyor.
+
+                        </p>
+                        <p style="color: white">
+                            Diğer taraftan Avustralya’lı güvenlik firması Skylight ise hedef arasında yer alan 619 MAC adresinden 583 adedinin yer aldığı bir liste yayınladı. Yayınlanan liste sayesinde siz de hedeflenen cihazlardan birine sahip olup olmadığınızı kontrol edebilirsiniz. Listeye ulaşmak için tıklayın.
+
+                        </p>
+                        <p style="color: white">
+                            Skylight araştırmacıları, Kaspersky tarafından yayınlanan çevrimdışı aracı kullanarak, uzun süren bir çalışmanın ardından listeyi oluşturmayı başardı. İlk olarak IDA kullanarak aracın kaynak koduna erişmeyi başardı. İkinci aşama olarak şifrelenmiş formatta yer alan MAC adreslerinin listesine ulaştı. Salted hash ile korunan liste, brute force saldırısı kullanarak yaklaşık bir saatte deşifre edildi.
+
+                        </p>
+                        <p style="color: white">
+                            Asus da konuyla ilgili olarak çalışma yapmış, Live Update aracının yeni sürümünü yayınlamış durumda. Ayrıca güvenlik onay mekanizmaları üzerinde de güncelleme yaparak, daha güvenli bir doğrulama oluşturduklarını iddia ediyorlar.
+                        </p>
+
+
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+
+
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal2">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Apple çok sayıda kritik zafiyet için yama yayınladı</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/apple-feature-360x206.jpg" style="width:100%" >
+                        <p style="color: white">
+                            Apple, pazartesi günü iOS 12.2 sürümünü yayınlayarak, toplam 51 güvenlik zafiyetini yamaladı. Bu zafiyetler iPhone 5S ve sonrası akıllı telefonlarla birlikte, iPad Air ve sonrası ile, iPod Touch 6. nesil cihazları etkiliyor. Zafiyetlerin büyük çoğunluğu web renderlama motoru WebKit’de bulunuyor.
+                        </p>
+                        <p style="color: white">
+                            Apple araştırmacıları tarafından yapılan açıklamaya göre WebKit tabanlı herhangi bir uygulama üzerinden zararlı kod içeren bir web sitesine erişildiğinde sistem, arbitrary code execution, sensitive user information disclosure, sandbox restriction bypass ya da XSS gibi zafiyetlere açık hale geliyor.
+                        </p>
+
+                        <p style="color: white">
+                            WebKit’te bulunan zafiyetler dışında zararlı web sitelerinin iOS cihazındaki mikrofona erişip, “mikrofon kullanımda” bildirisi çıkmaksızın açmalarına imkan tanıyan bir başka önemli zafiyet daha bulunuyor (CVE-2019-6222).
+                        </p>
+                        <p style="color: white">
+                            Bir diğer benzer zafiyetse Apple’ın ReplayKit API’sinde bulunuyor. Bu zafiyet ile birlikte yine iOS cihazındaki mikrofon, zararlı bir başka uygulama tarafından kullanıcı uyarılmaksızın açılabiliyor (CVE-2019-8566).
+                        </p>
+                        <p style="color: white">
+                            Apple tarafından yamalananlar arasında bir de mantıksal bug bulunuyor. Yine WebKit’te bulunan bug sayesinde zararlı web siteleri, bir başka site üzerinden betik çalıştırarak, kullanıcılara ait hassas bilgilere erişebiliyor (CVE-2019-8503).
+                        </p> 
+                        <p style="color: white">
+                            WebKit ile birlikte gelen zafiyet ve bug’lar bir kenara dursun, bir diğer önemli zafiyet ise iOS cihazlarda bulunan ve kullanıcılara zararlı SMS linklerin gönderilmesine sebep olan CVE-2019-8553.
+                        </p> 
+                        <p style="color: white">
+                            Eğer siz de iPhone ya da iPad kullanıcısıysanız, Ayarlar -> Genel -> Yazılım Güncellemesi yolunu takip edin ve “İndir ve Yükle” düğmesine basın. Güncellemenin ardından, yazıda bahsettiğimiz zafiyet ve bug’lardan kurtulmanızı sağlayan yamaya sahip olacaksınız.
+                        </p>
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal3">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Hacker’lar WordPress’in Easy WP SMTP eklentisini hedef alıyor</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+
+                    <div class="modal-body" style="background: black">
+
+                        <img src="image/wp-easy-smtp-vulnerability-360x206.png" style="width:100%">
+                        <p style="color: white">
+                            Popüler bir WordPress eklentisi olan Easy WP SMTP‘nin güncellenmemiş sürümlerini çalıştıran web sitelerini hedef alan iki hacking grubu tespit edildi.
+
+                        </p>
+                        <p style="color: white">
+                            WordPress marketinde 300.000‘den fazla yüklemeye sahip olan Easy WP SMTP, mail yönetimi için kullanılıyor. Easy WP, WordPress sitelerininin gönderdiği toplu e-postaların şüpheli olarak algılanıp e-posta sağlayıcıları tarafından spam olarak gönderilmemesini sağlayan ve güvenilir bir SMTP sunucusu aracılığıyla yönlendirmeleri gerçekleştiren bir eklenti olarak satılıyor.
+
+                        </p>
+
+                        <p style="color: white">
+                            Easy WP‘nin 1.3.9 sürümünde keşfedilen bir zafiyet ile saldırganlar, gizli yönetici yetkilerine sahip normal abone hesapları oluşturabiliyor veya zararlı yazılımlar barındıran sitelere yönlendirmeler için siteleri ele geçirebiliyorlar.
+
+
+                        </p>
+                        <p style="color: white">
+                            WordPress güvenlik duvarı geliştiricisi olan Defiant‘a (eski adıyla WordFence) göre, sorun 1.3.9’a eklenen Import/Export özelliğinden kaynaklanıyor.
+
+
+                        </p>
+                        <p style="color: white" >
+                            Bu zafiyetle, kullanıcı kapasitesi kontrol edilmediğinden, bir abone de olsa, giriş yapan her kullanıcının bunu tetikleyebileceği anlamına geliyor.
+
+
+                        </p>
+
+                        <p style="color: white" >
+                            1.3.9 eklentisinin ne kadar zamandır kullanılmakta olduğu açıkça anlaşılamamakla birlikte, başka bir firewall şirketi olan Ninja Technologies, 15 Mart’tan bu yana zafiyeti istismar edebildiklerini söyledi.
+
+
+                        </p>
+                        <p style="color: white" >
+                            Bir saldırı çeşidi, yönetici ayrıcalıklarını yükseltmeye çalışıyor gibi görünürken, aynı zamanda ziyaretçileri kötü niyetli sitelere yönlendiriyor.
+
+
+                        </p>
+                        <p style="color: white" >
+                            Zafiyetten etkilenen sitedeki tüm <strong>PHP</strong> dosyalarına kötü amaçlı <strong>&lt;script&gt;</strong> tag&#8217;leri &#8220;<strong>index</strong>&#8221; yazısıyla eklenerek enjekte ediliyor. Bu açık bir şekilde <strong>index.php</strong> adlı dosyaları etkiliyor, ancak <strong>Yoast</strong>&#8216;ın <strong>SEO</strong> eklentisinde bulunan <strong>class-link-reindex-post-service.php</strong> gibi dosyaların da etkilendiği tespit edildi.
+                        </p>
+                        <h5 style="color: red">
+                            Bu Zafiyet Ne Kadar Yayıldı?
+                        </h5>
+
+                        <p style="color: white" >
+                            Eklenti desteğiyle ilgili bir düzine yorumda sitelerinin bu zafiyetten etkilendiğini iddia eden kullanıcılar var. Bunlar henüz doğrulanmamış olmasına rağmen 3 günde 10 müşterinin bu zafiyetten dolayı sitesini kaybettiği iddia ediliyor.
+
+
+                        </p>
+                        <h5 style="color: red">
+                            Ne Yapılabilir?
+                        </h5>
+                        <p style="color: white" >
+                            Eğer bu zafiyetten etkilendiğinizi düşünüyorsanız aşağıdaki yönergeleri takip etmelisiniz.
+                        </p>
+                        <p style="color: white" >
+                            Defiant’ın kendi blogunda yayımlamış olduğu bir dizi zafiyet göstergesi var ancak bunlardan hiçbirini göremiyorsanız;
+                        </p>
+                        <ul type="square" style="color: white">
+                            <li>Sitenizi 1.3.9.1 sürümüne güncellemeden önce acil olarak WordPress ve SMTP parolalarınızı değiştirmelisiniz.
+
+                            <li>İkinci bir yöntem ise, zafiyet içeren güncellemeyi uygulamadan önceki yedekleme dosyalarınızı kullanarak sitenizi geriye almaktır.<ul> 
+                                <li>Eğer herhangi bir yedekleme dosyanız bulunmuyorsa, eklenti geliştiricileri otomatik veya zamanlanmış yedeklemeleri, gelecekte savunma olarak kullanmanız için siteyi nasıl manuel olarak temizleyeceğinize dair birkaç talimat göstermektedir.
+                                </ul>   
+                        </ul>
+                        <p style="color: white" >
+                            Bu örneğimize benzer olarak geçen hafta, WooCommorce eklentisi için Abondoned Cart kullanıcıları acil olarak güncelleme talep ettiler. Bu hikayelerin temel prensibi, güncellemelerin sık sık takip edilmesinin bir siteyi korumanın önemli bir parçası haline gelmesidir.
+
+                        </p>
+                    </div><!-- model-body -->
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+
+
+        <div class="modal fade" id="de-modal6">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Drupal’de kritik zafiyet tespit edildi
+                        </h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/drupal-1.jpg" style="width:100%">
+                        <p style="color: white">
+                            Milyonlarca web sitesine hayat veren Drupal’de kritik bir zafiyet tespit edildi. Drupal güvenlik takımı konu üzerinde çalışarak, zafiyetin kapatılması için yeni bir güncelleme yayınlayacağını duyurdu.
+                        </p>
+                        <p style="color: white">
+                            Güvenlik takımının yaptığı açıklamaya göre ilgili zafiyet, kritik bir uzaktan kod çalıştırma (Remote Code Execution – RCE) açığı. Henüz zafiyetle ilgili teknik ayrıntılar yayınlanmış değil ancak CVE-2019-6340 referansı üzerinden bilgi edinmek mümkün.
+                        </p>
+                        <p style="color: white">
+                            Yama henüz yayınlanmadığı için saldırılara açık. Güncelleme yapılana kadar tüm web servis modüllerini etkisizleştirin ya da web sunucunuzda PUT/PATCH/POST HTTP metotlarına izin vermeyecek şekilde gerekli ayarları yapın.
+                        </p>
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal7">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">WordPress’te 6 yıldır kapatılmayan kritik güvenlik açığı
+                        </h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/wordpress-5-image-rce.png" style="width:100%">
+                        <p style="color: white">
+                            Eğer web sitenizi WordPress‘in 5.0.3 sürümüne güncellemediyseniz, şimdi yükseltmek mükemmel bir fikir olacaktır…
+                        </p>
+                        <p style="color: white">
+                            RIPS Technologies GmbH‘te çalışan siber güvenlik araştırmacıları, kısa bir süre önce son 6 yıl içinde yayınlanan, içerik yönetimi yazılımı olan WordPress’e ait önceki bütün sürümleri etkileyen remote code execution (RCE – uzaktan kod çalıştırma) zafiyeti bulduklarını söylediler.
+                        </p>
+                        <p style="color: white">
+                            WordPress çekirdeğinde bulunan RCE zafiyetini geçtiğimiz yılın sonlarına doğru WordPress güvenlik ekibine ileten araştırmacılar, iki farklı saldırı (Path Traversal ve Local File Inclusion(LFI)) ile en düşük yetkiye sahip bir “yazar” hesabı kullanılarak zafiyetin çalıştırılabildiğini söylediler.
+                        </p>
+                        <p style="color: white">
+                            Bu zafiyetin etkileri en azından bir “yazar” hesabı bulundurularak bir dereceye kadar azaltılabilir. Bu hesap, phishing, parola yenileme saldırıları veya başka saldırılar ile yazarın kimlik bilgilerini almayı başaran bir saldırgan tarafından kullanılabilir.
+                        </p>
+                        <p style="color: white">
+                            Araştırma ekibinden Simon Scannell, “Hedef bir WordPress sitesinde en azından yazar haklarına sahip bir hesaba erişen bir saldırgan, sunucu üzerinde rastgele PHP kodları çalıştırabilir ve sisteme uzaktan erişim sağlayabilir.” açıklamalarında bulundu.
+                        </p>
+                        <h5 style="color: red">
+                            Saldırı Nasıl Gerçekleşiyor?
+                        </h5>
+                        <p style="color: white">
+                            Simon Scannell’e göre saldırı, WordPress görüntü yönetimi sisteminin yüklenen görüntülerin tanımını, boyutunu, yaratıcısını ve diğer meta bilgilerini saklaması için kullandığı Post Meta girişlerini işleme biçiminden yararlanarak gerçekleşiyor.
+                        </p>
+                        <iframe width="560" height="315" style="width: 100%" src="https://www.youtube.com/embed/iWeRbsrjUOA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315"style="width: 100%"  src="https://www.youtube.com/embed/hfrKv6eDuR4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p style="color: white">
+                            Scannell, sahte veya tehlikeye atılmış bir yazar hesabının, bir görüntüyle ilişkili tüm girişleri değiştirebileceğini ve bunları Path Traversal zafiyetine neden olacak şekilde ayarlayabileceğini buldu.
+                        </p>
+
+                        <p style="color: white">
+                            Scannell, “Buradaki fikir, “https://targetserver.com/wp-content/uploads/evil.jpg?shell.php” URL’ine bir HTTP isteği göndermemizi sağlayacak olan “_wp_attached_file” dosyasını “evil.jpg?shell.php” olarak belirlemektir.”
+                        </p>
+
+                        <p style="color: white">
+                            “Sonuçta ortaya çıkan görüntünün “evil.jpg?/../../evil.jpg” gibi bir payload kullanılarak herhangi bir dizine gönderilmesi mümkün olmaktadır.” dedi.
+                        </p>
+                        <p style="color: white">
+                            Path Traversal hatası, tema dizinindeki local file inclusion hatası ile birlikte kullanılarak, saldırganın hedeflenen sunucuda rastgele kod çalıştırmasına izin verebilmektedir.
+                        </p>
+                        <p style="color: white">
+                            Araştırmacının kanıt olarak çektiği videoda da görüldüğü üzere, saldırı, savunmasız bir WordPress blog sitesinde tam kontrol sağlama işlemini saniyeler içinde gerçekleştirebiliyor.
+                        </p>
+                        <p style="color: white">
+                            Scannell’e göre, bu kod yürütme saldırısı, yetkisiz kullanıcıların isteğine bağlı olarak Post Meta girişlerini ayarlamasını engelleyen başka bir güvenlik açığı ortaya çıktıktan sonra, WordPress 5.0.1 ve 4.9.9 sürümlerinde kullanılamaz hale geldi.
+                        </p>
+                        <p style="color: white">
+                            Tüm bunlar Path Traversal hatasının en son WordPress sürümünde bile düzeltilemeyeceğinin ve kurulu bir 3. parti eklenti ile Post Meta girişleri değiştirilirse hala gerçekleştirilebileceğinin bir kanıtı.
+                        </p>
+                        <p style="color: white">
+                            Bir sonraki WordPress sürümünün, tamamen bu sorunu ele almak için bir düzeltme içereceğini ise WordPress çalışanları doğruladı. Tek yapmanız gereken önlemlerinizi alarak ilk güncellemeyi beklemek olacaktır.
+                        </p>
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal8">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">
+                            Android telefonunuz sadece görüntülediğiniz bir resim dosyasından hacklenebilir
+
+                        </h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/android-phone-hacking-png-rce.jpg" style="width:100%">
+                        <p style="color: white">
+                            Android telefon kullanıcısı mısınız? Eğer öyleyse internetten indirdiğiniz, mesaj yoluyla gelen ya da e-posta ile elinize ulaşan görselleri açarken dikkatli olun!
+                        </p>
+                        <p style="color: white">
+                            Evet, Android cihazınız zararsız görünen bir görseli açmanız ile hacklenebilir çünkü geçtiğimiz günlerde Android 7.0 Nougat’dan Android 9.0 Pie’a kadar milyonlarca cihazda etkili olan 3 tane yeni güvenlik açığı yayınlandı.
+                        </p>
+                        <p style="color: white">
+                            CVE-2019-1986, CVE-2019-1987 ve CVE-2019-1988 olarak tespit edilen güvenlik açıkları, Şubat ayı Android güvenlik güncellemelerinin bir parçası olarak Google tarafından Android Açık Kaynak Projesi’nde (AOSP) düzeltildi.
+                        </p>
+
+                        <p style="color: white">
+                            Bununla birlikte her cihaz üreticisi, her ay güvenlik yaması yayınlamadığı için bu düzeltmeyi sizin cihazınızın ne zaman alacağı ise belirsizliğini koruyor olabilir.
+                        </p>
+                        <p style="color:white">
+                            Her ne kadar Google mühendisleri bu açıklarla ilgili teknik bir açıklama yapmamış olsa da güncellemeler “Heap Buffer Overflow” ve “SkPngCodec”deki hataları ve PNG görüntülerini oluşturan bazı bileşenlerdeki hataları düzeltmekten bahsediyor.
+                        </p>
+                        <p style="color: white">
+                            Her ne kadar Google mühendisleri bu açıklarla ilgili teknik bir açıklama yapmamış olsa da güncellemeler “Heap Buffer Overflow” ve “SkPngCodec”deki hataları ve PNG görüntülerini oluşturan bazı bileşenlerdeki hataları düzeltmekten bahsediyor.
+                        </p>     
+                        <p style="color: white">
+                            Öngörüldüğü üzere bahsi geçen 3 güvenlik açığından birisi Android cihazınızda bir PNG formatındaki görsel aracılığıyla zararlı kod çalıştırma imkanı sunabiliyor ki bu açık Google’ın en ciddi açıklarından birisi olabilir. Google da bu konuyla ilgili bu düşünceyi şu şekilde destekliyor: “Keşfedilen açıklardan en önemlisi Framework’de özel hazırlanmış bir PNG’nin kullanıldığı uzaktan bir saldırıda saldırganın ayrıcalıklı bir işlem kapsamında cihazınızda kod çalıştırabilmesidir.” (ACE, Arbitrary Code Execution)
+                        </p>
+                        <img src="image/android-png-rce-300x168.png" style="width:100%">
+                        <p style="color: white">
+                            Bu açığı, saldırgan herhangi bir mesajlaşma uygulaması, e-posta ya da internet üzerinden indirmenizi sağladığı zararlı PNG’yi (İlk bakışta, inceleme yapılmadan zararlı olduğunun anlaşılması imkansız gibi bir şey..) kullanarak sömürebilir.
+                        </p>
+                        <p style="color: white">
+                            Google bu 3 açık da dahil olmak üzere 11’i kritik, 30’u yüksek seviyeli, 1 tane de orta seviyeli olmak üzere toplam 42 tane açık için güvenlik yaması oluşturdu.
+                        </p>
+                        <p style="color: white">
+                            Google şuana kadar keşfedilen bu açıklarla ilgili ciddi anlamda bir sömürme işleminin gerçekleştiğine dair herhangi bir raporun bulunmadığını da yaptığı açıklamada belirtti. Buna ek olarak Google, yayınlanmasından bir ay önce tüm güvenlik açıklarını iş ortaklarına bildirdiğini ve “Bu sorunlar için kaynak kod eklerinin önümüzdeki 48 saat içerisinde Android Açık Kaynak Projesi’ne eklenecektir.” şeklinde bir açıklamayı da iş ortaklarına duyurduğunu belirtti.
+                        </p>
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal9">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">4G, 3G ve özellikle 5G protokolünü etkileyen yeni zafiyet</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/5g-protocol-vulnerability.png"  style="width:100%">
+                        <p style="color: white">
+                            Yaklaşan 5G hücresel iletişim protokolünde yeni bir zafiyet keşfedildi. Araştırmacılar, ortaya çıkan yeni hatayı daha önce 3G ve 4G protokolleri için tespit edilmiş zafiyetlere göre daha ciddi zararlar meydana getirebilir olarak tanımlamışlardır.
+
+                        </p>
+                        <p style="color: white">
+                            Dahası, bu zafiyet 5G’nin ötesinde hali hazırdaki 3G ve 4G protokollerini de etkilemektedir. Konuyla ilgili gözetimleri yürüten teknoloji firmaları, ortaya çıkan yeni hata ile birlikte modern telefon protokolleri üzerinde çalışan yeni nesil IMSI-catchers ekiplerini oluşturmaya zorlayabilir.
+
+                        </p>
+
+                        <p style="color: white">
+
+                            Ortaya çıkan bu yeni zafiyet, geçen yıl yayınlanan New Privacy Threat on 3G, 4G, and Upcoming5G AKA Protocols araştırmasında detaylandırılmıştır.
+
+                        </p>
+
+                        <p style="color: white">
+                            Araştırmacılara göre zafiyet, kullanıcı telefonlarıyla hücresel ağlar arasında “Authentication” ve “Key Exchange” işlemlerini sağlamak için olan AKA (Authentication and Key Agreement) protokolünü etkilemektedir.
+                        </p>
+
+
+                        <p style="color: white">
+                            AKA protokolü, mobil telefon ve hücresel ağ arasında “Negotiating” ve şifreleme yaparak çalışmaktadır.
+                        </p>
+                        <p style="color: white">
+                            IMSI-catcher cihazları protokoldeki zafiyetleri hedef almaktadır. AKA protokolü zayıf bir versiyonuna çekilerek telefonların metadata ve lokasyon takip trafiklerine dahil olarak izlenmesi sağlanmaktadır.
+                        </p>
+                        <p style="color: white">
+                            AKA’nın 5G protokolü için tasarlanan versiyonu özellikle IMSI-catchers işleyişlerini bozması için oluşturulmuştur. Bu versiyona güçlü kimlik denetimi mekanizması eşlik etmektedir.
+                        </p>
+
+                        <p style="color: white">
+                            Ancak, zafiyet SINTEF Digital Norway akademisi tarafından geçtiğimiz sene keşfedilmiştir. Gözetimci teknoloji tedarikçilerine bir yeni sınıf IMSI-catchers oluşturmaları için ETH Zurich ve Berlin‘deki teknik üniversitesi tarafından izin verilmiştir.
+                        </p>
+                        <p style="color: white">
+                            “Yeni bir sınıf” diyoruz çünkü keşfedilen zafiyet eski usuldeki IMSI-catchers’ların izlemesine olanak tanımamaktadır. Yeni zafiyet, Mobil trafik müdahalesinin yerine bu sefer mobil kullanıcı aktivitelerini detaylıca ortaya çıkarmaktadır. Elde edilen detaylarla örneğin; gönderilen ve alınan mesajlaşma ve arama sayısı verileri sayesinde IMSI-catcher operatörleri tarafından her mobil kullanıcı için profiller oluşturulmaktadır.
+                        </p> 
+                        <p style="color: white">
+                            Dahası, mobil kullanıcılar sahte baz istasyonlarının kapsamasından çıksalar dahi saldırganlar ilgili zafiyet sayesinde tekrar sahte istasyonun kapsama alanına girildiği takdirde kullanıcının AKA protokolü üzerinden güncel telefon aktivitelerini takip edebilmektedirler.
+                        </p>
+                        <p style="color: white">
+                            Araştırma ekibi “Yayıncılar (kullanıcılar) çok uzun süre boyunca saldırı alanından uzaklaşsalar dahi aktivite örneklerinin uzaktan izlenebildiğini defalarca vurguladık.” diyorlar.
+                        </p>
+                        <p style="color: white">
+                            Telefon aktivite istatistikleri çok tehlikeli görünmeyebilir. Fakat araştırmacıların farklı açıdan baktıkları raporlarında, yeni bir atak, politikacılar veya büyükelçilik çalışanları üzerinde casusluk faaliyeti olarak kullanılabileceğini belirtiyorlar. Keşfedilen teknik, daha iyi reklamcılık hedefleri amacıyla da kullanılabilir:
+                        </p>
+                        <p style="color: white">
+                            Dahasında, alana yeterli düzeyde IMSI-catchers entegre edildiğinde, bu yeni zafiyet, lokasyon izleme saldırısı kullanılarak bilinen bir kullanıcı kullanımındaki mobil telefonun sahte baz istasyonları alanlarına girip çıkmasıyla takip gözlemleme faaliyeti için kolaylıkla uyarlanabilir.
+                        </p>
+                        <p style="color: white">
+                            İlave olarak, hali hazırda satılan eskiye nazaran çok daha az maliyetli ekipmanlarla yeni zafiyet kullanılarak istismar yapılabilmektedir.
+                        </p>
+                        <p style="color: white">
+                            Araştırmacılar yayınladıkları bildiride, yeni saldırıyı şimdilik pazardaki 5G ekipman yoksunluğu sebebiyle 4G ağında test ettiklerini belirttiler. Ancak saldırının gerçekleştirildiğinde kesinlikle 5G sistemleri üzerinde başarılı olacağını söylüyorlar.
+                        </p>
+                        <p style="color: white">
+                            “3GPP ve GSMA tarafında tasdik edilmiş bulgularımızla ve iyileştirici aksiyonlarımızla sonraki jenerasyon protokollerimizi geliştirmek için çalışma halindeyiz. 5G’nin ilk dağıtımı (Release 15, phase 1) bu saldırıya maruz kaldığı halde bizler halen 5G AKA’nın ikinci dağıtımının (Release 16, 2019 sonunda tamamlanacak olan) piyasaya sürülmeden yamalacağını umuyoruz.” diye ekliyorlar.
+                        </p>
+                        <p style="color: white">
+                            Bu araştırma, çıkacak olan 5G protokolünün çok mühim sonuçlar doğurabilecek zafiyetten etkilendiğini ortaya koymasına karşın, 5G’nin tek başına sadece problemli güvenlik sorunu bu olmayacaktır.
+                        </p>
+                        <p style="color: white">
+                            Örneğin; Fransız ve Finlandiyalı farklı iki araştırmacının akademik çalışmaları, 3GPP’den elde edilenlere rağmen IMSI-catcher saldırılarının güncellenmiş 5G-AKA protokolünde geçerli olabileceğini ortaya koymaktadır.
+
+
+                        </p>
+                        <p style="color: white">
+                            5G-AKA protokolüyle alakalı diğer üç araştırma makalede, 3GPP ve mobil telekomünikasyon sağlayıcılarının, 5G’yi tasarlarken güvenliğin akıllarının tepesinde olacağını iddia etmesine rağmen çok sayıda başka güvenlik sorunu buldu…
+
+
+
+                        </p>
+
+
+
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal10">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Apple’ın kullanıcılarından sakladığı bir gizlilik ihlali
+                        </h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/Apple-iCloud-hack-melih-sevim.png"  style="width:100%">
+                        <p style="color: white">
+                            Geçtiğimiz yılın sonlarında Facebook, anonim bir hacker grubu tarafından ele geçirilen milyonlarca Facebook hesaplarının kullanıcılarını bilgilendirmişti.
+                        </p>
+                        <p style="color: white">
+                            Benzer şekilde diğer bir sosyal medya şirketi olan Twitter‘dan gelen açıklamada, Twitter’da son birkaç ay içinde birden fazla güvenlik açığı tespit edildiğini açıkladı ve etkilenen kullanıcılarını bilgilendirdiğini ifade etti.
+
+                        </p>
+
+                        <p style="color: white">
+                            Son olarak Google‘ın yaptığı açıklamada, platformunda yüz binlerce kullanıcının özel verilerini üçüncü taraf geliştiricilere erişim sağlayan, iki güvenlik açığını kabul etti ve Nisan ayında sosyal medya ağı olan Google+‘ı da kapatacağını bildirdi .
+
+                        </p> 
+                        <p style="color: white">
+                            Apple‘ın, geçen yılın sonlarına doğru, iCloud‘un bazı verilerinin kullanıcıları doğrudan etkileyen gizlilik ihlali yaşadığı ortaya çıkmıştı, ancak şirket olayı gizli tutmayı seçti..
+
+                        </p>
+                        <p style="color: white">
+                            Geçen hafta Türk güvenlik araştırmacısı Melih Sevim‘in, The Hacker News ile temasa geçmesi üzerine;<br>
+                            Apple hizmetlerinde bazı verileri, özellikle kullanıcı notlarını, rastgele iCloud hesaplarından ve hedeflenen iCloud kullanıcılarıdan, sadece kayıtlı telefonlarını sisteme tanıyarak, verilere erişmesine izin veren bir kusur keşfettiğini iddia etti.
+                        </p>
+                        <p style="color: white">
+                            Melih, Apple’ın güvenlik ekibine, Apple kullanıcılarından kişisel iCloud verilerini nasıl okuyabildiğini gösteren raporu bildirdi.
+
+                        </p>
+                        <p style="color: white">
+                            Araştırmacı Melih’in yaptığı açıklamada, “iCloud hesabımı açtığımda kullanıcı ile Apple sunucuları arasında aktif bir veri aktarımı olduğunda, her yenilemede rastgele bazı verileri görüntüleme imkanı olduğunu keşfettim.” ifadelerini söyledi.
+
+                        </p>
+                        <h5 style="color: red">
+                            Gizemli bir iCloud Açığı
+
+                        </h5>
+                        <p style="color: white">
+                            Melih’in açıklamasına dayanarak, iddia edilen kusur, Apple’ın dahili bir şekilde ya da kasıtlı olarak, bir Apple ID’nin fatura bilgilerinde kaydedilmiş bir telefon numarasını, aynı telefon numarasını kullanan bir cihazdaki iCloud hesabına bağladığı şekilde kalmıştır.
+                        </p>
+                        <p style="color: white">
+                            “Araştırmam sırasında, banka hesaplarıyla ilgili bilgileri ve şifrelerini iCloud’da tutan diğer Apple kullanıcılarının notlarını gördüm.”
+
+                        </p>
+                        <p style="color: white">
+                            <strong>Apple zafiyeti kabullendi ama ..</strong> <br>
+                            Haber ajansının, Melih’in keşfettiği güvenlik zafiyetini ve olayın tam olarak ne olduğunu bilmek için, bu makaleyi yayınlamadan önce Apple güvenlik ekibi tarafından bilgileri doğruladı.
+                            Apple son olarak ajansın e-postasına hatanın kaç hafta kaldığı da dahil olmak üzere diğer bazı önemli sorulara cevap vermeden “sorun Kasım ayında düzeltildi” diyerek hata raporunu kabul etti.
+                        </p>
+
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal11">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Facetime’daki bu zafiyet, arayanların siz açmadan sizi duymasını ve görmesini sağlıyor
+                        </h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/facetime.png"  style="width:100%">
+                        <p style="color: white">
+                            Bir Apple cihazınız varsa, Facetime uygulamasını birkaç gün boyunca kapalı konuma getirmenizi öneriyoruz…
+                        </p>
+
+
+                        <p style="color: white">
+                            Apple’ın popüler video ve sesli arama uygulaması olan Facetime’da, ağızları açık bırakan bir zafiyet keşfedildi.<br>
+                            Bu zafiyet siz daha birilerini aramadan önce onları duymanızı ve görmenizi sağlıyor! Evet yanlış duymadınız..
+                        </p>
+
+                        <p style="color: white">
+                            Twitter ve diğer sosyal medya uygulamalarında birçok kullanıcının bu gizlilik sorunuyla ilgili şikayetlerini dile getirdiği paylaşımlarla zafiyet daha da hızlı yayılıyor.
+                        </p>
+
+
+                        <p style="color: white">
+                            Bu hataya ait kanıtlarda sadece iPhone telefonlarda değil MacOS çalıştıran Macbook’larda da aynı zafiyetin bulunduğu görülüyor.
+                        </p>
+                        <h5 style="color: red">
+                            Yazılımdaki bu bug kullanılarak nasıl casus olunur?
+                        </h5>
+                        <p style="color: white">
+                            Sorun, yeni başlatılan bir grup Facetime özelliğinde bulunan teknik bir güvenlik açığından çok bir tasarım ve mantıksal kusura benziyor.
+                        </p>    
+
+                        <iframe width="560" height="315"  style="width: 100%" src="https://www.youtube.com/embed/Z2-RV7qVmro" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <h5 style="color: red">
+                            Uygulama adımları
+                        </h5>
+                        <p style="color: white">
+                            Herhangi bir iPhone kişisiyle bir Facetime video araması başlatıyorsunuz.
+                        </p>   
+                        <p style="color: white">
+                            Arama devam ederken, iPhone ekranınızın altından yukarı doğru kaydırma yaparak “Kişi Ekle”ye dokunuyoruz.
+                        </p>   
+                        <p style="color: white">
+                            Kendi telefon numaramızı buraya ekliyoruz.
+                        </p>   
+                        <p style="color: white">
+                            Bu, siz ve ilk aradığınız kişi de dahil olmak üzere, henüz arama kabul edilmemiş bile olsa, herkesin sesini dinleyebileceğiniz bir grup Facetime araması başlatıyor.
+                        </p>
+                        <p style="color: white">
+                            Daha fazla ne olabilir? diyorsanız. Aradığınız ilk kişinin aramayı susturmak veya kapatmak için ses kısma düğmesi veya güç düğmesine basması durumunda, iPhone kamerasının da açılacağı bildiriliyor. Bununla birlikte siz video görüşmesini görürken karşı taraf sadece arandığını görüyor.
+                        </p>   
+
+
+
+                        <h5 style="color: white">
+                            -
+                        </h5>
+
+
+                        <p style="color: white">
+                            Apple şirketi bu durumla ilgili bir şikayet için aradığında, şirket “Bu konunun farkındayız ve bu haftaki yazılım güncelleştirmesinde düzeltme uygulayacağız” diyerek yanıt veriyor.
+
+                        </p>   
+                        <p style="color: white">
+                            Apple, bu hafta hatayı gidermek için kalıcı bir düzeltme üzerinde çalışırken aynı zamanda da Facetime’daki grup arama özelliğini geçici olarak devre dışı bıraktı.
+
+                        </p>   
+
+                        <p style="color: white">
+                            Önlem olarak, şirket yeni bir düzenleme/düzeltme yayınlayana kadar kullanıcılar, iPhone, iPad ve Macbook’larında Facetime görüntülü arama özelliğini devre dışı bırakabilirler.
+
+                        </p>   
+                        <img src="image/Ads%C4%B1z-300x185.png" style="width:100%">
+                        <h5 style="color: red">
+                            Facetime’ı devre dışı bırakmak için:
+
+                        </h5>
+                        <p style="color: white">
+                            iPhone veya iPad’de, Ayarlara gidin, “Facetime” simgesini bulmak için aşağı kaydırın ve özelliği kapatmak için seçim düğmesine dokunun.
+
+                        </p>   
+                        <p style="color: white">
+                            Mac’te Facetime uygulamasını açın, menü çubuğunun sol üst köşesindeki Facetime üzerine tıklayın ve ardından “Facetime’ı Kapat”ı tıklayın.
+                        </p>
+
+
+
+
+
+
+
+
+
+
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+
+    </body>
+
+
+</html>

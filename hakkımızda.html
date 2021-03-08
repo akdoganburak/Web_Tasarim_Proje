@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cyber Channel</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0;">
+
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- cards gallery -->   
+        <link rel="stylesheet" href="cards-gallery.css">   
+
+        <!--card animation-->    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+
+        <!--Google icon-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <!-- social icons -->
+        <!--Font Awesome 5 icon-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    </head>
+
+    <body style="background-color: black">
+        <div class="jumbotron text-center "style="background-color:black">
+            <h1><b>CYBER CHANNEL</b></h1>  
+            <script>
+
+                var mydate=new Date()
+                var year=mydate.getYear()
+                if (year < 1000)
+                    year+=1900
+                var day=mydate.getDay()
+                var month=mydate.getMonth()
+                var daym=mydate.getDate()
+                if (daym<10)
+                    daym="0"+daym
+                var dayarray=new Array("Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi")
+                var montharray=new Array("Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık")
+
+                myhours = mydate.getHours();
+                if (myhours >= 12) {
+                    myhours = (myhours == 12) ? 12 : myhours - 12; mm = " Akşam";
+                }
+                else {
+                    myhours = (myhours == 0) ? 12 : myhours; mm = " Sabah";
+                }
+
+                myminutes = mydate.getMinutes();
+                if (myminutes < 10){
+                    mytime = ":0" + myminutes;
+                }
+                else {
+                    mytime = ":" + myminutes;
+                };
+
+                document.write("<font color='white' face='Arial' size=2><b>" + myhours + mytime + mm + ", " + dayarray[day]+", "+montharray[month]+" "+daym+", "+year+"</b></font>")
+
+            </script>
+            <div class="container">
+
+            </div>  <!--containerın -->  
+        </div><!--jmbotron -->
+
+
+
+        <div class="sticky-top"; >
+            <nav class=" navbar-expand-md navbar bg-dark navbar-fixed-top navbar-dark" >
+                <div class="container">
+                    <button class="navbar-toggler"data-toggle="collapse" data-target="#Link1"><span class="navbar-toggler-icon"></span></button>  
+                    <div class="collapse navbar-collapse" id="Link1">
+                        <ul  class="navbar-nav">
+                            <a class="navbar-brand" href="index.html">Ana Sayfa</a>
+                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Siber Saldırılar</a>
+                                <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                                    <a  class ="dropdown-item " href="verisizintilari.html">Veri Sızıntıları</a>
+                                    <a class="dropdown-item " href="dossald%C4%B1r%C4%B1lar%C4%B1.html">DOS/DDOS Saldırıları</a>
+
+                                </div>                   
+                            </li>  
+                            <li class="nav-item"><a class="nav-link" href="arastirma.html">Araştırma</a></li>
+
+                            <li class="nav-item"><a class="nav-link" href="guvenliaciklari.html">Güvenlik Açıkları</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Hakkımızda</a></li>
+                        </ul>
+                    </div> 
+
+                    <div class="row"> 
+                        <div class="col-md-12">
+                             <ul class="navbar-nav mx-auto  ">
+                                <form action="" style="position: relative; left: -30px; top:25px; transform:  translate(30px,-50%)">
+                                    <input type="search">
+                                    <i id="fa" class="fa fa-search"></i>
+                                </form>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <img src="image/turk-bayragi-olusumu.jpg" style="width:100%"   >
+
+
+            <div class="baslik"> 
+                <h2 style="color: blue">Hakkımızda</h2>  
+            </div>  
+            <p style="color: white; text-align: justify">
+             Sitemizin amacı halkımıza siber güvenlik hakkında bilgi vermek ve  bu konuda bilinçlendirmektir.
+
+            </p>
+
+
+
+        </div>
+
+
+
+        <div class="jumbotron text-center mb-0 mt-4 bg-dark">
+            <div class="container">
+                <a id="i1" class="fab fa-facebook-f" href="https://www.facebook.com"></a>
+                <a id="i2" class="fab fa-instagram" href="https://www.instagram.com"></a>
+                <a id="i3" class="fab fa-twitter" href="https://www.twitter.com"></a>
+                <a id="i4" class="fab fa-youtube" href="https://www.youtube.com"></a>
+                <br><br><br>
+                <p>@Copyright 2019</p>
+            </div>  
+        </div>
+
+
+    </body>
+
+
+</html>
