@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cyber Channel</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0;">
+
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- cards gallery -->   
+        <link rel="stylesheet" href="cards-gallery.css">   
+
+        <!--card animation-->    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+
+        <!--Google icon-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <!-- social icons -->
+        <!--Font Awesome 5 icon-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    </head>
+
+    <body style="background-color: black">
+        <div class="jumbotron text-center "style="background-color:black">
+            <h1><b>CYBER CHANNEL</b></h1>  
+            <script>
+
+                var mydate=new Date()
+                var year=mydate.getYear()
+                if (year < 1000)
+                    year+=1900
+                var day=mydate.getDay()
+                var month=mydate.getMonth()
+                var daym=mydate.getDate()
+                if (daym<10)
+                    daym="0"+daym
+                var dayarray=new Array("Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi")
+                var montharray=new Array("Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık")
+
+                myhours = mydate.getHours();
+                if (myhours >= 12) {
+                    myhours = (myhours == 12) ? 12 : myhours - 12; mm = " Akşam";
+                }
+                else {
+                    myhours = (myhours == 0) ? 12 : myhours; mm = " Sabah";
+                }
+
+                myminutes = mydate.getMinutes();
+                if (myminutes < 10){
+                    mytime = ":0" + myminutes;
+                }
+                else {
+                    mytime = ":" + myminutes;
+                };
+
+                document.write("<font color='white' face='Arial' size=2><b>" + myhours + mytime + mm + ", " + dayarray[day]+", "+montharray[month]+" "+daym+", "+year+"</b></font>")
+
+            </script>
+            <div class="container">
+
+            </div>  <!--containerın -->  
+        </div><!--jmbotron -->
+
+
+
+        <div class="sticky-top"; >
+            <nav class=" navbar-expand-md navbar bg-dark navbar-fixed-top navbar-dark" >
+                <div class="container">
+                    <button class="navbar-toggler"data-toggle="collapse" data-target="#Link1"><span class="navbar-toggler-icon"></span></button>  
+                    <div class="collapse navbar-collapse" id="Link1">
+                        <ul  class="navbar-nav">
+                            <a class="navbar-brand" href="index.html">Ana Sayfa</a>
+
+
+                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Siber Saldırılar</a>
+                                <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                                    <a  class ="dropdown-item " href="verisizintilari.html">Veri Sızıntıları</a>
+                                    <a class="dropdown-item " href="#">DOS/DDOS Saldırıları</a>
+
+                                </div>                   
+                            </li>    
+                            <li class="nav-item"><a class="nav-link" href="arastirma.html">Araştırma</a></li>
+
+                            <li class="nav-item"><a class="nav-link" href="guvenliaciklari.html">Güvenlik Açıkları</a></li>
+                            <li class="nav-item"><a class="nav-link" href="hakk%C4%B1m%C4%B1zda.html">Hakkımızda</a></li>
+                        </ul>
+                    </div> 
+                    <div class="row"> 
+                        <div class="col-md-12">
+                             <ul class="navbar-nav mx-auto  ">
+                                <form action="" style="position: relative; left: -30px; top:25px; transform:  translate(30px,-50%)">
+                                    <input type="search">
+                                    <i id="fa" class="fa fa-search"></i>
+                                </form>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+
+        </div>
+        <br>
+        <br>
+        <div class="container">
+
+            <div class="row">
+                <div class="baslik"> 
+                    <h2 style="color: blue">DOS/DDOS Saldırıları</h2>  
+                </div>  
+
+                <div class="col-md-9" style="text-align: center">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+
+
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="image/new-Mirai-variant-360x206.jpg"  style="width:100%" alt="First slide" data-toggle="modal" data-target="#de-modal1">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p >19 Mart 2019</p>
+                                    <h5 style="color: white">Mirai Botnet’in yeni çeşidi kurumsal sistemleri hedefliyor</h5>
+                                </div>
+
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="image/0x.jpg" style="width:100%" alt="Second slide" data-toggle="modal" data-target="#de-modal2">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>3 Şubat 2019</p>
+                                    <h5>Büyük DDoS saldırıları saniyede 500 milyon paket üretiyor</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="image/promo-4.jpg" style="width:100%" alt="Third slide" data-toggle="modal" data-target="#de-modal3">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>11 Ekim 2018</p>
+                                    <h5>DDoS koruma kalkanı 5 adımda nasıl değerlendirilir?</h5>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <br>
+
+                </div>
+
+                <div class="col-md-3" style="text-align:center;">
+                 
+
+                    <button type="button" class="btn btn-outline-primary btn-block"><a id="i1" class="fab fa-facebook-f" href="https://www.facebook.com"></a></button>
+                    <button type="button" class="btn btn-outline-danger btn-block"><a id="i4" class="fab fa-youtube" href="https://www.youtube.com"></a></button>
+                    <button type="button" class="btn btn-outline-warning btn-block"> <a id="i2" class="fab fa-instagram" href="https://www.instagram.com"></a></button>
+                    <button type="button" class="btn btn-outline-info btn-block"> <a id="i3" class="fab fa-twitter" href="https://www.twitter.com"></a></button>
+                    <br>
+                    <!-- weather widget start --><div id="m-booked-bl-simple-835"> <div class="booked-wzs-160-110 weather-customize" style="background-color:#050505;width:220px;" id="width3"> <div class="booked-wzs-160-110_in"> <a target="_blank" class="booked-wzs-top-160-110" href="https://www.booked.net/"><img src="//s.bookcdn.com/images/letter/s5.gif" alt="booked.net" /></a> <div class="booked-wzs-160-data"> <div class="booked-wzs-160-left-img wrz-18"></div> <div class="booked-wzs-160-right"> <div class="booked-wzs-day-deck"> <div class="booked-wzs-day-val"> <div class="booked-wzs-day-number"><span class="plus">+</span>14</div> <div class="booked-wzs-day-dergee"> <div class="booked-wzs-day-dergee-val">&deg;</div> <div class="booked-wzs-day-dergee-name">C</div> </div> </div> <div class="booked-wzs-day"> <div class="booked-wzs-day-d"><span class="plus">+</span>21&deg;</div> <div class="booked-wzs-day-n"><span class="plus">+</span>15&deg;</div> </div> </div> <div class="booked-wzs-160-info"> <div class="booked-wzs-160-city">İstanbul</div> <div class="booked-wzs-160-date">Salı, 14</div> </div> </div> </div> <a target="_blank" href="https://bookeder.com/weather/istanbul-18319" class="booked-wzs-bottom-160-110"> <div class="booked-wzs-center"><span class="booked-wzs-bottom-l"> 7 Günlük Hava Tahmini</span></div> </a> </div> </div> </div><script type="text/javascript"> var css_file=document.createElement("link"); css_file.setAttribute("rel","stylesheet"); css_file.setAttribute("type","text/css"); css_file.setAttribute("href",'https://s.bookcdn.com/css/w/booked-wzs-widget-160.css?v=0.0.1'); document.getElementsByTagName("head")[0].appendChild(css_file); function setWidgetData(data) { if(typeof(data) != 'undefined' && data.results.length > 0) { for(var i = 0; i < data.results.length; ++i) { var objMainBlock = document.getElementById('m-booked-bl-simple-835'); if(objMainBlock !== null) { var copyBlock = document.getElementById('m-bookew-weather-copy-'+data.results[i].widget_type); objMainBlock.innerHTML = data.results[i].html_code; if(copyBlock !== null) objMainBlock.appendChild(copyBlock); } } } else { alert('data=undefined||data.results is empty'); } } </script> <script type="text/javascript" charset="UTF-8" src="https://widgets.booked.net/weather/info?action=get_weather_info&ver=6&cityID=18319&type=1&scode=124&ltid=3458&domid=765&anc_id=61385&cmetric=1&wlangID=21&color=050505&wwidth=220&header_color=ffffff&text_color=333333&link_color=08488D&border_form=1&footer_color=ffffff&footer_text_color=333333&transparent=0"></script><!-- weather widget end -->
+                </div>
+            </div>
+
+            <section class="gallery-block cards-gallery ">
+                <div class="baslik"> 
+                    <h2 style="color: blue">Haberler</h2>  
+                </div>  
+                <div class="row " style="margin-top: 17px;">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal6">
+                            <a class="lightbox">
+                                <img src="image/github-rekor-ddos-1.3tbps.png" style="width:100%"   alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">Github’a rekor DDoS saldırısı</a></h6>
+                                <p class="text-muted card-text"> 28 Ocak 2018 Çarşamba günü, Github’ın kodları barındırdığı hostingin web sitesine DDoS saldırısı gerçekleştirilmiş ve cihazların gözlemlediği kadarıyla şu ana kadar ki en yüksek … <br> <br> <br> <br></p>
+                            </div>
+                        </div>
+
+                    </div><!github!>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal7">
+                            <a class="lightbox">
+                                <img src="image/hajime2.jpg" style="width:100%"   alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">300 Bin IoT Cihazı Hajime’nin Kontrolü Altında</a></h6>
+                                <p class="text-muted card-text"> Evrim geçirmeye devam eden gizemli bir IoT zararlı yazılımı olan ve büyük bir uçtan uca (P2P) botnet kuran Hajime’nin faaliyetleri üzerine Kaspersky Lab uzmanları, … </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal8">
+                            <a class="lightbox">
+                                <img src="image/ddos.jpg"style="width:100%"   alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">DDoS Saldırılarındaki Düşüşe Aldanmayın
+                                    </a></h6>
+                                <p class="text-muted card-text">Fırtınadan önceki sessizlik: DDoS saldırılarındaki düşüşe aldanmayın 2017’nin ilk üç ayında görülen saldırılar, Kaspersky Lab’ın DDoS saldırılarının geçirmekte olduğu evrim konusunda 2016 yılı sonuçlarına …<br><br>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal9">
+                            <a class="lightbox">
+                                <img src="image/cctv.jpg" style="width:100%"   alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">Yeni IoT Zararlı Yazılımı DDoS’a Hazırlanıyorr</a></h6>
+                                <p class="text-muted card-text"> 100.000’den fazla internet bağlantılı kameranın, yeni IoT zararlı yazılımın saldırısına maruz kalacağı öngörülüyor. Persirai isimli zararlı yazılım, Çin’de üretilen kablosuz.... </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal10">
+                            <a class="lightbox">
+                                <img src="image/smart-tv-hack-670x335.jpg" style="width:100%"   alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">Akıllı TV’lerin Yüzde 85’i Yayın Sinyalleri ile Hacklenebiliyor</a></h6>
+                                <p class="text-muted card-text">IoT kavramının gelişmesiyle birlikte internete bağlanan cihazların sayısında büyük bir artış yaşanmaya başlandı. Cihaz sayısındaki bu artış için olumlu bir gelişme denilebilir ancak güvenlik …<br> <br>  </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal11">
+                            <a class="lightbox">
+                                <img src="image/mirai-windows.jpg"style="width:100%"   alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">Mirai Bu Sefer Windows’tan Yayılıyor</a></h6>
+                                <p class="text-muted card-text"> Yetenekli bir siber saldırgan, meşhur Mirai zararlı yazılımını yaymak için ileri seviye bir Windows botnet‘i geliştirdi. Aralarında Türkiye de olmak üzere, özellikle internete bağlantılı … <br> <br> <br> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+
+        <div class="jumbotron text-center mb-0 mt-4 bg-dark">
+            <div class="container">
+                <a id="i1" class="fab fa-facebook-f" href="https://www.facebook.com"></a>
+                <a id="i2" class="fab fa-instagram" href="https://www.instagram.com"></a>
+                <a id="i3" class="fab fa-twitter" href="https://www.twitter.com"></a>
+                <a id="i4" class="fab fa-youtube" href="https://www.youtube.com"></a>
+                <br><br><br>
+                <p>@Copyright 2019</p>
+            </div>  
+        </div>
+
+        <div class="modal fade" id="de-modal1">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Mirai Botnet’in yeni çeşidi kurumsal sistemleri hedefliyor</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+
+                    <div class="modal-body" style="background: black">
+
+                        <img src="image/new-Mirai-variant-360x206.jpg"  
+                             style="width:100%">
+
+                        <p style="color: white">
+                            Yeni bir Mirai botnet çeşidi, işletmeler tarafından kullanılan WePresent WIPG-1000 Kablosuz Sunum Sistemleri‘ni ve LG Supersign TV‘leri hedefliyor.
+
+                        </p>
+
+
+                        <p style="color: white">
+                            Araştırmacılar, Ocak ayından bu yana kurumsal kablosuz sunum ve görüntüleme sistemlerindeki güvenlik açıklarını hedef alan ünlü Mirai IoT botnet‘in yeni bir türünü keşfetti.
+                        </p>
+                        <p style="color: white">
+
+                            Palo Alto Network’ün Birim 42 araştırmacıları, Mirai’nin bu yeni çeşidinin özellikle farklı olduğunu belirterek, hassas, tüketici IoT (Internet of Things) cihazlarının aksine kurumsal odaklı cihazları hedef aldığını; yani, WePresent WIPG-1000 Kablosuz Sunum Sistemleri’ni ve LG Supersign TV’leri hedef aldığını belirtti.
+
+
+
+                        </p>
+                        <p style="color: white">
+                            Her iki sistemin de kurumsal işletme ortamlarında sıklıkla kullanıldığı bilinmektedir.
+                        </p>
+                        <h5 style="color: red">
+                            Yeni Exploit’ler
+                        </h5>
+                        <p style="color: white">
+                            LG Supersign TV’ler için, birçok TV’de yerleşik olarak bulunan LG SupersignEZ CMS, yanlış parametre işleme nedeniyle yapılan uzaktan kod yürütme saldırılarının (CVE-2018-17173) çalıştırılmasına neden oluyor. WePresent WIPG-1000 için ise bu yeni çeşit Mirai, command injection saldırısını hedefliyor.
+                        </p>
+                        <p style="color: white">
+                            WePresent ve LG şirketlerinden zafiyetlerle ilgili henüz bir açıklama gelmedi.
+
+                        </p>
+                        <p style="color: white">
+                            Bu ticari yazılımların yanında, yeni çeşit Mirai, router’lar (Linksys E1500/E2500 ve ZTE ZXV10 H108L) gibi çeşitli gömülü donanımları, ağ depolama aygıtlarını, NVR‘ler ve IP kameraları (Netgear ReadyNAS Surveillance 1.4.3-16 ve NUOO NVRMini cihazları) bunlara karşı birçok exploit’i kullanarak hedef alıyor.
+
+
+                        </p>                     
+                        <p style="color: white">
+                            Araştırmacılar, yeni Mirai çeşidinin 11‘i yeni olmakla beraber toplamda 27 tane exploit içerdiğini belirtti.
+
+
+                        </p>                   
+                        <p style="color: white">
+                            Araştırmacılar Pazartesi günü yayımlanan yazıda, “Bu yeni özellikler botnet’e geniş bir saldırı yüzeyi sağlıyor. Özellikle, kurumsal bağlantıların hedeflenmesi aynı zamanda, daha geniş bant genişliğine erişilmesine izin veriyor ve DDoS saldırıları için botnet’in daha fazla saldırı gücü ortaya çıkarmasına neden oluyor” dedi. “Botnet’in kurumsal güvenlik açıklarını hedeflediğini gözlemlediğimiz örnekler ise, Apache Struts ve SonicWall‘a karşı yapılan exploit’lerin de saldırılara dahil edilmesiydi” diye eklediler.
+
+
+
+                        </p>                       
+                        <p style="color: white">
+                            Mirai, 2016‘da büyük websitelerine saldırı yapmak amacıyla 300.000‘den fazla IoT cihazını kullanan büyük, eşi benzeri görülmemiş bir DDoS saldırısında kullanılmasıyla tanınıyor.
+                        </p>
+                        <h5 style="color: red">
+                            Brute Force Taktikleri Gelişiyor
+                        </h5>
+                        <p style="color: white">
+                            Yeni istismarların yanı sıra, Mirai’nin yeni çeşidi, cihazlara yönelik brute force saldırılarına wordlist‘ine eklediği yeni, varsayılan kimlik bilgileriyle devam ediyor.
+                        </p> 
+                        <p style="color: white">
+                            Varyantın daha fazla incelenmesinin ardından, araştırmacılar, bu yeni çeşit botnet’te daha önce rastlamadıkları olağan dışı bir brute force referansı kullanıldığını söylediler.
+                        </p> 
+                        <ul type="square" style="color: white">
+                            <li><a href="https://www.websec.ca/publication/Blog/backdoors-in-Zhone-GPON-2520-and-Alcatel-Lucent-I240Q">admin:huigu309</a>
+                            <li><a href="https://www.websec.ca/publication/Blog/backdoors-in-Zhone-GPON-2520-and-Alcatel-Lucent-I240Q">root:huigu309</a>
+                            <li>><a href="https://www.websec.ca/publication/Blog/backdoors-in-Zhone-GPON-2520-and-Alcatel-Lucent-I240Q">root:huigu309</a>><a href="https://www.websec.ca/publication/Blog/backdoors-in-Zhone-GPON-2520-and-Alcatel-Lucent-I240Q">CRAFTSPERSON:ALC#FGU</a>
+                            <li>><a href="https://www.exploit-db.com/exploits/44387">root:videoflow</a>
+                        </ul>
+
+                        <p style="color: white">
+                            Cihazlar saldırıya uğradığında, kötü amaçlı yazılım, değişiklikler için Mirai payload’ını çekiyor ve cihazı botnet’lerin arasına ekliyor. Böylece, HTTP flood kullanılarak yapılan DDoS saldırılarında kullanılmak için zombi cihaz hazır hale geliyor.
+
+                        </p>
+                        <p style="color: white">
+                            Araştırmacılar, varyantın, shell script payload‘ının hala aktif olduğunu ve ilginç bir şekilde Kolombiya‘da bulunan “elektronik güvenlik, entegrasyon ve alarm izleme” işleri için oluşturulmuş bir web sitesinde barındırıldığını söyledi.
+                        </p>
+                        <img src="image/Figure-1-Shell-script-payload-fetched-by-exploits-1024x344.png"  style="width:100%">
+                        <p style="color: white">
+                            Araştırmacılar, IoT/Linux botnet‘lerin, ya daha fazla cihaza ulaşmak ve ağlarına eklemek için daha farklı exploit’ler kullandığını ya da daha çeşitli varyasyonlar denemek için oluşturulan wordlist’lerle brute force saldırıları yaptığını belirtti. Ayrıca, kurumsal güvenlik açıkları hedeflenerek, tüketici cihaz bağlantılarından daha büyük bant genişliğine ulaşarak, DDoS saldırıları için daha fazla saldırı gücü sağlanıyor denildi.
+
+
+                        </p> 
+                        <p style="color: white">
+                            Siber suçlular, savunmasız bir şekilde çoğalan IoT cihazlarıyla orantılı olarak Mirai’nin farklı türevlerini ortaya çıkarmaya devam ediyorlar…
+
+
+                        </p>
+
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+
+
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal2">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Büyük DDoS saldırıları saniyede 500 milyon paket üretiyor</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/0x.jpg" style="width:100%" >
+                        <p style="color: white">
+                            Imperva şirketinin dediğine göre, 10 Ocak‘tan itibaren başlayan saldırılar ile ilişkili olan ağ paketleri, geçen senenin en büyük saldırısı olan GitHub saldırısından bile 4 kat daha büyük.
+
+                        </p>
+                        <p style="color: white">
+                            DDoS, rahatsız edici ve hafifletilmesi zor olan bant genişliğine ihtiyaç duymuyor..
+
+
+                        </p>
+                        <p style="color: white">
+
+                            Imperva, bu ayın başlarında, müşterilerinden birine gelen saniyede 500 milyon paketlik bir saldırıyı hafifletti, şimdiye kadar kaydedilen, paket hacmi en büyük DDoS saldırısı ile karşı karşıya kalındı.
+
+
+                        </p>
+                        <p style="color: white">
+                            10 Ocak saldırısı, saldırganın hedef sunucuda, makinenin işleyebileceğinden daha hızlı TCP bağlantısı isteği yapmasıyla gerçekleştirdiği SYN Flood saldırısıydı. Imperva’nın kaydettiği verilere göre, saldırgan, bir çok sahte kaynak portları ve adreslerini kullanarak hedefe hem normal hem de SYN paketleri ile 800 ile 900 baytlık paketleri içeren büyük bir SYN saldırısı gönderdi. Saldırganlar, genellikle bu tarz saldırıları bir çok kaynağı birleştirerek gerçekleştiriyor, böylece normal SYN paketleri CPU gibi sunucu kaynaklarını tüketiyor ve daha büyük ağları kimse giremeyecek şekilde dolduruyor.
+
+
+                        </p>
+                        <p style="color: white">
+                            Imperva’nın Ocak saldırısına ilişkin başlattığı soruşturmalarda, daha önce bilinen iki aracın kullanılarak bu saldırıların başlatıldığı tespit edildi — biri düzenli olarak SYN trafiğini taşırıyordu, diğeri de daha büyük paketlerle SYN saldırısı yapmak için kullanılıyordu —. Bu hafta yeni bir rapor daha yayınlandı ve bu raporda araçların farklı iki kişi tarafından yazıldığı ve daha sonra “İnternet tarihindeki en büyük DDoS saldırısını” başlatması için bir arada kullanıldıkları belirtildi.
+
+
+
+                        </p>
+
+                        <p style="color: white">
+                            Imperva’da çalışan bir siber güvenlik araştırmacısı olan Tomer Shani, işletmeler ve medyanın saldırıların tipinden çok boyutuna odaklanma eğiliminde olduğunu söylüyor. “Gerçekte ise, saldırıların boyutlarının önlenemeyecek kadar zorlaşabileceğinin veya ne kadar zarar verebileceğinin en iyi yansıması bu değil.” diyor. “Saniyede gönderilen paket sayısı (PPS) ise bu saldırıların daha iyi bir göstergesidir.”
+
+
+
+
+                        </p>
+                        <p style="color: white">
+                            Geçen yıl GitHub’a yapılan ve saniyede 1,35 terabitlik trafik üreten bir saldırı, şimdiye kadarki en geniş bant genişliğine sahip DDoS saldırılarından biri olarak kabul ediliyor. Saldırı o sırada çok fazla dikkat çekti ve büyük DDoS saldırılarının ortaya koyabileceği zorlukların anlatılmasında iyi bir örnek olarak sıklıkla kullanıldı.
+                        </p>
+                        <h5 style="color: red">
+                            Etkilerin Azaltılmasının Zorlukları
+                        </h5>
+                        <p style="color: white">
+                            Bu saldırılar ancak yeterli ağ bant genişliği sağlandığında köreltilebiliyor ve azaltılabiliyor. Imperva, bu günlerde yaptığı çalışmalarla DDoS azaltma ve koruma hizmetleriyle, bugüne kadar gözlenen en büyük DDoS saldırılarından çok daha büyük ağ bant genişliğini sağlayabileceğini belirtti. Satıcıya göre, bu, saldırıların büyüklüğünün daha az sorun oluşturacağı anlamına geliyor.
+
+                        </p>    
+                        <p style="color: white">
+                            Öte yandan, çok yüksek PPS içeren saldırılarla başa çıkmak, her paketi değerlendirmek için gereken işlem gücünden dolayı daha da zorlaşıyor. Imperva’nın raporunda, servis sağlayıcılarının genellikle DDoS saldırılarını azaltmak için kullandığı ağ yönlendiricilerinin, anahtarların ve etki azaltma aygıtlarının sınırlayıcı faktörünün gelen paket boyutu değil, gelen paket sayısı olduğu belirtildi. Yüksek PPS saldırılarını azaltmak, gelen paketleri yönlendirmek veya değiştirmek için kullanılan ağ cihazlarının mevcut olandan çok daha fazla işlem yeteneğine ihtiyaç duyduğu da belirtildi.
+                        </p>    
+                        <p style="color: white">
+                            Shani, “Kuruluşlar şirketlere kapasite sağlarken DDoS saldırılarının standart boyuttaki ölçülerini düşünürler, ancak kuruluşlar yüksek PPS’li saldırılarla daha fazla ilgilenmelidir.” diyor.
+
+
+                        </p>    
+                        <p style="color: white">
+                            Örneğin GitHub saldırısı, DDoS trafiğini esas olarak aynı porttan farklı sunuculara 129,6 milyon civarında ve nispeten düşük bir PPS hızında gönderilen büyük boyutlu paketlerden meydana geliyordu. Buna karşılık, Imperva’nın bu geçtiğimiz ay karşılaştığı saldırı, gönderilen paketlerin hacminin yaklaşık dört katıydı.
+
+
+                        </p>    
+                        <p style="color: white">
+                            Shani, “Yüksek PPS saldırılarda ihtiyaç duyulan daha fazla bilgi işleme ve üretme işlemi ne kadar zorsa, bu verileri işlemek ve azaltmak da o kadar zor. Şirketler, yüksek PPS’ye sahip saldırılarla daha fazla ilgilenmeliler.” dedi.
+
+
+                        </p>    
+                        <p style="color: white">
+                            Corero Network Security CEO‘su Ashley Stephenson, bir DDoS saldırısının etkisinin, hedeflenen kuruluşun karşı koyma vektörlerine ve kırılganlığına bağlı olduğunu söylüyor. Doğru koşullarda, hem yüksek bant genişliği saldırıları hem de yüksek PPS DDoS saldırıları eşit derecede yıkıcı olabilir. “Çoklu vektörlerle DDoS saldırılarının nasıl gelişeceğini önceden tahmin etmek mümkün değil. Farklı vektörler farklı azaltma zorlukları doğurur. Yüksek bant genişliğiyle yapılan saldırılar, meydana getirdikleri tıkanıklıktan dolayı daha kalabalık olduğundan daha fazla hasar yaratır” diyor.
+
+
+                        </p>    
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal3">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">DDoS koruma kalkanı 5 adımda nasıl değerlendirilir?</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+
+                    <div class="modal-body" style="background: black">
+
+                        <img src="image/promo-4.jpg" style="width:100%">
+                        <p style="color: white">
+                            DDoS saldırılarının etkisini azaltma ve korunmaya yönelik önlemler bugün hemen her şirkette mevcut. Peki DDoS koruma kalkanınızın etkinliğini nasıl değerlendirebileceğinizi biliyor musunuz? Sistemin çalışmasını denetleyebilen bir sağlayıcı ile ortaklık kurmak, büyük bir iş yükünü omuzlarınızdan alır, personel kaynaklarınızı artırır ve özel bir DDoS uzmanlığına erişmenizi sağlar. Ancak tüm yönetilen DDoS hizmetleri aynı değildir.
+                        </p>
+                        <h5  style="color: red">
+                            Özel iş akışlarını gerçekleştirme esnekliği
+                        </h5>
+                        <p style="color: white">
+                            DDoS tehditlerini ele almak için uygulanan bazı operasyon süreçleriniz ve prosedürleriniz zaten mevcut olabilir. Bir yönetilen hizmet sağlayıcısı, süreçlerinizi değiştirmenizi istemek yerine size uyum sağlayabilmelidir. Örneğin, iletişim protokolünüz nedir? Hizmet sağlayıcısının kendi başına etki azaltma eylemini başlatmasını veya yetkilendirmenizi istemesini bekleyeceğiniz senaryolar hangileridir? Sağlayıcı farklı uyarı türlerine veya olay seviyelerine göre farklı eylemleri destekleyebiliyor mu? İyi bir sağlayıcının süreçlerinizi anlaması zaman alır ve süreçlerinizin içinde çalışma esnekliğine sahiptir. İyi olanlar da dahil birçok satıcı için ya kendi yolu vardır ya da bir yol yoktur.
+                        </p>
+                        <h5  style="color: red">
+                            Müşteri odaklı raporlama ve haber alma
+                        </h5>
+                        <p style="color: white">
+                            İyi bir DDoS sağlayıcısı en son olayların ayrıntılarını ve güvenlik olaylarına yanıt olarak yapılan işlemleri içeren raporlar sunar. İyi bir sağlayıcı, güvenlik durumunuzu iyileştirmeye yönelik önerilerin temeli olarak global tehdit istihbaratından yararlanan daha proaktif ve danışmayı temel alan bir yaklaşım benimser. Yönetilen hizmet sağlayıcısı ayrıca üst düzey yöneticiler için yatırım getirisini ve temel ölçümleri göstermenizi sağlayan yönetim düzeyinde raporlama sağlayabilmelidir.
+                        </p>
+                        <h5  style="color: red">
+                            Ağ boyutu
+                        </h5>
+                        <p style="color: white">
+                            DDoS saldırıları büyük ölçüde büyütme teknikleri ve Nesnelerin İnterneti (IoT) bilgisayar saldırıları nedeniyle büyük bir hızla büyümekte ve terabayt sınırına süratle yaklaşmaktadır. Bilinen en büyük saldırıları sindirme ve dağıtma becerisi bir zorunluluktur. Etki azaltma işleminin saldırı kaynağına mümkün olduğunca yakın gerçekleşmesini sağlayan birden fazla konuma sahip dağıtılmış bir altyapı, eşit derecede önemlidir. Bunun yapılması “dar geçitleri” önlemekle kalmayıp etki azaltma süresi döngülerini hızlandırı 
+                        </p>
+                        <p style="color: white" >
+                            Mutlak ağ boyutu kadar önemli bir konu da DDoS etki azaltma işlemine ayrılan kapasite miktarıdır. Örneğin, büyük ağ kapasitesi ile övünen bazı içerik teslim ağları ve web hizmet sağlayıcıları, ek olarak DDoS koruması sunabilir. Ancak ağ kapasitelerinin büyük bölümünü ana iş koluna ayırmaları ve DDoS müşterilerini risk altında bırakmaları kulağa mantıklı gelmektedir.
+                        </p>
+                        <img src="image/ddos.png"  style="width:100%">
+
+                        <p style="color: white" >
+                            Bu yüzden, özel bir sağlayıcı büyük saldırıları azaltmak için kritik öneme sahiptir. Bununla birlikte, yönetilen hizmet sağlayıcıları birden fazla müşteriyi destekler ve her zaman tek seferde birkaç müşteriye ulaşma riski vardır. Bu nedenle, potansiyel bir saldırının boyutuna eşit ya da hatta onun iki katı büyüklükte kapasite düzeylerine sahip olunması yeterli değildir. Bunun yerine, ağın bilinen en büyük saldırılardan birkaç kat daha geniş bir büyüklük sırasında olması gerekir. On terabayt kapasite; modern ve yönetilen DDoS sağlayıcısını tanımlayacak standart haline gelmektedir.
+                        </p>
+                        <h5  style="color: red">
+                            Ekibin deneyimi
+                        </h5>
+                        <p style="color: white" >
+                            İyi bir sağlayıcı, yüksek oranda otomasyona bağımlıdır. Otomasyon etkili DDoS korumasında kesinlikle önemli bir rol oynar ancak her zaman iyi trafiği kötüden ayırt edemez. Meşru trafiği engelleyip çok sayıda yanlış pozitif oluşturma olasılığı yüksektir. Kötü amaçlı aktörlerin engellenmesi için insan zekası gerekir: gerçek bir saldırıyı tanıyıp analiz etme, kökenlerini anlama ve hedeflerini hızlıca belirleme becerisi. İyi bir sağlayıcı, DDoS saldırılarını araştırma, analiz etme ve başarıyla azaltılmasını denetleme konusunda yıllar süren deneyime sahip özel araştırma ekipleriyle birlikte çalışır. Ayrıca, çeşitli profesyonel geçmişleri ve tamamlayıcı becerileri olan geniş bir güvenlik uzmanları ekibine sahiptir.                        </p>
+                        <p style="color: white" >
+                            En iyi karma çözüm uygulaması: Birçok yönetilen hizmet teklifi tamamen bulut tabanlıdır. Diğer bir deyişle, etki azaltma işleminin yüzde 100’ü hızla pahalı hale gelebilen “her zaman etkin” bir bulut tabanlı sistemde gerçekleşir. Güvenlik uzmanları, yerinde koruma ile bulut özelliklerini birleştiren bir karma çözümün DDoS saldırılarına karşı en iyi savunma olduğunu giderek daha fazla kabul etmektedir. Yerinde koruma bileşeni genellikle kötü amaçlı trafiğin büyük bölümünü yakalayabilir. Bir saldırı, yerinde koruma aygıtı kapasitesini tüketmeyi tehdit ederse, bulut özelliği otomatik olarak etkinleşebilir.
+
+                        </p>
+                        <img src="image/ddos-koruma.png"  style="width:100%">
+
+                        <p style="color: white" >
+                            Karma bir çözüm daha ucuzdur ve düşünebileceğinizden daha iyi bir değere sahiptir. Günümüzde yerinde korumalar sanal hale getirilebilir. Tam yönetilen bir hizmetle maliyetler personel gereksinimlerindeki azalma ile dengelenir. Siz yalnızca kullandığınız bulut kapasitesi kadar ödeme yaparsınız.
+                        </p>
+                    </div><!-- model-body -->
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal6">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Github’a rekor DDoS saldırısı</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/github-rekor-ddos-1.3tbps.png" style="width:100%">
+                        <p style="color: white">
+                            28 Ocak 2018 Çarşamba günü, Github’ın kodları barındırdığı hostingin web sitesine DDoS saldırısı gerçekleştirilmiş ve cihazların gözlemlediği kadarıyla şu ana kadar ki en yüksek trafik miktarı görüldü. İşte o miktar 1.3 Tbps.                        </p>
+
+                        <p style="color: white">
+                            İlginçtir ki saldırganlar hiç bir botnet ağı kullanmadan bunun yerine eksik/yanlış olarak yapılandırılmış Memcached sunucularından faydalandılar.
+
+
+                        <p style="color: white">
+
+                            Popüler açık kaynak ve dağıtımı oldukça kolay olan caching sistemini, orijinal gücünden daha fazla olan 51.000 kat daha fazla güçlü DDoS saldırısı başlatabilmesine imkan sağladı.
+
+
+                        <p style="color: white">
+                            Memcached olarak adlandırılan DDoS saldırısı, kurbanın IP adresi ile eşleşen sahte bir IP adresi kullanarak 11211 numaralı porta hedef olan Memcached sunucusuna sahte bir istek gönderiyor.
+
+                        </p>
+                        <p style="color: white">
+                            Zafiyetin bulunduğu sunuculara gönderilen istek birkaç byte boyutunda, hedef olan IP adresine ise on binlerce kat daha büyük bir cevap vermesini sağlıyor. Tıpkı DNS Amplification DDoS saldırısı gibi..
+                        </p>
+
+                        <p style="color: white">
+                            Akamai “Bu yapılan saldırı, Akamai tarafından şimdiye kadar görülen en büyük saldırıydı. Mirai botneti ve muhtemelen en büyük DDoS saldırısı olduğu açıklanan Eylül 2016 saldırılarının iki katından daha büyük bir saldırıydı.” dedi. Github’ın böyle bir saldırı anında hayatta kalmasını sağlayan ise Akamai Cloud Computing teknolojisi.
+                        </p>
+
+                        <p style="color: white">
+                            Github’ın teknik blogunda yayınladığı yazıda “On binlerce benzersiz kaynaktan gelen saldırılardı. Memcached tabanlı saldırı ile yaklaşık olarak saniyede 126.9 milyon paket gönderildi.” dendi.
+                        </p>
+
+                        <p style="color: white">
+                            Yeni olmasada Amplification saldırılarında genel olarak yanlış yapılandırılmış cihazlar kullanılıyor. Memcached’da buna bir örnek. İnternete bağlı halen çok fazla Caching server bulunuyor. Github saldırısında kullanılmasa da halen bu cihazlar yeni hedeflere saldırılar yapmak için kullanılabilirler.
+                        </p>
+
+                        <p style="color: white">
+                            Memcache sunucularının reflector olarak istismar edilmesini önlemek için portlardan 11211 UDP’yi engellemeli, hız sınırını düşürmeli veya kullanılmıyorsa UDP portları tamamen devre dışı bırakılmalıdır.
+                        </p>
+
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal7">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">300 Bin IoT Cihazı Hajime’nin Kontrolü Altında</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/hajime2.jpg"  style="width:100%">
+                        <p style="color: white">
+                            Evrim geçirmeye devam eden gizemli bir IoT zararlı yazılımı olan ve büyük bir uçtan uca (P2P) botnet kuran Hajime’nin faaliyetleri üzerine Kaspersky Lab uzmanları, detaylı araştırmalarını bitirip sonuçlarını paylaştılar. Son zamanlarda büyük bir hızla genişleyen Hajime botneti, bugüne kadar yaklaşık 300 bin cihazı bünyesine kattı ve geliştiricisinin komutlarını yerine getirmek için hazır bir şekilde bekliyor. Hajime’nin asıl amacı şimdiye kadar bilinmiyor ve resmen 300 bin IoT cihazı Hajime’ye itaat ediyor…
+
+
+
+                        </p>
+                        <img src="image/hajime2.jpg"  style="width:100%">
+
+
+                        <p style="color: white">
+                            Japonca’da “başlangıç” anlamına gelen ve faaliyetlerine ilk defa 2016 Ekim ayında rastlanan Hajime, o tarihten bu yana yeni yayılma teknikleri geliştirerek evrim geçirmeye devam ediyor. Kötü amaçlı yazılım, ele geçirdiği ve belirli bir merkezi olmayan bir grup cihazla dev bir uçtan uca botnet oluşturuyor ve onlarla gizli bir şekilde spam veya DDoS saldırıları gerçekleştiriyor.
+                        </p>
+                        <p style="color: white">
+
+                            Bununla birlikte, bir saldırı kodu ya da yeteneği bulunmayan Hajime, yalnız bir yayılım modülü. Gelişmiş ve gizli bir yazılım ailesi olan Hajime, cihazlara girmek için kaba kuvvet saldırılarıyla cihaz şifrelerini kırmak da dahil olmak üzere, birçok farklı teknik kullanıyor ve daha sonra kendisini cihazı ele geçirilen kurbandan gizliyor. Böylece söz konusu cihaz botnetin bir parçası haline geliyor.
+                        </p>
+                        <p style="color: white">
+                            Hajime, yalnızca belirli bir aygıt türüne değil, internete bağlantısı olan herhangi bir aygıta saldırabiliyor. Zararlı yazılımın geliştiricileri yine de faaliyetlerini bazı cihazlara odaklıyor. Hedefledikleri cihazların büyük çoğunluğunun dijital video kayıt cihazları, web kameraları ve yönlendiriciler (router’lar) olduğu görülüyor.
+                        </p>
+
+                        <p style="color: white">
+                            Bu arada derin teknik araştırmaya göre Hajime, aralarında General Electric, Hewlett-Packard, US Postal Service, ABD Savunma Bakanlığı ve bir dizi özel ağın da bulunduğu çeşitli ağlara bulaşmaktan kaçınıyor!?.
+                        </p>
+                        <p style="color: white">
+                            Araştırma döneminde zararlı yazılımın öncelikle Vietnam (% 20’nin üzerinde), Tayvan (yaklaşık% 13) ve Brezilya (yaklaşık% 9) üzerinden yayıldığı kaydedilmiş.
+                        </p>
+                        <img src="image/hajime3.jpg" style="width:100%">
+                        <p style="color: white">
+                            Ele geçirilmiş olan cihazların çoğu İran, Vietnam ve Brezilya’da bulunuyor.
+                        </p>
+                        <img src="image/hajime4.jpg"  style="width:100%">
+
+
+
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal8">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">DDoS Saldırılarındaki Düşüşe Aldanmayın
+                        </h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/ddos.jpg"  style="width:100%">
+                        <p style="color: white">
+                            Fırtınadan önceki sessizlik:
+                            DDoS saldırılarındaki düşüşe aldanmayın
+
+
+                        <p style="color: white">
+                            2017’nin ilk üç ayında görülen saldırılar, Kaspersky Lab’ın DDoS saldırılarının geçirmekte olduğu evrim konusunda 2016 yılı sonuçlarına dayanarak yaptığı tahminlerin doğru olduğunu ortaya çıkardı. Yılın ilk çeyreği aynı zamanda siber suçluların da dinlenmeye ihtiyaç duyduğunu gösteriyor. Karmaşık DDoS saldırılarının popülaritesi ilk çeyrekte artmaya devam etse de, saldırıların sayısında görülen genel bir düşüş ve ülkelere göre dağılımlarındaki değişim dikkatleri çekti.
+
+
+                        </p>
+                        <p style="color: white">
+                            Yılın ilk çeyreğinde Kaspersky DDoS İstihbarat Sistemi tarafından 72 ülkedeki kaynakları hedef alan DDoS saldırıları kaydedildi. Tespit edilen komuta ve kontrol sunucuları açısından Güney Kore lider olmaya devam etti. Aynı konuda ABD ikinci sırada gelirken, onu ilgili gözlemler başladığından bu yana Çin’i ilk defa ilk üçten atan Hollanda takip etti.
+
+
+
+                        </p>
+                        <p style="color: white">
+                            2017’nin ilk üç ayında işletim sistemine göre dağılım da değişim gösterdi. Bir önceki çeyrekte popüler olan Linux tabanlı IoT botnetleri, yerlerini yılın ilk çeyreğinde payları %25’ten %60’a çıkan Windows tabanlı botnetlere bıraktı. TCP, UDP ve ICMP saldırılarının sayısı kayda değer miktarda artarken, 2016’nın son çeyreğinde %75 paya sahip SYN DDoS ve HTTP saldırılarının payı, 2017’nin ilk çeyreğinde %48’e düştü.
+
+
+                        </p>
+                        <img src="image/1494488094_KL_DDoS-600x335.jpg" style="width:100%"   >
+
+
+
+                        <p style="color: white">
+
+                            Raporlanan dönemde bant genişliği yükseltme (amplification) tabanlı tek bir saldırıya bile rastlanmazken, şifreleme tabanlı saldırıların sayısında artış oldu. Bu tespit, geçtiğimiz sene öngörüldüğü gibi, basit ve güçlü DDoS saldırılarından, standart güvenlik araçları kullanan ve tespit edilmesi zor saldırılara doğru bir değişim olduğunu gösteriyor.
+
+
+                        </p>
+
+                        <p style="color: white">
+                            Genel olarak bakıldığında ilk çeyreğin nispeten sakin geçtiği görülüyor; en yüksek miktarda saldırı (994) 18 Şubat’ta gerçekleşti. En uzun süren DDoS saldırısı ise sadece 120 saat sürdü. Bir önceki çeyrekteki en uzun saldırının 292 saat sürdüğü göz önünde bulundurulduğunda bunun kayda değer miktarda az olduğu görülüyor.
+
+
+                        </p>
+
+
+
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal9">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Yeni IoT Zararlı Yazılımı DDoS’a Hazırlanıyor</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/cctv.jpg"  style="width:100%">
+                        <p style="color: white">
+                            100.000’den fazla internet bağlantılı kameranın, yeni IoT zararlı yazılımın saldırısına maruz kalacağı öngörülüyor. Persirai isimli zararlı yazılım, Çin’de üretilen kablosuz kameraları hedef alıyor. Geçtiğimiz aydan beri sözü edilen kameralara sızan zararlı, bu kameralardaki açıkları exploit ederek kendini yerleştiriyor. Zararlının sisteme girmesinin ardından, saldırganlar dışarıdan kameralara erişim sağlayıp, görüntüleri ele geçirebiliyor.
+
+
+
+
+
+                        <p style="color: white">
+                            Çinli üreticiler tarafından üretilen 1250’ye yakın farklı kamera modelinin tehlikede olduğu düşünülüyor. Shodan arama motoru ile yapılan araştırmalara göre, piyasada bu modellere ait 120.000 civarında kamera olduğu da beriliyor. Persirai, kameralardan oluşan bir botnet meydana getirmeye hazırlanıyor. Bu sayede daha önce olduğu gibi yine geniş çaplı bir DDoS saldırısının yaşanabileceği de ifade ediliyor.
+
+
+
+                        </p>
+
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal10">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Akıllı TV’lerin Yüzde 85’i Yayın Sinyalleri ile Hacklenebiliyor
+
+                        </h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/uber-hacked.jpg"  style="width:100%">
+                        <p style="color: white">
+                            IoT kavramının gelişmesiyle birlikte internete bağlanan cihazların sayısında büyük bir artış yaşanmaya başlandı. Cihaz sayısındaki bu artış için olumlu bir gelişme denilebilir ancak güvenlik tarafında ise aynı şeyi söylemek mümkün değil. Zira bu cihazlarda gerekli güvenlik önlemleri alınmadığından, her biri birer canlı bomba gibi internette geziniyor.
+
+                        </p>
+                        <p style="color: white">
+                            İnternete bağlanan cihazlar arasında yer alan akıllı televizyonlarla ilgili bir süredir güvenlik açısından olumsuz raporlar sızdırılmaya başlandı. Bu raporlar arasındaki en önemlileri şüphesiz yakın bir zamanda WikiLeaks tarafından yayınlanan ve CIA’in siber uzay üzerinde gerçekleştirdiği operasyonları gözler önüne seren Vault 7 isimli operasyon dosyası oldu.
+
+                        </p>
+                        <p style="color: white">
+                            Yeterli güvenlik önlemi alınmayan akıllı TV’ler dışında mikro dalga fırınlar, güvenlik kameraları, yazıcılar vb. cihazlar son zamanlarda sıkça hacklenerek, birer siber silah olarak kullanılmaya başlandı. Yakın bir zamanda Mirai gibi botnetler vasıtasıyla ne kadar şiddetli DDoS saldırılarının yapılabileceğini gözlemleyebildik. DynDNS sağlayıcısına karşı yapılan bu saldırı neticesinde birbirinden önemli birçok web sitesi uzun bir süreliğine hizmet dışı bırakıldı.
+
+                        </p> 
+                        <iframe width="560" height="315" style="width:100%" src="https://www.youtube.com/embed/bOJ_8QHX6OA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p style="color: white">
+                            Rafael Secheel isimli bir güvenlik araştırmacısı tarafından geliştirilmiş olan exploit sayesinde düşük bütçeli bir transmitter ile dahi yersel dijital video yayınlarına zararlı yazılım gömerek, bu zararlı yazılımların akıllı TV’lere bulaştırılmasının sağlanabildiğini gösterdi. Scheel’in yaptığı açıklamaya göre geçtiğimiz yıl satılan akıllı televizyonların yüzde 90’nı kadarının benzer saldırılarla birer kurban haline dönüşebileceğini bildirdi.
+
+                        </p>
+                        <p style="color: white">
+                            Exploit, web tarayıcılarında var olduğu bilinen bir zafiyetin arkaplanda çalışması ile birlikte internete çıkışı olan televizyonlara uzaktan bağlanarak, kamerasının çalıştırılması ve bir siber silah olarak kullanılması mümkün. CIA tarafından sızdırılan belgelerde Weeping Angel gibi akıllı televizyonlara yönelik saldırılarla bugüne kadar yüzbinlerce kişinin, kendi rızası olmaksızın izlendiği belirtildi.
+
+                        </p>
+
+
+
+
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal11">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Mirai Bu Sefer Windows’tan Yayılıyor
+
+                        </h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/mirai-windows.jpg"  style="width:100%">
+
+                        <p style="color: white">
+                            Yetenekli bir siber saldırgan, meşhur Mirai zararlı yazılımını yaymak için ileri seviye bir Windows botnet‘i geliştirdi. Aralarında Türkiye de olmak üzere, özellikle internete bağlantılı teknolojilere büyük miktarda yatırım yapan, gelişmekte olan pazarlar risk altında.
+
+                        </p>
+
+
+                        <p style="color: white">
+
+                            Kaspersky Lab uzmanları, halen kullanımda olan Mirai botnet’lerini kapatma çabalarının bir parçası olarak Mirai zararlı yazılımına yönelik ilk Windows tabanlı yayıcıyı analiz ediyor. Söz konusu Windows botu, 2016’nın sonunda gerçekleşen Mirai temelli büyük DDoS saldırılarını başlatan saldırganlardan daha gelişmiş becerilere sahip bir geliştirici tarafından oluşturulmuş gibi görünüyor ve dolayısıyla Mirai tabanlı saldırıların gelecekteki kullanımı ve hedefleri konusunda endişe veriyor. İşin arkasındaki geliştiricinin Çince konuştuğu tahmin ediliyor. Araştırma verileri, 2017’de yaklaşık 500 tekil sisteme yönelik saldırılar yapıldığını ve aralarında Türkiye de olmak üzere, internete bağlantılı teknolojilere büyük miktarda yatırım yapan, gelişmekte olan pazarların özellikle risk altında olduğuna dikkat çekiyor.
+
+
+                        </p>
+
+                        <p style="color: white">
+                            Windows tabanlı yayıcı, orijinal Mirai kod temelinden daha zengin ve daha sağlam ancak yeni sürümün bileşenleri, teknikleri ve işlevsellikleri yıllarca eskiye dayanıyor. Bu yayıcının Mirai zararlı yazılımını yayma kapasitesi ise sınırlı. Mirai botlarını, ele geçirilmiş olan bir Windows bilgisayarından savunmasız bir Linux IoT (Internet of Things – Nesnelerin İnterneti) cihazına sadece kaba kuvvet saldırısıyla girdiği uzak bir telnet bağlantısı söz konuysa gönderebiliyor.
+
+
+                        </p>
+
+
+                        <p style="color: white">
+                            Bu kısıtlamaya rağmen, kodun daha deneyimli bir geliştiricinin, muhtemelen de Mirai ile yeni ilgilenmeye başlayan birinin eseri olduğu açıkça anlaşılıyor. Yazılımın içinde bulunan kodun Tayvan’da bulunan sunuculara bağlı Çince bir sistemde derlenmiş olması ve Çinli şirketlerden çalınan kod imzalama sertifikalarının kötüye kullanılmış olması gibi arkada bırakılan bir takım ipuçları, geliştiricinin Çince konuşan biri olduğu olasılığına dikkat çekiyor.
+
+                        </p>
+
+                        <p style="color: white">
+                            Kaspersky Lab Baş Güvenlik Araştırmacısı Kurt Baumgartner;
+
+
+
+                        </p>    
+                        <p style="color: white">
+                            [box style=”note”]Mirai’nin Linux’tan Windows’a atladığını ve tecrübeli geliştiricilerin bu işlere giriştiğini görmek gerçekten endişe verici. 2011’de bankacılığı hedef alan Zeus adlı Truva atının kaynak kodunun yayımlanması yıllar süren problemleri beraberinde getirdi. 2016’da yayınlan Mirai IoT botu kaynak kodu da aynısını internet için yapacak. Gittikçe daha karmaşık becerileri ve teknikleri beraberinde getiren daha deneyimli saldırganlar, ortalıkta dolanan Mirai kodunu kullanmaya başlıyorlar. IoT Mirai botlarını yaymakta olan bir Windows botnet geliyor ve daha önce Mirai operatörleri tarafından kullanılamayan yeni cihazlara ve ağlara Mirai’nin yayılmasını sağlıyor. Bunun daha bir başlangıç olduğunu söyleyebiliriz dedi.
+
+                        </p>   
+                        <p style="color: white">
+                            Saldırının ikinci aşamasında yer alan IP adreslerinin coğrafi konumlandırılmasına dayanarak, bu konuda en savunmasız ülkelerin bağlantılı teknolojilere büyük miktarda yatırım yapmış ve gelişmekte olan Hindistan, Vietnam, Suudi Arabistan, Çin, İran, Brezilya, Fas, Türkiye, Malavi, Birleşik Arap Emirlikleri, Pakistan, Tunus, Rusya, Moldova, Venezuela, Filipinler, Kolombiya, Romanya, Peru, Mısır ve Bangladeş olduğu ortaya çıkıyor.
+
+                        </p>   
+                        <img src="image/mirai-analysis-768x474.png"  style="width:100%">
+
+
+
+
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+
+    </body>
+
+
+</html>
