@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cyber Channel</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0;">
+
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- cards gallery -->   
+        <link rel="stylesheet" href="cards-gallery.css">   
+
+        <!--card animation-->    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+
+        <!--Google icon-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <!-- social icons -->
+        <!--Font Awesome 5 icon-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    </head>
+
+    <body style="background-color: black">
+        <div class="jumbotron text-center "style="background-color:black">
+            <h1><b>CYBER CHANNEL</b></h1>  
+            <script>
+
+                var mydate=new Date()
+                var year=mydate.getYear()
+                if (year < 1000)
+                    year+=1900
+                var day=mydate.getDay()
+                var month=mydate.getMonth()
+                var daym=mydate.getDate()
+                if (daym<10)
+                    daym="0"+daym
+                var dayarray=new Array("Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi")
+                var montharray=new Array("Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık")
+
+                myhours = mydate.getHours();
+                if (myhours >= 12) {
+                    myhours = (myhours == 12) ? 12 : myhours - 12; mm = " Akşam";
+                }
+                else {
+                    myhours = (myhours == 0) ? 12 : myhours; mm = " Sabah";
+                }
+
+                myminutes = mydate.getMinutes();
+                if (myminutes < 10){
+                    mytime = ":0" + myminutes;
+                }
+                else {
+                    mytime = ":" + myminutes;
+                };
+
+                document.write("<font color='white' face='Arial' size=2><b>" + myhours + mytime + mm + ", " + dayarray[day]+", "+montharray[month]+" "+daym+", "+year+"</b></font>")
+
+            </script>
+            <div class="container">
+
+            </div>  <!--containerın -->  
+        </div><!--jmbotron -->
+
+
+
+        <div class="sticky-top"; >
+            <nav class=" navbar-expand-md navbar bg-dark navbar-fixed-top navbar-dark" >
+                <div class="container">
+                    <button class="navbar-toggler"data-toggle="collapse" data-target="#Link1"><span class="navbar-toggler-icon"></span></button>  
+                    <div class="collapse navbar-collapse" id="Link1">
+                        <ul  class="navbar-nav">
+                            <a class="navbar-brand" href="index.html">Ana Sayfa</a>
+
+
+                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Siber Saldırılar</a>
+                                <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                                    <a  class ="dropdown-item " href="verisizintilari.html">Veri Sızıntıları</a>
+                                    <a class="dropdown-item " href="dossald%C4%B1r%C4%B1lar%C4%B1.html">DOS/DDOS Saldırıları</a>
+
+                                </div>                   
+                            </li>  
+                            <li class="nav-item"><a class="nav-link" href="#">Araştırma</a></li>
+
+
+                            <li class="nav-item"><a class="nav-link" href="guvenliaciklari.html">Güvenlik Açıkları</a></li>
+                            <li class="nav-item"><a class="nav-link" href="hakk%C4%B1m%C4%B1zda.html">Hakkımızda</a></li>
+                        </ul>
+                    </div> 
+
+                    <div class="row"> 
+                        <div class="col-md-12">
+                            <ul class="navbar-nav mx-auto  ">
+                                <form action="" style="position: relative; left: -30px; top:25px; transform:  translate(30px,-50%)">
+                                    <input type="search">
+                                    <i id="fa" class="fa fa-search"></i>
+                                </form>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <div class="baslik"> 
+                <h2 style="color: blue">Araştırma
+                </h2>  
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-9" style="text-align: center">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+
+
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="image/deep-dark-web-black-market-360x206.jpg"   style="width:100%" alt="First slide" data-toggle="modal" data-target="#de-modal1">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>25 Mart 2019</p>
+                                    <h5 style="color: white">SSL/TLS sertifikalarının Deep/Dark Web’de satıldığı ortaya çıktı</h5>
+                                </div>
+
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="image/defense.jpg"  style="width:100%" alt="Second slide" data-toggle="modal" data-target="#de-modal2">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>6 Şubat 2019</p>
+                                    <h5>Hackerlar güvenliği size karşı kullanıyor</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="image/PDT-.jpg"  style="width:100%; " alt="Third slide" data-toggle="modal" data-target="#de-modal3">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>20 Ocak 2019</p>
+                                    <h5>İran ile Shamoon bağı hakkında uzmanların yorumu</h5>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <br>
+
+                </div>
+
+                <div class="col-md-3" style="text-align:center;">
+
+                    <button type="button" class="btn btn-outline-primary btn-block"><a id="i1" class="fab fa-facebook-f" href="https://www.facebook.com"></a></button>
+                    <button type="button" class="btn btn-outline-danger btn-block"><a id="i4" class="fab fa-youtube" href="https://www.youtube.com"></a></button>
+                    <button type="button" class="btn btn-outline-warning btn-block"> <a id="i2" class="fab fa-instagram" href="https://www.instagram.com"></a></button>
+                    <button type="button" class="btn btn-outline-info btn-block"> <a id="i3" class="fab fa-twitter" href="https://www.twitter.com"></a></button>
+                    <br>
+                    <!-- weather widget start --><div id="m-booked-bl-simple-835"> <div class="booked-wzs-160-110 weather-customize" style="background-color:#050505;width:220px;" id="width3"> <div class="booked-wzs-160-110_in"> <a target="_blank" class="booked-wzs-top-160-110" href="https://www.booked.net/"><img src="//s.bookcdn.com/images/letter/s5.gif" alt="booked.net" /></a> <div class="booked-wzs-160-data"> <div class="booked-wzs-160-left-img wrz-18"></div> <div class="booked-wzs-160-right"> <div class="booked-wzs-day-deck"> <div class="booked-wzs-day-val"> <div class="booked-wzs-day-number"><span class="plus">+</span>14</div> <div class="booked-wzs-day-dergee"> <div class="booked-wzs-day-dergee-val">&deg;</div> <div class="booked-wzs-day-dergee-name">C</div> </div> </div> <div class="booked-wzs-day"> <div class="booked-wzs-day-d"><span class="plus">+</span>21&deg;</div> <div class="booked-wzs-day-n"><span class="plus">+</span>15&deg;</div> </div> </div> <div class="booked-wzs-160-info"> <div class="booked-wzs-160-city">İstanbul</div> <div class="booked-wzs-160-date">Salı, 14</div> </div> </div> </div> <a target="_blank" href="https://bookeder.com/weather/istanbul-18319" class="booked-wzs-bottom-160-110"> <div class="booked-wzs-center"><span class="booked-wzs-bottom-l"> 7 Günlük Hava Tahmini</span></div> </a> </div> </div> </div><script type="text/javascript"> var css_file=document.createElement("link"); css_file.setAttribute("rel","stylesheet"); css_file.setAttribute("type","text/css"); css_file.setAttribute("href",'https://s.bookcdn.com/css/w/booked-wzs-widget-160.css?v=0.0.1'); document.getElementsByTagName("head")[0].appendChild(css_file); function setWidgetData(data) { if(typeof(data) != 'undefined' && data.results.length > 0) { for(var i = 0; i < data.results.length; ++i) { var objMainBlock = document.getElementById('m-booked-bl-simple-835'); if(objMainBlock !== null) { var copyBlock = document.getElementById('m-bookew-weather-copy-'+data.results[i].widget_type); objMainBlock.innerHTML = data.results[i].html_code; if(copyBlock !== null) objMainBlock.appendChild(copyBlock); } } } else { alert('data=undefined||data.results is empty'); } } </script> <script type="text/javascript" charset="UTF-8" src="https://widgets.booked.net/weather/info?action=get_weather_info&ver=6&cityID=18319&type=1&scode=124&ltid=3458&domid=765&anc_id=61385&cmetric=1&wlangID=21&color=050505&wwidth=220&header_color=ffffff&text_color=333333&link_color=08488D&border_form=1&footer_color=ffffff&footer_text_color=333333&transparent=0"></script><!-- weather widget end -->
+                </div>
+            </div>
+
+            <section class="gallery-block cards-gallery ">
+                <div class="baslik"> 
+                    <h2 style="color: blue">Haberler</h2>  
+                </div>  
+                <div class="row " style="margin-top: 17px;">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal6">
+                            <a class="lightbox">
+                                <img src="image/sigintos.png" style="width: 100%"   alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">Sinyal istihbaratı için yerli Linux dağıtımı: SigintOS</a></h6>
+                                <p class="text-muted card-text"> SigintOS; isminden de anlaşılacağı üzere SIGINT (Signal Intelligence) yani sinyal istihbaratına yönelik geliştirilmiş bir Linux dağıtımıdır. Ubuntu Linux temel...</p>
+                            </div>
+                        </div>
+
+                    </div><!sigintos!>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal7">
+                            <a class="lightbox">
+                                <img src="image/incident-response.jpg"   style="width: 100%"   alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">Tüm güvenlik önlemleri başarısız olduğunda, geriye ne kalır?</a></h6>
+                                <p class="text-muted card-text">Günümüzde siber saldırganların daha karmaşık sosyal mühendislik saldırıları ile hedef kullanıcıları tuzağa düşürmesi, teknolojik önlemleri büyük ölçüde yetersiz kılmıştır. “Payment swift 034954053917” başlıklı hedef …</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal8">
+                            <a class="lightbox">
+                                <img src="image/sandboxtech.jpg"   style="width: 100%" alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">Gelişmiş tespit teknolojilerine olan ihtiyaç hiç olmadığı kadar arttı</a></h6>
+                                <p class="text-muted card-text">Yasal yazılımlardaki açıklardan faydalanmak 2017’de siber suçlular için verimli bir yöntem oldu. Bu yöntemde zararlı aktiviteler güvenilir işlemlerin arkasına kolaylıkla saklanabiliyor. …<br></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal9">
+                            <a class="lightbox">
+                                <img src="image/fifa-world-cup-2018-cyber-attacks.jpg" style="width: 100%"  alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">Siber suçlular, kullanıcıları Dünya Kupası ve Bitcoin ile kandırıyor</a></h6>
+                                <p class="text-muted card-text"> Kaspersky Lab’in “2017’de spam ve kimlik avı” raporuna göre, suçlular global gündemi takip ederek, kullanıcıları kandırıp paralarını veya kişisel bilgilerini çalmak için son 12 …</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal10">
+                            <a class="lightbox">
+                                <img src="image/mcafee-csis-arastirmasi.jpg" style="width: 100%"   alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">Siber suçlar dünya ekonomisine yaklaşık 600 milyar dolar zarar verdi</a></h6>
+                                <p class="text-muted card-text"> Yeni Global Siber Güvenlik Raporuna Göre Siber Suçlar Dünya Ekonomisine Yaklaşık  …</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 transform-on-hover" data-toggle="modal" data-target="#de-modal11">
+                            <a class="lightbox">
+                                <img src="image/parrot-security-os.jpg" style="width: 100%"  alt="Card Image" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h6><a href="#">Parrot Security OS nedir?</a></h6>
+                                <p class="text-muted card-text">Not: Arka Kapı dergisinin I. sayısında da yayınlanmıştır. Parrot Security OS, Parrot Project çatısı altında 2013 yılında farklı ülkelerde yaşayan ve tamamen gönüllülerden oluşan …</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+
+        <div class="jumbotron text-center mb-0 mt-4 bg-dark">
+            <div class="container">
+                <a id="i1" class="fab fa-facebook-f" href="https://www.facebook.com"></a>
+                <a id="i2" class="fab fa-instagram" href="https://www.instagram.com"></a>
+                <a id="i3" class="fab fa-twitter" href="https://www.twitter.com"></a>
+                <a id="i4" class="fab fa-youtube" href="https://www.youtube.com"></a>
+                <br><br><br>
+                <p>@Copyright 2019</p>
+            </div>  
+        </div>
+
+        <div class="modal fade" id="de-modal1">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">SSL/TLS sertifikalarının Deep/Dark Web’de satıldığı ortaya çıktı</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+
+                    <div class="modal-body" style="background: black">
+
+                        <img src="image/deep-dark-web-black-market-360x206.jpg" 
+                             style="width:100%">
+
+                        <p style="color: white">
+                            Daha önceden de tahmin ediliyordu ancak, güvenlik araştırmacıları, siber suçluların kötü niyetli faaliyetlerini gizlemek amaçlı, deep/dark web‘de satılan SSL/TLS sertifikaları kullandığını kanıtlarla ortaya çıkardı.
+                        </p>
+                        <p style="color: white">
+                            Son zamanlarda yapılan bir araştırmada, siber suçluların güvenli gibi görünen zararlı siteler oluşturmalarına yardımcı olmak için tasarlanan ve sıklıkla zararlı yazılımlar ile paketlenen SSL/TLS sertifikalarının deep/dark web’de bulunduğu ortaya çıkarıldı.
+                        </p>
+                        <p style="color: white">
+                            Georgia State Üniversitesi ve Surrey Üniversitesi’ndeki Kanıt Bazlı Siber Güvenlik Araştırma Grubu araştırmacıları tarafından yürütülen bir çalışmada, yeraltı SSL/TLS sertifika pazarının siber suç ekonomisindeki rolüne odaklanıldı.
+                        </p>
+                        <p style="color: white">
+                            Makine kimliği koruma sağlayıcısı olan Venafi‘nin sponsorluğundaki çalışmada, Tor ağı pazarında yapılan araştırmalarda beş sitenin sürekli olarak SSL/TLS sertifikası istediği gözlemlendi: Dream Market, Wall Street Market, BlockBooth, Nightmare Market ve Galaxy3.
+                        </p>
+                        <p style="color: white">
+                            Sosyal güvenlik numaraları gibi kişisel bilgiler bile deep/dark web’de 1 dolardan satılırken, araştırmacılar, sertifikanın türüne ve sunulan ek hizmetlerin kapsamına bağlı olarak SSL/TLS sertifikalarının 260 ile 1.600  dolara satıldığını tespit etti.
+                        </p>
+                        <img src="image/security_dark-web_fig5-600x427.jpg"  >
+                        <p style="color: white">
+                            Bazı satıcılar, satış sonrası destek ve bir dizi meşru ödeme sistemiyle entegrasyonun yanı sıra, uzun süredir kayıtlı ve aktif olarak kullanılan web sitelerin sertifikalarını da sunuyor. Daha yeni olarak alınan sertifikalar güvenlik ürünleri tarafından potansiyel olarak, güvensiz işaretlenebiliyor.
+                        </p>
+                        <p style="color: white">
+                            Güvenilir SSL/TLS sertifikaları, siber suçluların, phishing saldırılarını gizli bir şekilde yapabilmesi için, HTTPS kontrolleri ve güvenli tarama modları gibi birkaç web tarayıcısının güvenlik önlemlerinden kaçmasına olanak tanıyor. Venafi‘de güvenlik stratejisi ve tehdit istihbaratı başkan yardımcısı olan Kevin Bocek, bu deep/dark web servislerinin temel olarak, siber suçlulara “hizmet kimliği“ verdiğini söyledi. Bocek, SSL/TLS sertifikalarının her bir makineye, benzersiz bir makine kimliği sağladığını, web sitesi ziyaretçilerine ve arama motorlarına güven vermek için kullanıldığını belirtti.
+                        </p>
+                        <p style="color: white">
+                            Bocek, “Bu günlerde, makinelerin kimlikleri çok daha değerli, çok daha ilginç ve bilgisayar korsanları için önemli. Saldırıların bir parçası olarak makine kimliğine sahip olmak aslında bügün olmazsa olmazdır, çünkü tarayıcılar artık bir TLS dijital sertifikanız yoksa, web servisinize, web sitenizde saldırı olacağına dair bir politika uygulamaktadır ve sitenizi güvenilmez olarak işaretlemektedir. Hiçbir siber suçlu bunu istemez.” dedi.
+                        </p>
+                        <p style="color: white">
+                            Araştırmacılar, çevrim içi yeraltı pazarlarındaki satıcıların, güvenilir makine kimlikleri sunduğunu, ABD‘de ve İngiltere‘deki şirketlere 2.000 ABD dolarından Extended Validation (Ev) sertifikaları sunduğunu da belirtti.
+                        </p>
+                        <p style="color: white">
+                            Araştırmacılar, çevrim içi yeraltı pazarlarındaki satıcıların, güvenilir makine kimlikleri sunduğunu, ABD‘de ve İngiltere‘deki şirketlere 2.000 ABD dolarından Extended Validation (Ev) sertifikaları sunduğunu da belirtti.
+                        </p>   
+                        <p style="color: white">
+                            Ev sertifikaları, saldırganların güvenilir bir şekilde kötü amaçlı web siteleri oluşturmasına ve sunucular arasındaki trafiği şifrelemesine olanak sağlayarak, yapmış olduğu sorunlu davranışların tespitini zorlaştırıyor.
+                        </p>
+                        <h5 style="color: red">
+                            Dijital Sertifikaların Korunması
+                        </h5>
+                        <p style="color: white">
+                            Bocek, sertifikaların ve anahtarlarının başarılı bir şekilde yönetilebilmesi için kuruluşların SSL/TLS anahtarlarının ve sertifikalarının her birinde görünürlüklerinin olmasını söyledi. Şirketlerin, dijital sertifikalarının etkin yönetimi için otomasyona başvurmaları gerektiğini ifade etti.
+                        </p>
+                        <p style="color: white">
+                            Certificate Transparency(Sertifika Şeffaflığı) gibi özgür yazılım projelerinin, güvenlik ekiplerinin SSL/TLS sertifikalarını izlemesine yardımcı olabileceğini de sözlerine ekledi.
+                        </p>
+                        <p style="color: white">
+                            Web sitesi güvenliği sağlayıcısı SiteLock‘ın ürün ve kanal uzmanı Monique Becenti, deep/dark web’de SSL/TLS sertifikalarının satışının önemli olduğunu, çünkü tüketicilerin SSL/TLS sertifikalarını kullanarak güvenilir varsayılan siteleri ziyaret ettiklerini ve çevrim içi alışverişlerini gerçekleştirdiklerini söyledi.
+                        </p>
+                        <p style="color: white">
+                            Kudelski Security‘nin CTO‘su olan Andrew Howard, “En güvenli yöntem, anahtarları depolamak ve gerekli şifreleme işlemleri gerçekleştirmek için bir donanım güvenlik modülü kullanmak olacaktır. Ancak, bu cihazlar çok pahalı olabilir ve fiyatına değmeyebilir” dedi.
+                        </p>
+                        <p style="color: white">
+                            Howard, güçlü donanım güvenliği kullanmayanlar için, odak noktasının sertifika kötüye kullanımı ve uzlaşma kanıtı olup olmadığını kontrol etmek için sürekli izlenmesi gerektiğini söyledi.
+                        </p>
+                        <p style="color: white">
+                            Sertifikalarınız az miktardaysa, anahtarlarınızı ve imzalama faaliyetlerinizi yalıtılmış, güvenli bir ağa taşımak yeterli olabilir. Örneğin, kod imzalama ile anahtarlarınızı yalıtılmış bir sistemde tutun ve imzalanmaya hazır olduğunda kodunuzu sisteme taşıyın. Bu, yalıtılmış ağınızın hiçbir zaman internete bağlı kalmadığından ve anahtarlarınızın kötü niyetli kişilerde olmadığından emin olmak için korunan sistemler kullanın.
+                        </p>
+
+
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+
+
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal2">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Hackerlar güvenliği size karşı kullanıyor</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/defense.jpg" style="width:100%" >
+                        <p style="color: white">
+                            2. dünya savaşında müttefik devletler büyük bir avantaja sahiplerdi. Bu avantaj, Japonların ve Almanların birbirlerine iletecekleri hassas bilgileri içeren mesajları gönderirken kullandıkları şifreleme algoritmasını çözmeleriydi. Böylece müttefik devletler hassas operasyonlarla ilgili istihbarat edinmek amacıyla mesajlara müdahale edip bu mesajları çözebildiler.
+                        </p>
+                        <p style="color: white">
+                            Günümüz internet çağında hackerlar, saldırılarını işletmelerin iletişimlerini koruma altına almak için kullandıkları güvenlik protokollerine yönlendiriyorlar.
+                        </p>
+                        <h5 style="color: red">
+                            SSL/TLS’in Kullanım Amaçları
+                        </h5>
+                        <ul type="square" style="color: white">
+                            <li>Kurum ve kuruluşlar, internet iletişimlerini şifrelemek için SSL ve TLS’i kullanırlar. Şifreleme protokolleri gizlilik ve veri bütünlüğünü sağlamak amacıyla kullanılırlar fakat bu protokoller zararlı ya da meşru olan verileri de güvence altına alırlar.
+
+                            <li>Hackerlar, SSL ve TLS’i, kullandıkları çeşitli payload’ları gizlemek ya da kamufle etmek için bir araç olarak kullanıyorlar. Örneğin bir güvenlik cihazı, yapılan XSS ya da SQL Injection saldırısını plaintext (açık metin) olarak gördüğü zaman tanımlayabilir fakat aynı atak SSL ya da TLS kullanılarak şifrelendiğinde saldırı ilk incelemede şifreleme çözülmediği sürece gerçekleşecektir. Ayrıca hackerlar, direkt olarak SSL ve TLS üzerinde de güvenlik açıkları buldular, bunlara POODLE ve Heartbleed’i örnek verebiliriz.
+                        </ul>
+                        <h5 style="color: red">
+                            Güvenlik Aracınıza Karşı Savunma
+                        </h5>
+                        <p style="color: white">
+                            Organizasyonlar, verilerini korumak için şifreleme protokollerini kullanmak zorundalar fakat bu sefer de saldırganlar bu protokollerden faydalandıkları için bu protokollere karşı güvenlik araçları kullanmak zorunda kalıyorlar.
+                        </p>
+                        <p style="color: white">
+                            Kullanılacak savunma yönteminde SSL/TLS trafiğinin incelenmesi ve kurulan bağlantıların meşru ya da bir DDoS’a bağlı olan bağlantılar mı olduğunun saptanması gereklidir. İdeal olarak da sistem, SSL/TLS trafiğini ağın ve uygulamanın performansını olumsuz yönde etkilemeyecek şekilde yönetebilmesi gerekmektedir.
+                        </p>
+                        <p style="color: white">
+                            SSL/TLS bağlantılarını yönetmek için ağır kaynak gereksinimleri olması nedeniyle bağlantıların tirajını yapmak ve bağlantıları işlemek için bu yöntemlerin belirli metodolojileri olmak zorunda. Bu yöntemler gerektiği zaman SSL/TLS bağlantısını doğrulamak amacıyla uygun bir Kimlik Doğrulama/Yanıt mekanizmasına sahip olan yüksek performanslı bir şifreleme sistemine yönlendirebilirler. Bunlara ek olarak bu güvenlik sistemleri içeriği de denetleyebilirler. Ayrıca SSL bağlantılarının sayısı arttıkça bir darboğaza sebebiyet vermemek için bu sistemler bant dışında olmalıdırlar.
+                        </p> 
+                        <p style="color: white">
+                            Sunucumuza ya da servisimize gelen SSL trafiğimizin denetlenmesi ve hafifletilmesi için kullanılan yöntemler, DDoS saldırılarının hafifletilmesi ve uygulama güvenliğinin sağlanması için önemli güvenlik unsurlarındandır. Günümüzde internetteki trafiğin %50’den fazlası bu yönde şifrelenmektedir.
+                        </p> 
+                        <p style="color: white">
+                            DDoS koruması ya da uygulama güvenliği sağlayan araçlar veya hizmetler bünyelerinde SSL trafiğinde denetlenmesini sağlayacak nitelikler barındırmalıdır. Bu niteliklerde esneklik ve ölçeklendirilebilirlik oldukça önemlidir. Şirketler, bu kriterlere uyarak uygulamalarının ve ağ trafiklerinin güvenliğini sağlamak için her ne kadar kendileri tarafından oluşturulan tehditler olmasına rağmen kullandıkları şifreleme protokollerinden doğacak tehditlere karşı güvenliği sağlamak yükümlülüğündedirler.
+                        </p>
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal3">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">İran ile Shamoon bağı hakkında uzmanların yorumu</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+
+                    <div class="modal-body" style="background: black">
+
+                        <img src="image/PDT-.jpg" style="width:100%">
+                        <p style="color: white">
+                            Amerika Başkanı Donald Trump, 2018’in Mayıs ayında ABD’nin, İran’ın nükleer silah geliştirmesini veya üretmesini önlemek amaçlı tasarladığı, Obama Yönetimi tarafından müzakere edilen 2015 nükleer anlaşmasından çekileceğini açıkladı.
+                        </p>
+                        <p style="color: white">
+                            ABD’nin başından beri İran üzerinde oluşturduğu misilleme, iki ülke arasında gerilime sebep olduğundan bunun üzerine Trump hükumeti, İran için ekonomik yaptırımları geri çekti. Tabi bu sürece kadar ve halen devam eden İran’ın devlet destekli hacker’ları, ABD ve Avrupa’ya yönelik dijital saldırılarını hiç hız kestirmeden devam etmekteydi.
+                        </p>
+                        <h5 style="color: red">
+                            Yetkili kişilerden gelen açıklamalar
+
+                        </h5>
+                        <p style="color: white">
+                            Symantec‘in teknik yetkililerinden Eric Chien, “Eğer saldırgan gruplara bakarsanız, para amaçlı eylem gerçekleştirmiyorlar.” diyerek siber saldırıların politik amaçlarla gerçekleştirildiğini ifade etti ve “Orta doğu bir tür jeopolitik sorun görünmeye devam edilirse, kesinlikle devam eden saldırıları göreceksiniz.” şeklinde ekleme yaptı.
+
+                        </p>
+                        <p style="color: white">
+                            İran’a en doğrudan potansiyel bağ, Shamoon isimli ünlü yıkıcı virüsün bir türevini kullanan yeni bir saldırı dalgasından geliyor. Suudi Arabistan devlet destekli petrol şirketi Saudi Aramco‘ya yaptığı 2012 saldırısında kullanımıyla bilinen Shamoon, bulaştığı sistemlere zarar verirken, saldırganlara hedefin bilgilerine erişim sağlayarak, bulaştığı sunucu ve kullanıcı bilgisayarlarındaki verileri geri getirilemeyecek şekilde silmeye çalışıyordu.
+
+                        </p>
+                        <p style="color: white" >
+                            Shamoon’ı yıllardır inceleyen araştırmacılar, yeni saldırıların İran devleti destekli hacker’lara atfedilen öncekilerle benzerliklerinin olduğunu söylüyor.
+
+                        </p>
+
+                        <p style="color: white" >
+                            Bu kesin olarak, yeni zararlı yazılımın aynı grup tarafından üretildiği anlamına gelmez, ancak şu ana kadar analistler yeni Shamoon saldırılarının geçmiş saldırılarla bağlantısının olabileceğini söylüyor.
+
+                        </p>
+                        <p style="color: white" >
+                            Son olarak Chien, Shamoon’ın arkasındaki aktörlerin “Yıllar içinde bile uzaklaşma ve aniden tekrar ortaya çıkma gibi bir alışkanlığı var.” diyor.
+
+                        </p>
+                        <p style="color: white" >
+                            Crowdstrike Başkan Yardımcısı Adam Meyers, “Shamoon olaylarını analiz etmenin zorluklarından biri de hacker’ların, virüsü hedef sistemde iz bırakmadan bulaştırmalarıdır.
+                        </p>
+
+                        <p style="color: white" >
+                            Shamoon’un son etkinliği, 2016 ve 2017 yıllarında kötü amaçlı yazılımın dirilişinin bir devamı. Ancak önceki Shamoon yinelemeleri, verilerin toplanması ve silinmesi için daha statik bir araçken, 2016’da farklı işlevsellik kombinasyonlarına sahip olacak şekilde değiştirilebilecek yeni bir versiyonu ortaya çıktı. Dosyaları şifrelemek ve üzerine veri yazmak, önyükleme aygıtını yok etmek, takılı sabit sürücülerini silmek, işletim sistemini yok etmek veya özel öncelikli dosyaları silmek için özelleştirilebilir.” şeklinde açıklama yaptı.
+
+                        </p>
+                        <p style="color: white" >
+                            Crowdstrike, son siber saldırıların, İran ile bağlantıyı güçlendirdiğini söylediği yeni bir zararlı yazılım neslini temsil etmek yerine, bu esnekliği artırdığını düşünüyor. Diğer firmalar bu son saldırılarda kullanılan zararlı yazılımları “Shamoon 3” olarak adlandırdı.
+
+                        </p>
+                    </div><!-- model-body -->
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+
+
+        <div class="modal fade" id="de-modal6">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Sinyal istihbaratı için yerli Linux dağıtımı: SigintOS
+                        </h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/sigintos.png"  style="width:100%">
+                        <p style="color: white">
+                            SigintOS; isminden de anlaşılacağı üzere SIGINT (Signal Intelligence) yani sinyal istihbaratına yönelik geliştirilmiş bir Linux dağıtımıdır. Ubuntu Linux temel alınarak hazırlanan bu dağıtım, DVD veya USB bellek üzerinden canlı olarak çalıştırılabilme veya diske yükleme işlemiyle de kullanılabilmektedir. İçerisinde kendine özgü SigintOS Tool adındaki yardımcı yazılımı bulunmakta olup bu yazılım ile birçok SIGINT işlemleri tek bir grafiksel ara yüz üzerinden gerçekleştirilebilmektedir.
+                        </p>
+
+                        <p style="color: white">
+                            Böylece, sinyal işlemleri ile ilgilenen pek çok insanın sıkça karşılaştığı donanım ve yazılım kurulumu problemleri SigintOS ile tamamen ortadan kalkmış durumda.. HackRF, BladeRF, USRP, RTL-SDR gibi donanımlar hali hazırda kurulu olarak bulunmakta olup yine bu alanda en çok kullanılan Gnuradio, Gsm, LTE ve Gps uygulamaları da dağıtımın içerisinde mevcut bulunmaktadır.
+                        </p>
+                        <h5 style="color: red">
+                            Yerli Dağıtım
+                        </h5>
+
+
+                        <p style="color: white">
+
+                            SigintOS, Pardus Linux gibi diğer dağıtımlardan farklı olarak yalnızca bir alana odaklanmış durumda. Bu nedenle sıfırdan temel bir sistem oluşturmak yerine Ubuntu’nun güçlü ve kararlı yapısı kullanılarak üzerinde geliştirmeler yapılmıştır. Türkçe dahil olmak üzere birçok dil desteği bulunan dağıtım, global kullanım amacı ile varsayılan olarak İngilizce dilinde çalışıyor. SigintOS Tool yazılımı da yine global kullanımı baz aldığı için İngilizce olarak karşımıza çıkıyor.
+
+                        </p>
+                        <h5 style="color: red">
+                            SigintOS ile Kendi GSM Operatörümüzü Kuralım
+
+                        </h5>
+
+                        <p style="color: white">
+                            SigintOS dağıtımı içerisinde kurulu halde bulunan YateBTS adlı açık kaynaklı yazılım ve BladeRF gibi full-duplex bir donanım ile saniyeler içerisinde kendimize ait bir GSM şebekesi kurabiliriz.
+                        </p>
+                        <p style="color: white">
+                            Önemli Not: Bu bölüme anlatılacak olan GSM operatörü kurma örneği yalnızca deneysel olarak anlatılmış olup bu örneğe bakarak yapmış olduğunuz testler bir faraday kafesi içerisinde veya çevrenizdeki başka kişilerin kullandığı cihazların frekanslarını etkilemeyecek şekilde yapılmalıdır.
+
+
+                        </p> 
+                        <p style="color: white">
+                            Gereksinimler
+                            GSM operatörü kurmak için ihtiyacımız olan tek şey SigintOS dağıtımı ve full-duplex özelliğinde bir donanım olacaktır. Piyasada bulunabilen BladeRF ve USRP adlı cihazlar bu işlem için yeterlidir. HackRF donanımı ile GSM operatörü kurulması mümkün değildir. Çünkü HackRF, half-duplex bir cihaz olup aynı anda hem sinyal alıp hem de gönderme işlemi gerçekleştiremez.
+                        </p>  
+                        <p style="color: white">
+                            GSM Şebekesi Ayarları
+                            YateBTS ayarlarının kolayca yapılabilmesi için NIPC adında bir web paneli mevcuttur. SigintOS içerisinde YateBTS web paneline http://localhost adresinden ulaşılmaktadır.
+                        </p>
+                        <img src="image/sigintos-yate-1024x640.png"  style="width:100%">
+                        <p style="color: white">
+                            BTS Configuration sekmesinde GSM operatörümüzün hangi bantta ve frekansta çalışacağı, adının ne olacağı gibi ayarlar yapılmaktadır.
+                        </p>
+                        <p style="color: white">
+                            Radio.Band: GSM850 – GSM900 gibi farklı band aralıkları mevcuttur. Biz örneğimizde GSM900 bandını kullanacağız.
+                        </p> 
+                        <p style="color: white">
+                            Radio.C0: Seçtiğimiz GSM900 bandındaki hangi frekansı kullanacağımızı seçebiliriz. Örnekte 935Mhz frekansını seçiyoruz.
+                        </p>
+                        <p style="color: white">
+                            Identity.MCC: Kuracağımız operatörün ülke kodu. Her ülkeye ait mcc kodları bulunmaktadır. Türkiye’nin mcc kodu 286’dır.
+                        </p>
+                        <p style="color: white">
+                            Identity.MNC: Operatör kodu. Her ülkedeki operatörlerin kendine ait bir kodu bulunmaktadır. Örneğin Turkcell=01 Vodafone (Telsim)=02 olarak belirlenmiştir. Örneğimizde kendi kodumuzu 10 olarak belirledik.
+                            Identity.ShortName: GSM operatörümüze ait isim.
+                        </p>
+                        <p style="color: white">
+                            Subscribers sekmesinde, operatörümüzde kayıtlı olan kullanıcıları belirleyebiliriz. Manage Sims kısmından yeni bir sim kart yani yeni bir operatör kullanıcı belirleyeceğimiz gibi List Subscribers sekmesinde Regexp alanına .* parametresini girerek her cep telefonu ve sim kart kullanıcısının bizim operatörümüze bağlanabilmesine olanak sağlayabiliriz.
+                        </p>
+
+
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal7">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">YTüm güvenlik önlemleri başarısız olduğunda, geriye ne kalır?
+                        </h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/incident-response.jpg" style="width:100%">
+                        <p style="color: white">
+                            Günümüzde siber saldırganların daha karmaşık sosyal mühendislik saldırıları ile hedef kullanıcıları tuzağa düşürmesi, teknolojik önlemleri büyük ölçüde yetersiz kılmıştır. “Payment swift 034954053917” başlıklı hedef odaklı hazırlanmış oltalama e-postası, yayıldığı gün bir çok e-posta güvenliği bileşeni tarafından tespit edilememiştir. Bu hedef odaklı e-posta zararlısını tespit edemeyen antivirus, firewall, sandbox vb. yeni nesil kurumsal çözümler, e-posta kullanıcısını bu risk ile karşı karşıya bırakmıştır.
+
+                        </p>
+
+                        <p style="color: white">
+                            Bu durumda, yazımızın başlığındaki sorunun cevabı “İyi eğitilmiş bir kullanıcı“.
+
+                        </p>
+
+
+
+                        <p style="color: white">
+
+                            İşte bu kullanıcı, teknolojik önlemlerin yetersiz kaldığı durumlarda, son ve etkili bir savunma duvarı olarak hayati öneme sahiptir. Günümüz koşullarında hiç bir teknoloji, insan zekasının yapabildiği düşünme, algılama, yorum katma yetisine sahip değildir. Sosyal mühendislik araçlarıyla başlatılan karmaşık saldırıların, teknolojik önlemleri etkisiz kıldığı durumlarda, iyi eğitilmiş bir kullanıcı, yetisiyle bu riskleri anlamada, tespit etmede ve engellemede en iyi kalkan statüsündedir.
+
+                        <h5 style="color: red">
+                            Yaşanmış bir örnek
+                        </h5>
+
+                        <p style="color: white">
+                            “Payment swift 034954053917” başlıklı hedef odaklı hazırlanmış oltalama e-postası da, birçok yeni nesil teknolojik önlemleri geçerek, sektörünün öncüsü durumunda olan kurumsal bir şirketin bir çalışanına ulaşmıştır. Ancak, bu çalışan Keepnet Labs anti-phishing and cybersecurity awareness platform üzerinden daha önce aldığı eğitimler ve yaşadığı tecrübeler neticesinde, bu e-postadan şüphelenmiş ve daha sonra bunun bir sosyal mühendislik saldırısı olduğunu algılayabilmiştir. “Phishing Incident Responder” modülünü kullanan müşterimiz, şüpheli aktivite raporlama butonu sayesinde tek tık ile bildirimde bulunarak bu sahte e-postanın ilgili kişiler üzerinden analiz servislerine göndermesini sağlamıştır ve entegre diğer servisler sayesinde zararlı olduğunu doğrulatmıştır.
+
+
+                            <img src="image/keepnet-incident-responder-1-1.png" style="width:100%"  >
+                        <p style="color: white">
+                            Resim 1.’de görüldüğü üzere bu sahte e-posta, kişiye hitaben hazırlanmış ve çalışanın merak edip bakmak isteyeceği bir konu üzerinden iletişim kurulmuştur. Bütün teknolojik önlemleri aşan ve masum görünen bu e-posta, bilinçsiz kullanıcılar için büyük tehlike oluşturmaktadır. Özellikle finansal içerikli e-postalar, kullanıcıların düşünmeden hareket etmelerine sebep olabilmektedir.
+
+                        </p>
+                        <img src="image/keepnet-incident-responder-2-1.png" style="width:100%"   >
+
+                        <h5 style="color: red">
+                            Bu e-posta başka hangi kullanıcılara ulaşmış olabilir?
+                        </h5>
+                        <p style="color: white">
+                            Bu e-posta başka hangi kullanıcılara ulaşmış olabilir? Bu e-posta başka hangi kullanıcılara ulaşıp ulaşmadığını anlamak için geleneksel yöntemler ile bu işi yapan uzmanlar, e-posta servisinin olay kayıtlarından bu durumu aramaya çalışırlar ya da gerçek anlamda e-posta servisi kayıtlarını bir log kolerasyon çözümüne (SIEM) aktarıyorlarsa orada çare bulmaya çalışırlar. Böyle bir senaryoda 1-2 saatlik bir efor ve farklı ekiplerin koordinasyonu gerekir ki, saldırı bu sürede hedefine ulaşmış olabilir!                  
+                        </p>
+                        <p style="color: white">
+                            Keepnet Labs. Phishing Incident Investigation ekranındaki sorgu ile aktif kullanıcıların e-posta kutularında son 30 günde “Payment swift 034954053917” başlıklı e-posta olup olmadığı ya da göndericisi “infodc2@alfahdsteel.com” olan kişiden bir e-postanın gelip gelmediği öğrenilebilmektedir.
+                        </p>
+                        <img src="image/keepnet-incident-responder-3.png" style="width:100%"   >
+
+                        <h5 style="color: red">
+                            Kullanıcılar tuzağa düşmeden, riski ve zararı azaltmak
+                        </h5>
+                        <p style="color: white">
+                            Kullanıcılar e-postanın zararlı olduğu bilse bile açıp kurumu ciddi zarara uğratabilmektedirler. Bu gibi zararlı e-postaları kullanıcıların e-posta kutusundan silmek tercih edilen en iyi yöntemdir.
+                            Resim 3.’te belirtilen arama kriterinden sonra aksiyon kısmına geçebilir ve iki alternatif yol izleyebilirsiniz:                      
+                        </p>
+                        <ul type="square" style="color: white">
+                            <li> Zararlı e-postayı kullanıcının e-posta kutusundan tek tık ile silebilirsiniz.
+                            <li> Bu e-postanın zararlı olduğu uyarısını gönderebilirsiniz.
+                        </ul>
+                        <img src="image/keepnet-incident-responder-4.png" style="width:100%"   >
+                        <img src="image/keepnet-incident-responder-5.png" style="width:100%"   >
+                        <p style="color: white">
+                            Resim 5.’te e-postanın zararlı olduğu uyarısını gönderme işlemi yapıldıktan sonra kullanıcılara aşağıdaki gibi bir mesaj iletilir.
+                        </p>
+                        <img src="image/keepnet-incident-responder-6-1.png" style="width:100%"   >
+                        <p style="color: white">
+                            H4cktimes olarak ürün ile yaptığımız test sürüşlerimizde ve müşterilerden gelen geri bildirimlere göre Keepnet Labs, bu işi bir dakikanın altında çözüyor.
+
+                        </p>
+
+
+
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal8">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">
+                            Gelişmiş tespit teknolojilerine olan ihtiyaç hiç olmadığı kadar arttı      
+                        </h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/sandboxtech.jpg" style="width:100%">
+                        <p style="color: white">
+                            Yasal yazılımlardaki açıklardan faydalanmak 2017’de siber suçlular için verimli bir yöntem oldu. Bu yöntemde zararlı aktiviteler güvenilir işlemlerin arkasına kolaylıkla saklanabiliyor. Deneyimli bir siber güvenlik ekibi bile, bu tür gizlenme teknikleri kullanan tüm zararlı yazılımları tespit ettiğinden her zaman emin olamıyor. Bunu başarmak için ekiplerin gelişmiş tespit teknolojileriyle donatılmış olması gerekli. Bunlardan biri de eleme teknolojisi. Eleme teknolojisi genellikle çoğu BT güvenlik ekibinin karşılayamayacağı büyük donanım yatırımları yapılmasını gerektiriyor. Kaspersky Cloud Sandbox ile gelişmiş tespit ve inceleme becerileri, Kaspersky Threat Intelligence Portal içinde bir hizmet olarak sunuluyor. Böylece siber güvenlik ekipleri hem gelişmiş teknolojiden faydalanabiliyor hem de bütçelerini aşmamış oluyor. Siber güvenlik ekiplerine ve güvenlik operasyonları merkezi (SOC) uzmanlarına zararlı yazılımların davranışları ve tasarımlar hakkında derin analiz yapma fırsatı sunan bu servis, daha önce tanımlanmamış hedefli siber tehditleri tespit ediyor.
+                        </p>
+                        <h5 style="color: red">
+                            Gelişmiş kaçış önleyici teknikler: Gizli gerçek ortaya çıkıyor
+                        </h5>
+                        <p style="color: white">
+                            Zararlı yazılımların yapacakları potansiyel hasarı ortaya çıkarmak için, eleme teknolojisi performansının gelişmiş kaçış önleyici tekniklere sahip olması gerekiyor. Belirli bir yazılım ortamında çalışması için geliştirilen zararlı bir program, ‘temiz’ bir sanal makinede gerçek yüzünü ortaya çıkarmaz ve büyük olasılıkla hiç iz bırakmadan kendini yok eder. Bunu engellemek için Kaspersky Cloud Sandbox kullanıcı davranışlarını taklit eden çeşitli teknikler kullanıyor. Windows düğmelerine tıklamak, belgeleri sürüklemek, özel rutin işlemler gibi rastgele kullanıcı aktiviteleri zararlı yazılımın gerçek yüzünü ortaya çıkarmasını sağlıyor.
+                        </p>
+                        <img src="image/Kaspersky_CloudSandbox-1024x576.jpg" style="width:100%"  >
+                        <h5 style="color: red">
+                            Kayıt sistemi: Hiçbir şey gözden kaçmaz
+                        </h5>
+
+
+
+                        <p style="color: white">
+                            Zararlı yazılım hasar verici aktivitelerine başladığı zaman, diğer bir Kaspersky Cloud Sandbox teknolojisi olan kayıt sistemi devreye girer. Bu sistem zararlı etkinlikleri müdahale etmeden yakalıyor. Bir Word belgesi şüpheli davranmaya başladığında, örneğin makine belleğinde bir dizin oluşturmaya, Shell komutları çalıştırmaya veya yüklerini bırakmaya (tümü bir metin belgesi için anormal aktiviteler) başladığında, bu etkinlikler Kaspersky Cloud Security kayıt sisteminde tutuluyor. Bu sistem; DLL, kayıt defteri anahtar kaydı ve değişimi, HTTP ve DNS talepleri, dosya yaratma, silme ve değiştirme gibi çok geniş bir yelpazedeki zararlı etkinlikleri tespit edebiliyor. Ardından müşteriye veri grafikleri, ekran görüntüleri ve okunabilir eleme kaydı içeren kapsamlı bir rapor sunuluyor.
+                        </p>
+                        <h5 style="color: red">
+                            Tespit ve vakalara yanıt verme performansında birinci
+                        </h5>
+                        <p style="color: white">
+                            Kaspersky Cloud Sandbox tespit performansı, Kaspersky Security Network’ten (KSN) gelen gerçek zamanlı tehdit istihbaratı verileriyle destekleniyor. Bu sayede müşterilere, bilinen ve yeni keşfedilen tehditlerin anlık durumu sunuluyor. Kaspersky Lab’in 20 yıllık tehdit araştırması ve karmaşık tehditlerle mücadele deneyimiyle yapılan gelişmiş davranış analizleri, müşterilerin daha önce görülmemiş zararlı nesneleri de tespit edebilmesini sağlıyor.
+                        </p>
+                        <p style="color:white">
+                            SOC uzmanları ve araştırmacılar, gelişmiş tespit becerisi edinmelerinin yanı sıra Kaspersky Threat Intelligence Portal’daki diğer hizmetler sayesinde vakalara verdikleri yanıtları daha etkin hale getirebiliyor. Siber güvenlik uzmanları, dijital araştırma yaparken veya bir vakaya yanıt verirken URL’ler, alan adları, IP adresleri, sağlama dosyaları, tehdit adları, istatistiksel/davranışsal veri ve WHOIS/DNS verileri hakkında en yeni detaylı tehdit istihbaratına erişebiliyor. Ardından bu bilgileri, buluttaki eleme teknolojisinin analiz ettiği örneğin IOC’siyle birleştirebiliyorlar. Müşterilerin güvenlik operasyonlarına entegrasyonu otomatik hale getirmek için sunulan API’lar sayesinde, siber güvenlik ekipleri vaka araştırmalarını birkaç dakika içinde güçlendirebiliyor.
+                        </p>
+
+
+
+
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal9">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Siber suçlular, kullanıcıları Dünya Kupası ve Bitcoin ile kandırıyor</h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/fifa-world-cup-2018-cyber-attacks.jpg" style="width:100%">
+                        <p style="color: white">
+                            Kaspersky Lab’in “2017’de spam ve kimlik avı” raporuna göre, suçlular global gündemi takip ederek, kullanıcıları kandırıp paralarını veya kişisel bilgilerini çalmak için son 12 ayda FIFA 2018 Dünya Kupası ve Bitcoin gibi konuları kullandı.
+                        </p>
+                        <p style="color: white">
+                            Spam e-posta gönderenlerin, kurbanların ilgisini çekip paraya çevirmek için global sorunları ve önemli olayları sürekli takip ettikleri belirlendi. Kaspersky Lab’in, spam ve kimlik avı aktiviteleri üzerinde devam eden araştırması, kullanıcıların dikkatsizliği ve güveni nedeniyle spam gönderenlerin yöntemlerinin etkili olmaya devam ettiğini ortaya çıkardı. Bu da kullanıcıların sahte yönlendirmeleri takip etme olasılığının yüksek olduğu anlamına geliyor.
+                        </p>
+
+                        <p style="color: white">
+
+                            Tüm dünyanın merakla beklediği FIFA 2018 Dünya Kupası, 2017’de spam gönderenlerin yoğun bir şekilde kullandığı konular arasında yer aldı. Etkinliğin resmi logolarına sahip sahte mesajlarda, organizatörler ve sponsor markalarla ilgili bilgiler ve hatta kullanıcıların çekilişle ücretsiz bilet kazandığını belirten içerikleri yer alıyordu.
+                        </p>
+
+                        <p style="color: white">
+                            2017’nin kimlik avı amaçlı en popüler bir diğer spam e-posta konusu ise Bitcoin’in değerinin inanılmaz şekilde artmasının ardından kripto para birimleri oldu. Araştırmacılar 2017’nin üçüncü çeyreğinde blockchain ile ilgili dolandırıcılıklarda artış tespit etmişti. Yıl sonuna kadar, çok sayıda farklı spam aracı tespit edildi.
+                        </p>
+
+
+                        <p style="color: white">
+                            Araştırmanın bulgularına göre suçlular, kripto para birimi satış siteleri şeklinde görünen sahte web siteleri ve özel veri merkezlerini kiralayarak bulut madencilik yapmayı sağladığı iddia edilen sahte servisler gibi yöntemler kullanıyordu.Elbette tüm bu durumlarda kurbanlar para kazanmak yerine kaybediyordu. Suçlular sahte çekiliş kazanımları gibi daha geleneksel dolandırıcılık yöntemlerinde de Bitcoin’i yem olarak kullanmaya başladı. Spam gönderilen hedefli adres veri tabanlarına ek olarak, kritpo para birimi kullanıcılarının e-posta adreslerinin yer aldığı veri tabanlarına da büyük fırsat vaatleri içeren mesajlar gönderildi.
+                        </p>
+                        <p style="color: white">
+                            Suçlular spam e-postalarla, Bitcoin kazanma veya kripto para birimi ticareti araçları şeklinde gizlenen farklı birçok tür zararlı yazılım da gönderdi. Ancak, geliştiricilerinin Bitcoin olarak fidye talep ettiği Cryptolocker adlı yazılımlar spam e-postalarda geçtiğimiz yıla göre daha az tespit edildi.
+
+                        </p>
+                        <p style="color: white">
+                            Genel olarak, 2017’deki spam e-posta miktarı 2016’ya göre 1,68 puan düşerek %56,63’e geriledi. Öte yandan kimlik avı saldırılarında ise artış gözlendi. Kaspersky Lab Anti-Phishing sistemi, Kaspersky Lab kullanıcılarının bilgisayarlarında toplam 246.231.645 kez uyarı verdi. Bu da 2016’ya göre %59 artış olduğu anlamına geliyor.
+                        </p>
+                        <img src="image/Kaspersky_Lab_2017_de_e_posta_tarafigi_icinde_spam_postalarinin_orani.jpg"  style="width:100%">
+                        <p style="color: white">
+                            Araştırmacıların 2017’de ortaya koyduğu diğer önemli eğilimler ve istatistikler arasında şunlar yer alıyor:
+                        </p>
+                        <ul type="square" style="color: white">
+                            <li> En popüler spam e-posta kaynağı ABD (%13,21) oldu. Onu sırasıyla Çin (%11,25) ve Vietnam (%9,85) takip etti. İlk 10’da ayrıca Hindistan, Almanya, Rusya, Brezilya, Fransa ve İtalya yer aldı.
+                            <li> Zararlı e-postaların en çok hedef aldığı ülke, 2016’ya göre 2,12 puanlık küçük bir düşüş yaşayan Almanya’ydı (%16,25). İlk 10’daki diğer ülkeler ise Çin, Rusya, Japonya, Birleşik Krallık, İtalya, Brezilya, Vietnam, Fransa ve BAE oldu.
+                            <li> Kimlik avı saldırılarından etkilenen kullanıcı oranı en yüksek ülke Brezilya (%29,02) oldu.
+                        </ul>
+
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal10">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Siber suçlar dünya ekonomisine yaklaşık 600 milyar dolar zarar verdi
+                        </h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/mcafee-csis-arastirmasi.jpg"  style="width:100%">
+                        <p style="color: white">
+                            Yeni Global Siber Güvenlik Raporuna Göre Siber Suçlar Dünya Ekonomisine Yaklaşık 600 Milyar Dolar Zarar Verdi<br>
+
+                            McAfee ve CSIS araştırması, kara borsa ve dijital para birimlerini devreye sokan kötü niyetli çevreler nedeniyle siber suç işlemenin kolaylaştığını ortaya çıkardı.                
+                        </p>
+                        <p style="color: white">
+                            Öne Çıkanlar:
+                        </p>
+
+                        <ul type="square" style="color: white">
+                            <li> McAfee ve CSIS, yayımladıkları yeni raporda siber suçların sebep olduğu maddi zararın %25’inin fikri mülkiyet hırsızlıklarından kaynaklandığını tespit etti.
+                            <li> “Online suç pazarı” sayısının 6.000’i aşması ve fidye yazılımın bir hizmet modeline dönüşmesi sonucunda fidye yazılımlar en hızlı büyüyen siber suç araçları oldu.
+                            <li> Güvenlik açığını istismar etmekte kullanılan araç setleri (exploit kit), kişiye özel zararlı yazılımlar ve botnet kiralama gibi geniş yelpazeli çözümler nedeniyle siber suçun bir hizmet modeline dönüşümü (Cybercrime-as-a-Service) hızla yaygınlaşıyor.
+                            <li> Başta finans olmak üzere kritik iş alanlarında güvenliği artırmak için tehdit verisinin daha büyük ölçekli olarak standartlaştırılması ve siber güvenlik gereksinimlerinin daha başarılı bir koordinasyonuna ihtiyaç duyuluyor.
+
+                        </ul>
+                        <p style="color: white">
+                            Santa Clara, Kaliforniya, 21 Şubat 2018 – McAfee, Stratejik ve Uluslararası Araştırmalar Merkezi (CSIS) iş birliğiyle hazırladığı, siber suçun dünyanın dört bir yanındaki ekonomiler üzerindeki dikkat çeken etkisini ele alan “Siber Suçun Ekonomik Etkisi – Azalma Yok” başlıklı küresel raporu yayımladı. İşlenen siber suçlarla şirketlere verilen toplam hasarın 600 milyar dolara ya da başka bir deyişle global gayrisafi hasılanın yüzde 0,8‘ine yakın olduğunu ortaya koyan rapor, bu rakamın 2014 yılındaki araştırmada belirlenen 445 milyar dolarlık küresel zarardan kayda değer ölçüde yüksek olduğunu vurguluyor.
+                        </p> 
+                        <p style="color: white">
+                            Üç yıl içinde gerçekleşen bu büyümenin sebebi ise raporda siber suçluların yeni teknolojilere hızla aya uydurması, bir dizi “siber suç merkezi” sayesinde bu tür suçları işlemenin kolaylaşması ve daha büyük ölçekli suçluların kullandığı finansal yöntemlerin her geçen gün daha karmaşık hâle gelmesi olarak açıklanıyor.
+                        </p>
+                        <p style="color: white">
+                            Dijital dünyanın hayatlarımızın hemen her yönünü değiştirdiğini dile getiren McAfee CTO’su Steve Grobman, buna risk ve suçların da dahil olduğunu söylüyor ve ekliyor: “Suçun kendisi artık daha tesirli, daha az riskli, daha kârlı ve onu işlemek hiç olmadığı kadar kolay. Örneğin fidye yazılım vakalarında suçlular diledikleri takdirde işin büyük çoğunluğunu yetenekli bir uzmandan hizmet olarak satın alabiliyor.” Fidye yazılımı böylesi bir hizmet modeline (Randomware-as-a-service) dönüştüren bulut sağlayıcıları, bu saldırıları milyonlarca sistemi hedefleyecek şekilde kolayca ölçeklendirebiliyor. Üstelik saldırılar otomatik gerçekleştiği için çok az insan müdahalesine ihtiyaç duyuyor. Bu temel unsurların üzerine kripto para birimleri sayesinde her türlü işlemin hızlı ve risksiz biçimde finanse edilebilmesini eklendiğinde, siber suçtan doğan 600 milyar dolarlık zararın üzücü bir sonuç olarak karşımızda durduğunu dile getiren Grobman, “Bu rakamlar aynı zamanda teknolojik olarak elde ettiğimiz başarıların, en az ekonomik düzenin diğer alanları kadar yoğun bir şekilde suç ekonomisini de dönüştürdüğünü gösteriyor.” diyor.
+                        </p>
+                        <p style="color: white">
+                            Bankaların siber suçlular için en yaygın hedef olmaya devam ettiğini belirleyen rapora göre bu alanda en tehlikeli suç kaynağı ise ulus devletler. Finansal kuruluşlara yönelik hack saldırılarında en yoğun eylemlerin Rusya, Kuzey Kore ve İran‘da gerçekleştiği belirlenirken, Çin ise siber casusluk alanında en aktif konumda yer alıyor.
+                        </p>
+                        <p style="color: white">
+                            Hacker topluluklarının bu işteki uzmanlığı ve ülkenin genel olarak Batı ülkelerindeki kanunları reddetmesi gibi unsurlar sonucunda Rusya’nın siber suçta lider olduğunu bu araştırmayla gün yüzüne çıkardıklarını ifade eden CSIS Kıdemli Başkan Vekili James Lewis, “Kuzey Kore ise kendi rejimini fonlamak için gerçekleştirdiği kripto para hırsızlıkları neticesinde ikinci sırada yer alıyor. Üstelik artık ‘siber suç merkezlerinin’ sayısında artış görüyoruz ve buna sadece Kuzey Kore değil, Brezilya, Hindistan ve Vietnam gibi ülkeler de dahil.” diye konuştu.
+                        </p>
+                        <p style="color: white">
+                            Raporda Kuzey Amerika, Avrupa ve Merkez Asya, Doğu Asya ve Pasifik, Güney Asya, Latin Amerika ve Karayipler, Sahara Altı Afrika, Orta Doğu ve Kuzey Afrika‘daki siber suçlar ölçümleniyor. Zengin ülkelerde siber suça dayalı zararların genel olarak daha yüksek olması şaşırtmazken, ulusal gelire oranla en yüksek zararı gören ülkelerde ise dijitalleşmiş olmasına karşın henüz siber güvenlikte tam kapasiteye ulaşamayan orta ölçekli ülkeler başı çekiyor.
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+        <div class="modal fade" id="de-modal11">   <!-- fade  bir efekt --> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background:black">
+                        <h4 class="modal-title" style="color: white">Parrot Security OS nedir?
+                        </h4>
+                        <a class="close" data-dismiss="modal">&times;</a>
+                    </div> <!-- model-header -->
+                    <div class="modal-body" style="background: black">
+                        <img src="image/parrot-security-os.jpg" style="width:100%">
+                        <p style="color: white">
+                            Parrot Security OS, Parrot Project çatısı altında 2013 yılında farklı ülkelerde yaşayan ve tamamen gönüllülerden oluşan bir ekip tarafından pentesting/red teaming/reverse engineering/digital forensics (+anti forensics)/development (software, exploit, tool)/privacy defense, anonymity başlıkları için tasarlanmış, aynı zamanda günlük kullanım için de ideal olan, düzenli olarak geliştirme yapılan ve yeni özellikler eklenen (rolling releases), live olarak da kullanılabilen, eski veya sınırlı kaynaklarda (düşük donanımlarda) verimli çalışabilen (lightweight), hem tecrübeli hem de yeni kullanıcılar için uygun, stabil bir GNU/Linux dağıtımı ve topluluk projesidir.
+
+                        </p>
+
+
+                        <p style="color: white">
+                            Bunların yanı sıra;
+                        </p>
+                        <ul type="square" style="color: white">
+                            <li> Özenle seçilmiş 600+ güncel araç barındıran, güvenli ve şifrelenmiş ortam (end to end encryption, full disk encryption) sağlayan,
+                            <li> Geliştirme (software, exploit, tool) için uygun ortam sağlayan
+                            <li> Güvenli derleme ortamı ve repo’lara (gpg signed) sahip,
+                            <li>Türkiye de dahil olmak üzere dünyanın dört bir yanında mirror sunucuları bulunan,
+                            <li>Geniş donanım desteği olan,
+                            <li>ARM desteği olan,
+                            <li>MATE masaüstü ortamı kullanan,
+                            <li>Tamamen “özgür” olan (kaynak kodu istediğin gibi oku ve/veya değiştir!),
+                            <li>Tamamen ücretsiz (ve hep ücretsiz kalacak!) olan,
+                            <li>Kurulumu ve kullanımı basit
+                        </ul>
+                        <p style="color: white">
+                            polimorfik bir işletim sistemi dağıtımıdır.
+                        </p>
+
+
+                        <p style="color: white">
+                            Son üç aylık veriye göre, Parrot Security OS, DistroWatch sitesinde, kendi alanındaki en çok tıklanan dağıtımlar listesinde 2. sırada, genel dağıtımlar listesinde ise 29. sıradadır.
+                        </p>
+                        <p style="color: white">
+                            Parrot Security OS, üç farklı versiyona sahiptir. Bunlar; Security, Home ve IoT. Bu versiyonların özellikleri ve farkları aşağıdaki tabloda belirtilmiştir.
+                        </p>    
+                        <img src="image/parrot-security-os-features-768x478.png"style="width:100%">
+                        <h4 style="color: blue">
+                            Farklar
+                        </h4>
+                        <h5 style="color: red">
+                            Topluluk
+                        </h5>
+
+
+                        <p style="color: white">
+                            ParrotSec OS’i benzer dağıtımlardan ayıran en önemli fark, amacından ziyade ona ulaşma yoludur. Tek cümle ile özetlemek gerekirse, Parrot Project’ bir güvenlik dağıtımı geliştirmekten daha fazlasını olmak istiyor ve birçok fikir için “gateway” görevi görüyor. Bu güç de topluluğumuzdan geliyor.
+                        </p>   
+                        <p style="color: white">
+                            Kuzey/Orta/Güney Amerika, Asya, Avrupa, Afrika olmak üzere, 20+ ülkede temsilcisi olan topluluklarımız mevcuttur ve bu topluluklarda ülkenin kendi dilinde iletişim kurabilmek mümkündür. Bu topluluklar, iletişimlerini yüz yüze, bir alana mesaj bırakarak veya anlık olarak sağlamaktadır.
+                        </p>   
+                        <p style="color: white">
+                            Bu toplulukların amacı, sadece Parrot Project (ve *nix) desteği ve eğitimi değil (kullanıcılar karşılaştıkları sorunları anlık olarak sorabiliyor, cevabını ve çözümünü anlık olarak hızlıca alabiliyor!), genel olarak -tamamen ücretsiz olmak koşulu ile- siber güvenlik/bilgi güvenliği başlığı altındaki her alt başlık konusunda tartışmalar/paylaşımlar/bilgilendirmeler/eğitimler/sunumlar/yayınlar yapmaktır.
+
+
+
+                        </p>   
+                        <h5 style="color: red">Teknik
+                        </h5>
+
+                        <p style="color: white">
+                            Güncel versiyonumuzun (3.10/Intruder) iki major özelliği bulunmaktadır.
+                        </p>   
+                        <ul type="square" style="color: white">
+                            <li> AnonSurf
+                                <p style="color: white">Bunların birincisi, “privacy defense, anonymity” başlıkları için tasarladığımız AnonSurf, sistem trafiğinin TOR ve I2P ağları üzerinden yapılmasını sağlayan, GUI ve CLI arayüzü olan Parrot Security OS’in anonim modudur. Çalışma mantığı ise, firewall (iptables) katmanında çalışarak, TCP/IP tespitini zorlaştırır, TCP trafiğinin hepsi otomatik olarak TOR proxy’e yönlendirilir. Ayrıca, Tor Browser, TorChat gibi standart araçlar da üzerinde yüklü gelmektedir.
+                                </p>
+                            <li> Sandbox
+                                <p style="color: white">Farklı tekniklerin birleşimiyle tasarladığımız bu özellik, işletim sistemi bileşenlerini izole ederek proaktif şekilde korunmasını sağlıyor. Çalışma mantığı ise, örneğin, sistem üzerinde bulunan Firefox çalıştırıldığında, sandbox bileşenleri tetiklenir. Kullanıcı hesabına tanımlanmış özel bir kullanıcı alanı oluşturulur. root kullanıcısı ve kullanıcı değiştirme yetenekleri pasif hale getirilir. Linux capabilities, supplementary kullanıcı grubu engellenir. Shell ortamı pasif, seccomp aktif hale getirilir. Buna ek olarak, tüm sistem salt okunur olduğu için özel bir dosya ağacı oluşturulur, “/dev” ve “/tmp” klasörlerinin özel sürümleri orijinal dosyaların yerini alır ve “/home” klasörü yalnızca beyaz listeye alınmış klasörlerin çok sıkı bir seçimini (whitelist) içerir, yazma izinlerine sahip olan klasörlere zararlı kodun yürütülmesini önlemek için noexec bayrağı atanır. Benzer kısıtlamalar diğer hassas sistem programlarına uygulanır. Bu sistemin amacı, tehditleri ‘izole’ ederek, saldırganın hassas ve kritik kaynaklara ulaşmasını engellemektir.
+                                </p>
+                        </ul>
+                        <h4 style="color: blue">
+                            Planlar
+
+                        </h4>
+                        <h5 style="color: red">
+                            Eğitim
+                        </h5>
+
+
+                        <p style="color: white">
+                            Sıkı kurallara ve disipline bağlı düzenli geliştirme faaliyetleriyle, var olan özelliklerin mükemmelleştirilmesi, bu faaliyetlerin yeni özelliklerle birleştirilmesi, güncel teknoloji/trend’lerin projeye dahil edilmesi, yeni yazılım/araç analizlerinin yapılması ve yeni kullanıcılar için sistemin daha kolay kullanılmasını sağlamanın yanı sıra odaklanmak istediğimiz ve bizim için en önemli konu, eğitimdir.
+                        </p>   
+                        <p style="color: white">
+                            Halihazırda yaptığımız eğitim çalışmalarının yanında hem uluslararası platformumuzda hem de bölgesel toplulukların/ülke topluluklarının kendi dillerinde verecekleri eğitimlerin arttırılması, çeşitlendirilmesi ve bu çerçevede pentesting/red teaming, reverse engineering, software development, system administration, networking, cryptography, malware analysis konuları üzerinde dokümantasyon havuzu (kitap, e-kitap, makale, kılavuz vb) oluşturmak da üzerinde durduğumuz noktalardan bir tanesidir.
+                        </p>   
+                        <h5 style="color: red">
+                            Teknik
+                        </h5>
+                        <p style="color: white">
+                            Sandbox, sistemimizi geliştirmeye ve mükemmelleştirmeye devam edeceğiz. Bunun yanı sıra, “Parrot Security Mobile” yayınlamak da bir sonraki planlarımız arasında bulunmakta… Bugüne kadar yaptığımız gibi, bu da benzer bir proje değil, özel bir proje olacak.
+                        </p>   
+
+
+
+
+
+
+
+
+
+                    </div><!-- model-body -->
+
+                    <div class="modal-footer " style="background: black">  
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div><!-- model-footer -->
+                </div> <!-- model-content -->
+            </div><!-- modal-dialog -->
+        </div> <!-- modal -->
+
+    </body>
+
+
+</html>
